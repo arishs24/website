@@ -44,6 +44,175 @@ import {
       title: "Contact",
     },
   ];
+
+  export const dp1Data = [
+    {
+      title: 'DP-1 Project Ideation',
+      date: 'September 2023',
+      iconBg: '#ff6347',
+      points: [
+        'Brainstorming sessions to define DP-1 project objectives.',
+        'Created initial sketches and concepts for DP-1.',
+        'Developed timeline and goals for DP-1 project.',
+      ],
+    },
+    {
+      title: 'DP-1 Prototype Development',
+      date: 'October 2023',
+      iconBg: '#4682b4',
+      points: [
+        'Built first prototype for DP-1 project.',
+        'Tested DP-1 components for usability and efficiency.',
+        'Collected feedback to iterate on DP-1 design.',
+      ],
+    },
+    {
+      title: 'DP-1 Final Testing',
+      date: 'November 2023',
+      iconBg: '#32cd32',
+      points: [
+        'Finalized DP-1 design based on feedback.',
+        'Completed extensive testing for DP-1 project.',
+      ],
+    },
+  ];
+  
+  export const dp2Data = [
+    {
+      title: 'DP-2 Project Ideation',
+      date: 'September 2023',
+      iconBg: '#ff6347',
+      points: [
+        'Brainstorming sessions to define DP-2 project objectives.',
+        'Created initial sketches and concepts for DP-2.',
+        'Developed timeline and goals for DP-2 project.',
+      ],
+    },
+    {
+      title: 'DP-2 Prototype Development',
+      date: 'October 2023',
+      iconBg: '#4682b4',
+      points: [
+        'Built first prototype for DP-2 project.',
+        'Tested DP-2 components for usability and efficiency.',
+        'Collected feedback to iterate on DP-2 design.',
+      ],
+    },
+    {
+      title: 'DP-2 Final Testing',
+      date: 'November 2023',
+      iconBg: '#32cd32',
+      points: [
+        'Finalized DP-2 design based on feedback.',
+        'Completed extensive testing for DP-2 project.',
+      ],
+    },
+  ];
+  
+  export const dp3Data = [
+    {
+      title: 'DP-3 Project Ideation',
+      date: 'September 2023',
+      iconBg: '#ff6347',
+      points: [
+        'Brainstorming sessions to define DP-3 project objectives.',
+        'Created initial sketches and concepts for DP-3.',
+        'Developed timeline and goals for DP-3 project.',
+      ],
+    },
+    {
+      title: 'DP-3 Prototype Development',
+      date: 'October 2023',
+      iconBg: '#4682b4',
+      points: [
+        'Built first prototype for DP-3 project.',
+        'Tested DP-3 components for usability and efficiency.',
+        'Collected feedback to iterate on DP-3 design.',
+      ],
+    },
+    {
+      title: 'DP-3 Final Testing',
+      date: 'November 2023',
+      iconBg: '#32cd32',
+      points: [
+        'Finalized DP-3 design based on feedback.',
+        'Completed extensive testing for DP-3 project.',
+      ],
+    },
+  ];
+  
+  export const dp4Data = [
+    {
+      title: 'DP-4 Project Ideation',
+      date: 'September 2023',
+      iconBg: '#ff6347',
+      points: [
+        'Brainstorming sessions to define DP-4 project objectives.',
+        'Created initial sketches and concepts for DP-4.',
+        'Developed timeline and goals for DP-4 project.',
+      ],
+    },
+    {
+      title: 'DP-4 Prototype Development',
+      date: 'October 2023',
+      iconBg: '#4682b4',
+      points: [
+        'Built first prototype for DP-4 project.',
+        'Tested DP-4 components for usability and efficiency.',
+        'Collected feedback to iterate on DP-4 design.',
+      ],
+    },
+    {
+      title: 'DP-4 Final Testing',
+      date: 'November 2023',
+      iconBg: '#32cd32',
+      points: [
+        'Finalized DP-4 design based on feedback.',
+        'Completed extensive testing for DP-4 project.',
+      ],
+    },
+  ];
+
+  
+
+  const designProcessData = [
+    {
+      title: 'Project Ideation',
+      date: 'August 2023',
+      iconBg: '#ff6347', // Background color for the icon
+      // icon: 'path_to_icon', // Replace with an appropriate icon path
+      points: [
+        'Conducted brainstorming sessions to define project objectives.',
+        'Created rough sketches and initial concept designs.',
+        'Developed initial project timeline and goals.'
+      ],
+    },
+    {
+      title: 'Prototype Development',
+      date: 'September 2023',
+      iconBg: '#4682b4',
+      // icon: 'path_to_icon', // Replace with an appropriate icon path
+      points: [
+        'Built the first prototype based on initial design.',
+        'Tested key components for usability and efficiency.',
+        'Collected feedback from early testers to iterate on design.'
+      ],
+    },
+    {
+      title: 'Final Design and Testing',
+      date: 'October 2023',
+      iconBg: '#32cd32',
+      // icon: 'path_to_icon', // Replace with an appropriate icon path
+      points: [
+        'Finalized the design based on feedback.',
+        'Completed extensive testing of the final prototype.',
+        'Prepared project documentation and presentation materials.'
+      ],
+    },
+  ];
+
+
+  
   
   const services = [
     {
@@ -241,6 +410,7 @@ export const volunteerExperiences = [
     ]
   },
   {
+    
     title: "Clinical Shadowing",
     company_name: "Juravinski Hospital, Royal Oak Clinic, Renal Care Centre",
     icon: shadow,
@@ -250,6 +420,18 @@ export const volunteerExperiences = [
       "Juravinski Hospital - Orthopaedics, Dr. Thomas Wood, MD. Clinical & Surgery",
       "Royal Oak Clinic - Family Medicine, Dr. Evis Skendaj, MD.",
       "Renal Care Centre - Dialysis, Dr. Sharn Bhandal, MD."
+    ]
+  },
+  {
+    
+    title: "Biomedical Team Lead",
+    company_name: "Eclipto Network",
+    icon: shadow,
+    iconBg: "#1E90FF",
+    date: "Mar 2024 - July 2024",
+    points: [
+      "- Led biomedical research projects, fostering innovation and enhancing team engagement.",
+      "- Directed brainstorming sessions using advanced methodologies to solve complex scientific issues."
     ]
   },
   {
@@ -357,9 +539,9 @@ export const publishedResearch = [
       source_code_link: "https://github.com/arishs24/aqua_boost",
     },
     {
-      name: "Pantry Tracker",
+      name: "Surgery Inventory Tracker",
       description:
-        "Web application developed to streamline the process of tracking and managing pantry items using AI and ML.",
+        "Web application developed to streamline the process of tracking and managing surgery items using AI and ML.",
       tags: [
         {
           name: "React",
@@ -432,8 +614,8 @@ export const publishedResearch = [
         },
       ],
       image: tripguide,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/arishs24/Portfolio-Website",
     },
   ];
   
-  export { services, technologies, experiences, testimonials, projects };
+  export { services, technologies, experiences, testimonials, projects, designProcessData};
