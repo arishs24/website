@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import 'react-vertical-timeline-component/style.min.css';
 
 import styles from '../styles'; // Ensure this path is correct
-import { experiences, volunteerExperiences, publishedResearch, designProcessData, dp1Data, dp2Data, dp3Data, dp4Data } from '../constants'; // Add all project data
+import { experiences, volunteerExperiences, publishedResearch} from '../constants'; // Add all project data
 import SectionWrapper from '../hoc/SectionWrapper'; // Ensure this path is correct
 import { textVariant } from '../utils/motion';
 
@@ -51,8 +51,6 @@ const ExperienceCard = ({ experience }) => {
 
 const Experience = () => {
   const [activeSection, setActiveSection] = useState('work');  // Start with Work Experience
-  const [showProjectSubButtons, setShowProjectSubButtons] = useState(false);  // Toggle for sub-buttons
-
   let sectionData;
   if (activeSection === 'work') {
     sectionData = experiences;
@@ -80,7 +78,6 @@ const Experience = () => {
           {activeSection === 'work' && "Work Experience"}
           {activeSection === 'volunteer' && "Volunteer Experience"}
           {activeSection === 'research' && "Published Research"}
-          {(activeSection === 'dp0' || activeSection === 'dp1' || activeSection === 'dp2' || activeSection === 'dp3' || activeSection === 'dp4') && "University Projects"}
         </h2>
       </motion.div>
 
@@ -104,50 +101,7 @@ const Experience = () => {
           Research
         </button>
         
-        {/* University Projects Button */}
-        <div className="relative">
-          <button
-            onClick={() => setShowProjectSubButtons(!showProjectSubButtons)}  // Toggle sub-buttons
-            className={`px-4 py-2 mx-2 ${showProjectSubButtons ? "bg-[#915EFF]" : "bg-gray-500"} text-white rounded-lg`}
-          >
-            University Projects
-          </button>
-          {/* Show Sub-buttons if toggle is active */}
-          {showProjectSubButtons && (
-            <div className="absolute mt-2 bg-gray-600 p-2 rounded-lg shadow-lg">
-              <button
-                onClick={() => setActiveSection('dp0')}
-                className={`block px-4 py-2 my-1 ${activeSection === 'dp0' ? "bg-[#915EFF]" : "bg-gray-500"} text-white rounded-lg`}
-              >
-                DP-0
-              </button>
-              <button
-                onClick={() => setActiveSection('dp1')}
-                className={`block px-4 py-2 my-1 ${activeSection === 'dp1' ? "bg-[#915EFF]" : "bg-gray-500"} text-white rounded-lg`}
-              >
-                DP-1
-              </button>
-              <button
-                onClick={() => setActiveSection('dp2')}
-                className={`block px-4 py-2 my-1 ${activeSection === 'dp2' ? "bg-[#915EFF]" : "bg-gray-500"} text-white rounded-lg`}
-              >
-                DP-2
-              </button>
-              <button
-                onClick={() => setActiveSection('dp3')}
-                className={`block px-4 py-2 my-1 ${activeSection === 'dp3' ? "bg-[#915EFF]" : "bg-gray-500"} text-white rounded-lg`}
-              >
-                DP-3
-              </button>
-              <button
-                onClick={() => setActiveSection('dp4')}
-                className={`block px-4 py-2 my-1 ${activeSection === 'dp4' ? "bg-[#915EFF]" : "bg-gray-500"} text-white rounded-lg`}
-              >
-                DP-4
-              </button>
-            </div>
-          )}
-        </div>
+
       </div>
 
       {/* Displaying the Content */}
