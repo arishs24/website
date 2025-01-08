@@ -28,6 +28,8 @@ import {
     tripguide,
     threejs,
     mac,
+    bag,
+    prost,
   } from "../assets";
   
   export const navLinks = [
@@ -340,7 +342,7 @@ technicalSkills: ["✅Engineering Sketches", "✅Material Analysis", "✅Gantt C
       { name: "User-Centric Design", color: "green-text-gradient" },
       { name: "Stress Testing", color: "pink-text-gradient" },
     ],
-    // image: "path/to/dp1-image.jpg", // Update with the actual image path
+    image: bag,
     source_code_link: "https://github.com/arishs24/dp1",
   },
   {
@@ -359,10 +361,10 @@ technicalSkills: ["✅Engineering Sketches", "✅Material Analysis", "✅Gantt C
 technicalSkills: ["✅CAD Using Autodesk Inventor 2025", "✅Engineering Sketches", "✅Material Analysis", "✅3D printing Using PrusaSlicer"],
     tags: [
       { name: "Biomedical", color: "blue-text-gradient" },
-      { name: "User-Centric Design", color: "green-text-gradient" },
-      { name: "Stress Testing", color: "pink-text-gradient" },
+      { name: "3D Modelling", color: "green-text-gradient" },
+      { name: "Material Analysis", color: "pink-text-gradient" },
     ],
-    // image: "path/to/dp1-image.jpg", // Update with the actual image path
+    image: prost,
     source_code_link: "https://github.com/arishs24/dp1",
   },
 ];

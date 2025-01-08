@@ -70,14 +70,13 @@ const ProjectDetails = () => {
             </div>
           </div>
 
-            {/* Project Image */}
-            {project.image && (
+            {/* {project.image && (
               <img
                 src={project.image}
                 alt="Project Visual"
                 className="rounded-lg w-full h-auto mb-6"
               />
-            )}
+            )} */}
           </div>
 
           {/* Right Column: Informative Sections */}
@@ -185,7 +184,7 @@ const ProjectDetails = () => {
             The image below showcases the completed prototype of the Twist n’ Go Colostomy Bag, highlighting the twist-lock mechanism and locking indicator:
           </p>
           <img
-            src="./bag.png"
+            //src="./bag.png"
             alt="Final Prototype of Twist n’ Go Colostomy Bag"
             className="mt-4 w-full h-auto border border-gray-500 rounded-lg"
           />
@@ -246,7 +245,7 @@ const ProjectDetails = () => {
   onClick={() => toggleSection("learning")}
 >
   <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
-    Project Learning Opportunities and Challenges
+  💭 Project Learning Opportunities and Challenges
   </h3>
   {activeSection === "learning" && (
     <div className="p-6 bg-gray-800 text-white rounded-lg">

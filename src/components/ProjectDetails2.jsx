@@ -70,14 +70,14 @@ const ProjectDetails2 = () => {
             </div>
           </div>
 
-            {/* Project Image */}
-            {project.image && (
+
+            {/* {project.image && (
               <img
                 src={project.image}
                 alt="Project Visual"
                 className="rounded-lg w-full h-auto mb-6"
               />
-            )}
+            )} */}
           </div>
 
           {/* Right Column: Informative Sections */}

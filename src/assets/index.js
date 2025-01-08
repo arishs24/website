@@ -37,6 +37,10 @@ import tripguide from "./tripguide.png";
 
 import mac from "./mac.jpg"
 
+import bag from "./bag.png"
+
+import prost from "./prost.png"
+
 export {
   logo,
   backend,
@@ -71,4 +75,6 @@ export {
   jobit,
   tripguide,
   mac,
+  bag,
+  prost,
 };
