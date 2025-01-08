@@ -19,22 +19,22 @@ const ProjectDetails = () => {
   }
 
   return (
-    <div className="w-full min-h-screen bg-gray-900 p-10">
+    <div className="w-full min-h-screen bg-gray-900 p-4 md:p-10 bg-tertiary p-4 md:p-8 lg:p-10 rounded-lg">
       {/* Back Button */}
       <button
-        onClick={() => navigate("/")}
-        className="bg-[#915EFF] text-white px-4 py-2 rounded-lg absolute top-5 left-5"
+        onClick={() => navigate("/#projects")}
+        className="bg-[#915EFF] text-white px-3 py-2 md:px-4 md:py-2 rounded-lg mb-4"
       >
         Back to Projects
       </button>
-
-      <div className="bg-tertiary p-10 rounded-lg">
+  
+      <div>
         {/* Title Section */}
-        <h2 className="text-white font-bold text-[32px] mb-6">
+        <h2 className="text-white font-bold text-[20px] md:text-[28px] lg:text-[32px] mb-6">
           {project.name}
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
           {/* Left Column: Role, Skills, Image */}
           <div className="col-span-2">
             {/* Role */}
@@ -82,137 +82,275 @@ const ProjectDetails = () => {
 
           {/* Right Column: Informative Sections */}
           <div className="col-span-3">
-            {/* Accordion Section: Patient Profile */}
-            <div
-              className="border border-gray-700 rounded-lg mb-6"
-              onClick={() => toggleSection("patientProfile")}
-            >
-              <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
-                Patient Profile:
-              </h3>
-              {activeSection === "patientProfile" && (
-                <div className="p-4 bg-gray-800 text-white">
-                  <p className="mb-4">
-                    Our patient, Tahani Al-Jamil, has an ostomy and uses a
-                    two-piece drainable system. She has a very physically
-                    demanding job that requires frequent twisting and bending
-                    of the abdomen. Unfortunately, during these types of
-                    activities, Tahani experiences a{" "}
-                    <span className="text-yellow-400 font-bold">
-                      frequent failure of the snap-in coupling of the flange
-                      and the pouch.
-                    </span>
-                  </p>
-                  <p>
-                    This project aimed to design a modification for a colostomy
-                    bag for Tahani to wear in her physically demanding work
-                    environment, allowing her to move comfortably without
-                    frequent adjustments.
-                  </p>
-                </div>
-              )}
-            </div>
+          {/* Accordion Section: Patient Profile */}
+<div
+  className="border border-gray-700 rounded-lg mb-6"
+  onClick={() => toggleSection("patientProfile")}
+>
+  <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
+    Patient Profile
+  </h3>
+  {activeSection === "patientProfile" && (
+    <div className="p-6 bg-gray-800 text-white rounded-lg">
+      <p className="mb-4 text-lg">
+        Our patient, <strong className="text-yellow-400">Kate Austen</strong>, uses a colostomy bag and often experiences frequent detachment of her current bag during physical activities due to a failure in the snap-in mechanism.
+      </p>
+      <p className="mb-4 text-yellow-400 font-bold">
+        The bag must remain intact during long hours of physical activity that include motions of twisting and bending at the abdomen, such as jogging. It should be comfortable and tightly secured to lessen interference with daily activities, enhancing Kate's quality of life.
+      </p>
+      <p className="text-lg">
+        This project aims to design a modification for a colostomy bag that allows Kate to wear it during her physically demanding activities, such as jogging. The design should enable her to move comfortably without frequent adjustments, ensuring durability and comfort throughout her daily life.
+      </p>
+    </div>
+  )}
+</div>
 
-            {/* Accordion Section: Objectives and Constraints */}
-            <div
-              className="border border-gray-700 rounded-lg mb-6"
-              onClick={() => toggleSection("objectives")}
-            >
-              <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
-                Establishing Objectives and Constraints:
-              </h3>
-              {activeSection === "objectives" && (
-                <div className="p-4 bg-gray-800 text-white">
-                  <p className="mb-4">
-                  For this milestone, the team had to gather information based on our unique design challenge, define a need statement, and identify a set of objectives and constraints. These were aspects of the fundamental concepts of engineering problem solutions. 
-                  </p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <h4 className="font-semibold text-yellow-400 mb-2">
-                        Objectives:
-                      </h4>
-                      <ul className="list-disc pl-5">
-                        <li>Should be flexible</li>
-                        <li>Stay fixed during exercise</li>
-                        <li>Withstand twisting and bending</li>
-                        <li>Adjustable to various stoma sizes</li>
-                        <li>Comfortable for long periods</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-yellow-400 mb-2">
-                        Constraints:
-                      </h4>
-                      <ul className="list-disc pl-5">
-                        <li>Must conform to two-piece system standards</li>
-                        <li>Biocompatible materials</li>
-                        <li>Comfortable for over an hour</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
 
-            {/* Accordion Section: Proposed Solution */}
-            <div
-              className="border border-gray-700 rounded-lg mb-6"
-              onClick={() => toggleSection("solution")}
-            >
-              <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
-                Proposed Solution:
-              </h3>
-              {activeSection === "solution" && (
-                <div className="p-4 bg-gray-800 text-white">
-                  <p className="mb-4">
-                    The <span className="text-yellow-400 font-bold">
-                      Twist-Lock Ostomy
-                    </span>{" "}
-                    was designed to address coupling failure:
-                  </p>
-                  <ul className="list-decimal pl-5 space-y-4">
-                    <li>
-                      <strong>First Component:</strong> A two-part twist-lock
-                      system with tabs for secure fitting.
+          {/* Accordion Section: Objectives and Constraints */}
+<div
+  className="border border-gray-700 rounded-lg mb-6"
+  onClick={() => toggleSection("objectives")}
+>
+  <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
+    Establishing Objectives and Constraints
+  </h3>
+  {activeSection === "objectives" && (
+    <div className="p-6 bg-gray-800 text-white rounded-lg">
+      <p className="mb-6 text-lg">
+        For this milestone, the team gathered information about our unique design challenge, defined a need statement, and identified a set of objectives and constraints. These aspects were fundamental to formulating an engineering problem solution.
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Objectives Section */}
+        <div>
+          <h4 className="text-xl font-semibold text-yellow-400 mb-4">
+            Objectives
+          </h4>
+          <ul className="list-disc pl-5 space-y-2 text-lg">
+            <li>Should be durable</li>
+            <li>Should be comfortable throughout extended use</li>
+            <li>Should have a simplified process for attaching, adjusting, and detaching</li>
+            <li>Should be lightweight to avoid hindering physical activity</li>
+            <li>Should have an adhesive capable of withstanding elevated body temperature and physical activity</li>
+          </ul>
+        </div>
+        {/* Constraints Section */}
+        <div>
+          <h4 className="text-xl font-semibold text-yellow-400 mb-4">
+            Constraints
+          </h4>
+          <ul className="list-disc pl-5 space-y-2 text-lg">
+            <li>Must be safe for the skin</li>
+            <li>Must be capable of containing stool securely</li>
+            <li>Must accommodate frequent movement such as bending, twisting, and jogging</li>
+            <li>Must prevent the pouch from detaching during movement</li>
+            <li>Must work within standard ostomy appliance sizes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  )}
+</div>
 
-                      Our solution consists of two main components:
 
-1. **First Component:** two-part twist-lock system.
-    1. the flange has a set of tabs that can be fitted into the slots present on the bag. The bag will then have to be fitted to the flange and twisted down so it locks in place. 
-    2. Further supported by velcro attachments (see Figure 2)
-                    </li>
-                    <li>
-                      <strong>Second Component:</strong> An elastic strap with
-                      clips for stabilization.
-                      2. **Second Component:** an elastic strap to stabilize the bag.
-    1. two clips on either side of the elastic band will then allow the user to secure the ends to the waistband of their pants in a desired position.
-                    </li>
-                  </ul>
-                </div>
-              )}
-            </div>
+          {/* Accordion Section: Proposed Solution */}
+<div
+  className="border border-gray-700 rounded-lg mb-6"
+  onClick={() => toggleSection("solution")}
+>
+  <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
+    Proposed Solution
+  </h3>
+  {activeSection === "solution" && (
+    <div className="p-6 bg-gray-800 text-white rounded-lg">
+      <p className="mb-6 text-lg">
+        The <span className="text-yellow-400 font-bold">Twist-Lock Ostomy</span> was designed to address coupling failure and ensure enhanced usability for users:
+      </p>
+      <ul className="list-decimal pl-5 space-y-6 text-lg">
+        <li>
+          <strong>First Component:</strong> A two-part twist-lock system with tabs for secure fitting.
+          <ul className="list-disc pl-6 mt-2 space-y-2">
+            <li>The flange includes a set of tabs that align with corresponding slots on the bag. The user fits the tabs into the slots and twists the bag into place, securely locking it.</li>
+            <li>A locking indicator provides clear visual feedback to ensure proper attachment, eliminating guesswork.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Second Component:</strong> A locking indicator for added confidence.
+          <ul className="list-disc pl-6 mt-2 space-y-2">
+            <li>The locking indicator ensures users can visually confirm when the bag is securely attached, offering peace of mind and improved usability during physical activity.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Final Prototype:</strong>
+          <p className="mt-2">
+            The image below showcases the completed prototype of the Twist n’ Go Colostomy Bag, highlighting the twist-lock mechanism and locking indicator:
+          </p>
+          <img
+            src="./bag.png"
+            alt="Final Prototype of Twist n’ Go Colostomy Bag"
+            className="mt-4 w-full h-auto border border-gray-500 rounded-lg"
+          />
+        </li>
+      </ul>
+    </div>
+  )}
+</div>
 
-            {/* Accordion Section: Final Results */}
-            <div
-              className="border border-gray-700 rounded-lg"
-              onClick={() => toggleSection("results")}
-            >
-              <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
-                Final Results:
-              </h3>
-              {activeSection === "results" && (
-                <div className="p-4 bg-gray-800 text-white">
-                  <p>
-                  Overall, I am really happy with the outcome of our final design. There is always room for improvement; however, I am proud of the way our team was able to develop and communicate ideas that led to the creation of a unique prototype to meet our patients' needs.
 
-The  {" "}
-                    <strong>challenges</strong>, we had faced along the way had given way to several learning opportunities that contributed to the iterative nature of the project, emphasizing the importance of adaptability, through testing, and continuous refinement in the engineering design process.
+{/* Accordion Section: Responsibilities and Contributions */}
+<div
+  className="border border-gray-700 rounded-lg mb-6"
+  onClick={() => toggleSection("resp")}
+>
+  <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
+    Responsibilities and Contributions
+  </h3>
+  {activeSection === "resp" && (
+    <div className="p-6 bg-gray-800 text-white rounded-lg">
+      <ul className="list-disc pl-5 space-y-6 text-lg">
+        {/* Team Manager Section */}
+        <li>
+          <strong>Team Manager:</strong>
+          <ul className="list-disc pl-6 mt-2 space-y-2">
+            <li>Created weekly meeting agendas to ensure structured and efficient discussions.</li>
+            <li>Delivered updates from Teaching Assistants (TAs) at the start of design meetings to align team efforts.</li>
+            <li>Developed the preliminary Gantt chart to plan and track project progress effectively.</li>
+          </ul>
+        </li>
 
-This project helped reinforce the importance of time management and organization, as many milestones and conceptual designs required the team to meet outside of class hours. There was also a significant emphasis on problem-solving throughout the project. This is because developing an engineering solution is often iterative and dynamic, involving several stages of adjustments and modifications. Our team was ultimately able to address these challenges in our final design and create a product that met the majority of the objectives we had identified.
-                  </p>
-                </div>
-              )}
-            </div>
+        {/* Written Documentation Section */}
+        <li>
+          <strong>Written Documentation:</strong>
+          <ul className="list-disc pl-6 mt-2 space-y-2">
+            <li>Wrote the abstract to summarize the project's goals, methodology, and outcomes.</li>
+          </ul>
+        </li>
+
+        {/* Prototyping and Video Section */}
+        <li>
+          <strong>Prototyping and Video:</strong>
+          <ul className="list-disc pl-6 mt-2 space-y-2">
+            <li>Played a leading role in the low-fidelity prototype video, contributing both on-screen and behind the scenes.</li>
+            <li>Cut and prepared materials required for constructing the low-fidelity prototype.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  )}
+</div>
+
+
+
+           {/* Accordion Section: Project Learning Opportunities and Challenges */}
+<div
+  className="border border-gray-700 rounded-lg mb-6"
+  onClick={() => toggleSection("learning")}
+>
+  <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
+    Project Learning Opportunities and Challenges
+  </h3>
+  {activeSection === "learning" && (
+    <div className="p-6 bg-gray-800 text-white rounded-lg">
+      <ul className="list-disc pl-5 space-y-6 text-lg">
+        {/* Project Learning Section */}
+        <li>
+          <strong>Project Learning Opportunities and Challenges:</strong>
+          <p className="mt-2">
+            During the early stages of the project, one of the main challenges
+            was ensuring all tasks were organized and completed on time. As the
+            manager, I had to oversee team progress and create the preliminary
+            Gantt chart, which required identifying and accounting for each
+            task’s duration and dependencies. This process taught me the
+            importance of detailed planning and clear communication in
+            maintaining project momentum, especially when working with a tight
+            schedule.
+          </p>
+        </li>
+
+        {/* Preliminary Concept Design Section */}
+        <li>
+          <strong>Preliminary Concept Design:</strong>
+          <p className="mt-2">
+            Developing the twist-and-lock system was an iterative process.
+            While the initial design was promising, discussions revealed the
+            need to refine certain aspects to enhance functionality and
+            usability. For example, we evaluated potential issues related to bag
+            detachment during physical activity and adjusted the design to
+            include a locking indicator for added confidence. This taught me
+            the value of revisiting initial concepts and incorporating feedback
+            to achieve a more effective solution.
+          </p>
+        </li>
+
+        {/* Prototyping Process Section */}
+        <li>
+          <strong>Prototyping Process:</strong>
+          <p className="mt-2">
+            The construction of the low-fidelity prototype provided valuable
+            insights into the design’s feasibility. Cutting and preparing the
+            materials for the prototype highlighted potential improvements
+            needed for durability and usability. Additionally, the prototyping
+            process reinforced the importance of hands-on testing and
+            demonstrated that a well-executed prototype is essential for
+            identifying and addressing design flaws before moving forward.
+          </p>
+        </li>
+      </ul>
+    </div>
+  )}
+</div>
+
+
+          {/* Accordion Section: Final Results */}
+<div
+  className="border border-gray-700 rounded-lg mb-6"
+  onClick={() => toggleSection("results")}
+>
+  <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
+    Final Results, Thoughts, & Regrets
+  </h3>
+  {activeSection === "results" && (
+    <div className="p-6 bg-gray-800 text-white rounded-lg">
+      <p className="italic text-yellow-400 mb-6">
+        "We do not learn from experience... we learn from reflecting on experience." – John Dewey
+      </p>
+      <ul className="list-disc pl-5 space-y-6 text-lg">
+        {/* Early Challenges Section */}
+        <li>
+          <strong>Early Challenges:</strong>
+          <p className="mt-2">
+            One of the first challenges was defining clear design constraints.
+            I questioned whether our scope was realistic, especially as we focused on the twist-and-lock mechanism. Through discussions and feedback, we incorporated a locking indicator, balancing innovation with practicality and improving usability for patients.
+          </p>
+        </li>
+
+        {/* Prototyping and Adaptability Section */}
+        <li>
+          <strong>Prototyping and Adaptability:</strong>
+          <p className="mt-2">
+            While cutting materials for the low-fidelity prototype, slight misalignments in the tabs and slots revealed the need for refined measurements. This iterative process reinforced the importance of adaptability and precision in engineering design.
+          </p>
+        </li>
+
+        {/* Time Management Section */}
+        <li>
+          <strong>Time Management:</strong>
+          <p className="mt-2">
+            Balancing weekly agendas, TA updates, and project milestones taught me to prioritize collaboration and flexibility. I often questioned whether I had allowed enough time for problem-solving, but the iterative approach helped us address challenges effectively.
+          </p>
+        </li>
+
+        {/* Final Reflections Section */}
+        <li>
+          <strong>Final Reflections:</strong>
+          <p className="mt-2">
+            The <em>Twist n’ Go Colostomy Bag</em> demonstrated the value of questioning, testing, and adapting. This project solidified my understanding that engineering solutions require a dynamic process of reflection and continuous improvement. By staying open to alternatives, our team successfully created a prototype that met the majority of our objectives.
+          </p>
+        </li>
+      </ul>
+    </div>
+  )}
+</div>
+
           </div>
         </div>
       </div>

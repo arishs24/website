@@ -43,15 +43,17 @@ const About = () => {
           variants={fadeIn('', '', 0.1, 1)}
           className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          👋 Hello world! My name is Arish Shahab, and I am an incoming student at McMaster University's Integrated Biomedical Engineering and Health Sciences (iBioMed) program. My journey is driven by a profound interest in merging biomedical engineering with cutting-edge medical research.<br /><br />
+          👋 Hello World! I’m Arish Shahab – a Biomedical Engineering and Health Sciences student at McMaster University with a passion for combining technology and healthcare to create meaningful solutions.<br /><br />
           
-          📚 At McMaster, I am exploring innovative solutions for healthcare, with a particular focus on smart drug delivery systems. My academic pursuits are complemented by hands-on research experiences, including collaborations with esteemed professors and involvement in projects that leverage AI and machine learning for optimized healthcare solutions.<br /><br />
+          📚 I’ve gained valuable experience working at institutions like Johns Hopkins University, where I optimized machine learning models for neuroscience research, and Hamilton Health Sciences, where I contributed to advancements in orthopedic applications. These experiences have equipped me with skills in computational modeling, machine learning, and biomedical device design.<br /><br />
           
-          🌱 My passion for biomedical engineering is fueled by a desire to make meaningful contributions to patient care and medical technology. I am dedicated to advancing research in drug delivery devices and automated medical injectors, aiming to bring transformative changes to healthcare systems.<br /><br />
+          🌱 In addition to research, I’ve developed impactful projects like Aqua Boost, a wearable hydration monitor that utilizes bioimpedance sensors to prevent dehydration complications, and Iremia, a stress-tracking wearable device with real-time personalized support. These projects reflect my dedication to addressing real-world healthcare challenges through innovative design and technology.<br /><br />
           
-          🚀 Recently, I have been working on developing a smart liposomal drug delivery system for interstitial lung disease and exploring the impact of disinfectants on biomaterials used in joint replacements. As I continue my academic and professional journey, I am committed to applying my skills to real-world medical challenges and improving patient outcomes.<br /><br />
+          🚀 Beyond academics, I enjoy mentoring others, writing for McMaster’s engineering journal The Frequency, and collaborating on ideas that push the boundaries of healthcare innovation.
+
+<br /><br />
           
-          ⚽ Hobbies: Reading, Travelling, Playing Soccer, Research, Technology<br />
+          ⚽ Hobbies: Reading, Traveling, Playing Basketball, Working Out, Cooking, Exploring Research<br /><br />
           💬 Let's Chat About: Biomedical Engineering, Drug Delivery Systems, AI in Healthcare, Medical Research, Lung Disease Treatment
         </motion.p>
       </div>

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from './components';
 import ProjectDetails from './components/ProjectDetails'; // Import the new ProjectDetails component
 import DP1Page from "./components/DP1Page";
+import ProjectDetails2 from './components/ProjectDetails2'; // Import the new ProjectDetails component
 
 
 const App = () => {
@@ -32,7 +33,8 @@ const App = () => {
         />
 
         {/* Project Details Page */}
-        <Route path="/project/:id" element={<ProjectDetails />} />
+        <Route path="/project/0" element={<ProjectDetails />} />
+        <Route path="/project/1" element={<ProjectDetails2 />} />
         <Route path="/dp1" element={<DP1Page />} />
       </Routes>
     </Router>

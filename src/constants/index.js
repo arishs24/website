@@ -333,8 +333,8 @@ export const universityProjects = [
       "Final Results": "Overall, I am really happy with the outcome of our final design. There is always room for improvement; however, I am proud of the way our team was able to develop and communicate ideas that led to the creation of a unique prototype to meet our patients' needs. The challenges we had faced along the way had given way to several learning opportunities that contributed to the iterative nature of the project, emphasizing the importance of adaptability, through testing, and continuous refinement in the engineering design process. This project helped reinforce the importance of time management and organization, as many milestones and conceptual designs required the team to meet outside of class hours. There was also a significant emphasis on problem-solving throughout the project. This is because developing an engineering solution is often iterative and dynamic, involving several stages of adjustments and modifications. Our team was ultimately able to address these challenges in our final design and create a product that met the majority of the objectives we had identified.",
     },
     role: "Manager",
-    softSkills: ["✅Teamwork", "✅Communication", "✅Problem-solving"],
-technicalSkills: ["✅SolidWorks", "✅Python", "✅CAD Modeling"],
+    softSkills: ["✅Teamwork & Collaboration", "✅Oral & Written Communication", "✅Problem-solving", "✅Time Management"],
+technicalSkills: ["✅Engineering Sketches", "✅Material Analysis", "✅Gantt Charts Design and Editing"],
     tags: [
       { name: "Biomedical", color: "blue-text-gradient" },
       { name: "User-Centric Design", color: "green-text-gradient" },
@@ -343,46 +343,27 @@ technicalSkills: ["✅SolidWorks", "✅Python", "✅CAD Modeling"],
     // image: "path/to/dp1-image.jpg", // Update with the actual image path
     source_code_link: "https://github.com/arishs24/dp1",
   },
-{
-  name: "Design Project 2",
-  description: "Developed an AI-integrated drug delivery system for personalized medicine.",
-  sections: {
-    "Patient Profile": "Details about the patient and the problem.",
-    "Objectives and Constraints": "Key objectives and constraints for the project.",
-    "Proposed Solution": "Description of the proposed solution.",
-    "Responsibilities and Contributions": "Your role and contributions.",
-    "Project Learning Opportunities and Challenges": "What you learned and the challenges faced.",
-    "Final Results": "The results and outcomes of the project.",
-  },
-  tags: [
-    { name: "AI", color: "blue-text-gradient" },
-    { name: "Machine Learning", color: "green-text-gradient" },
-  ],
-  source_code_link: "https://github.com/arishs24/dp2",
-},
   {
-    name: "Design Project 3",
-    description:
-      "An advanced medical imaging system that combines real-time analysis with deep learning techniques for enhanced diagnostics.",
+    name: "Design Project 2 - Hip Implant",
+    description: "Redesigning and 3D-modelling a hip implant that addresses aseptic loosening while promoting bone regrowth. ",
+    sections: {
+      "Patient Profile": "Our patient, Tahani Al-Jamil, has an ostomy and uses a two-piece drainable system. She has a very physically demanding job that requires frequent twisting and bending of the abdomen. Unfortunately during these types of activities, Tahani experiences a frequent failure of the snap-in coupling of the flange and the pouch. With regular use, including a frequent need to adjust bag positioning, Tahani has found that the coupling loses its secure connection resulting in her ostomy bag falling off on multiple occasions. ",
+      "Objectives and Constraints": "The goal was to develop a secure and comfortable ostomy bag, considering constraints like material safety, ease of use, and durability.",
+      "Proposed Solution": "The Twist-Lock Ostomy was designed to specifically address the uncoupling failure the patient experiences while also limiting bag movement. ",
+      "Responsibilities and Contributions": "As a coordinator, I recommended kinetic tape and took notes during team meetings.Our solution consists of two main components: 1. **First Component:** two-part twist-lock system. 1. the flange has a set of tabs that can be fitted into the slots present on the bag. The bag will then have to be fitted to the flange and twisted down so it locks in place.  2. Further supported by velcro attachments (see Figure 2) 2. **Second Component:** an elastic strap to stabilize the bag. 1. two clips on either side of the elastic band will then allow the user to secure the ends to the waistband of their pants in a desired position.",
+      "Project Learning Opportunities and Challenges": "Learned to collaborate effectively and handle user-centric design challenges.",
+      "Final Results": "Overall, I am really happy with the outcome of our final design. There is always room for improvement; however, I am proud of the way our team was able to develop and communicate ideas that led to the creation of a unique prototype to meet our patients' needs. The challenges we had faced along the way had given way to several learning opportunities that contributed to the iterative nature of the project, emphasizing the importance of adaptability, through testing, and continuous refinement in the engineering design process. This project helped reinforce the importance of time management and organization, as many milestones and conceptual designs required the team to meet outside of class hours. There was also a significant emphasis on problem-solving throughout the project. This is because developing an engineering solution is often iterative and dynamic, involving several stages of adjustments and modifications. Our team was ultimately able to address these challenges in our final design and create a product that met the majority of the objectives we had identified.",
+    },
+    role: "Subject Matter Expert",
+    softSkills: ["✅Teamwork & Collaboration", "✅Oral & Written Communication", "✅Problem-solving", "✅Time Management"],
+technicalSkills: ["✅CAD Using Autodesk Inventor 2025", "✅Engineering Sketches", "✅Material Analysis", "✅3D printing Using PrusaSlicer"],
     tags: [
-      { name: "Deep Learning", color: "blue-text-gradient" },
-      { name: "Medical Imaging", color: "green-text-gradient" },
-      { name: "Diagnostics", color: "pink-text-gradient" },
+      { name: "Biomedical", color: "blue-text-gradient" },
+      { name: "User-Centric Design", color: "green-text-gradient" },
+      { name: "Stress Testing", color: "pink-text-gradient" },
     ],
-    // image: "path/to/dp3-image.jpg", // Update with the actual image path
-    source_code_link: "https://github.com/arishs24/dp3",
-  },
-  {
-    name: "Design Project 4",
-    description:
-      "Explored the integration of nanotechnology in drug delivery systems for efficient and targeted treatment of chronic illnesses.",
-    tags: [
-      { name: "Nanotechnology", color: "blue-text-gradient" },
-      { name: "Drug Delivery", color: "green-text-gradient" },
-      { name: "Biomedical", color: "pink-text-gradient" },
-    ],
-    // image: "path/to/dp4-image.jpg", // Update with the actual image path
-    source_code_link: "https://github.com/arishs24/dp4",
+    // image: "path/to/dp1-image.jpg", // Update with the actual image path
+    source_code_link: "https://github.com/arishs24/dp1",
   },
 ];
   
