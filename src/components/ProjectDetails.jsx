@@ -182,7 +182,7 @@ const ProjectDetails = () => {
 </div>
 
 
-          {/* Accordion Section: Proposed Solution */}
+ {/* Accordion Section: Proposed Solution */}
 <div
   className="border border-gray-700 rounded-lg mb-6"
   onClick={() => toggleSection("solution")}
@@ -210,20 +210,32 @@ const ProjectDetails = () => {
           </ul>
         </li>
         <li>
+          <strong>Design Process:</strong>
+          <p className="mt-2">
+            The design process involved multiple iterations to ensure functionality and user-friendliness. The image below demonstrates one of the early concept sketches of the Twist-Lock Ostomy system:
+          </p>
+          <img
+            src="/dp/whiteboard.png"
+            alt="Design Process Sketch of the Twist-Lock Ostomy System"
+            className="mt-4 w-full max-w-lg border border-gray-500 rounded-lg"
+          />
+        </li>
+        <li>
           <strong>Final Prototype:</strong>
           <p className="mt-2">
             The image below showcases the completed prototype of the Twist n’ Go Colostomy Bag, highlighting the twist-lock mechanism and locking indicator:
           </p>
           <img
-            //src="./bag.png"
+            src="/dp/finalprot.png"
             alt="Final Prototype of Twist n’ Go Colostomy Bag"
-            className="mt-4 w-full h-auto border border-gray-500 rounded-lg"
+            className="mt-4 w-full max-w-lg border border-gray-500 rounded-lg"
           />
         </li>
       </ul>
     </div>
   )}
 </div>
+
 
 
 {/* Accordion Section: Responsibilities and Contributions */}
@@ -269,14 +281,13 @@ const ProjectDetails = () => {
 </div>
 
 
-
-           {/* Accordion Section: Project Learning Opportunities and Challenges */}
+{/* Accordion Section: Project Learning Opportunities and Challenges */}
 <div
   className="border border-gray-700 rounded-lg mb-6"
   onClick={() => toggleSection("learning")}
 >
   <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
-  💭 Project Learning Opportunities and Challenges
+    💭 Project Learning Opportunities and Challenges
   </h3>
   {openSections["learning"] && (
     <div className="p-6 bg-gray-800 text-white rounded-lg">
@@ -293,6 +304,14 @@ const ProjectDetails = () => {
             importance of detailed planning and clear communication in
             maintaining project momentum, especially when working with a tight
             schedule.
+          </p>
+          <img
+            src="/dp/w2.png"
+            alt="Concept Design Iteration"
+            className="mt-4 w-full max-w-lg border border-gray-500 rounded-lg"
+          />
+          <p className="text-sm text-gray-400 mt-2 text-center">
+            <strong>Fig. 3:</strong> Concept design iteration showing previous ideas which we considered.
           </p>
         </li>
 
@@ -323,11 +342,20 @@ const ProjectDetails = () => {
             demonstrated that a well-executed prototype is essential for
             identifying and addressing design flaws before moving forward.
           </p>
+          <img
+            src="/dp/proty.jpg"
+            alt="Low-Fidelity Prototype Construction"
+            className="mt-4 w-full max-w-lg border border-gray-500 rounded-lg"
+          />
+          <p className="text-sm text-gray-400 mt-2 text-center">
+            <strong>Fig. 4:</strong> Low-fidelity prototype showcasing the construction process and initial design tests.
+          </p>
         </li>
       </ul>
     </div>
   )}
 </div>
+
 
 
           {/* Accordion Section: Final Results */}
