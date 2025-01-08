@@ -202,8 +202,8 @@ export const education = [
   {
     school: 'McMaster University',
     degree: 'Integrated Biomedical Engineering and Health Sciences',
-    field: 'Applied Science',
-    date: '2024-2029',
+    field: 'Biomedical Engineering',
+    date: '2024-2028',
     image: mac, // Ensure this path is correct
   },
 ];

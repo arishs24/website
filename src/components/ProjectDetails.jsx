@@ -18,11 +18,30 @@ const ProjectDetails = () => {
     return null;
   }
 
+  const handleBackToProjects = () => {
+    if (window.location.pathname === "/") {
+      // If already on the homepage, scroll to the #projects section
+      const section = document.getElementById("projects");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // Navigate to the homepage and scroll after it loads
+      navigate("/");
+      setTimeout(() => {
+        const section = document.getElementById("projects");
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100); // Delay to allow homepage to load
+    }
+  };
+
   return (
     <div className="w-full min-h-screen bg-gray-900 p-4 md:p-10 bg-tertiary p-4 md:p-8 lg:p-10 rounded-lg">
       {/* Back Button */}
       <button
-        onClick={() => navigate("/#projects")}
+        onClick={handleBackToProjects}
         className="bg-[#915EFF] text-white px-3 py-2 md:px-4 md:py-2 rounded-lg mb-4"
       >
         Back to Projects

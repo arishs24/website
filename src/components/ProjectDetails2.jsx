@@ -1,6 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import TechBox from "./TechBox";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei"; // For model interaction
+import { useGLTF } from "@react-three/drei";
+
+
+const HipImplantViewer = () => {
+  const { scene } = useGLTF("/models/hip-implant.glb"); // Ensure path is correct
+  return <primitive object={scene} scale={0.5} />;
+};
 
 const ProjectDetails2 = () => {
   const location = useLocation();
@@ -18,11 +27,30 @@ const ProjectDetails2 = () => {
     return null;
   }
 
+  const handleBackToProjects = () => {
+    if (window.location.pathname === "/") {
+      // If already on the homepage, scroll to the #projects section
+      const section = document.getElementById("projects");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // Navigate to the homepage and scroll after it loads
+      navigate("/");
+      setTimeout(() => {
+        const section = document.getElementById("projects");
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100); // Delay to allow homepage to load
+    }
+  };
+
   return (
     <div className="w-full min-h-screen bg-gray-900 p-4 md:p-10 bg-tertiary p-4 md:p-8 lg:p-10 rounded-lg">
       {/* Back Button */}
       <button
-        onClick={() => navigate("/#projects")}
+        onClick={handleBackToProjects}
         className="bg-[#915EFF] text-white px-3 py-2 md:px-4 md:py-2 rounded-lg mb-4"
       >
         Back to Projects
@@ -133,6 +161,36 @@ const ProjectDetails2 = () => {
     </div>
   )}
 </div>
+
+<div
+  className="border border-gray-700 rounded-lg mb-6"
+  onClick={() => toggleSection("3dModel")}
+>
+  <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
+    Interactive Hip Implant Model
+  </h3>
+  {activeSection === "3dModel" && (
+    <div className="p-6 bg-gray-800 text-white">
+      <p className="mb-4">
+        Explore the interactive 3D model of the <span className="text-yellow-400 font-bold">PEEKformance</span> hip implant:
+      </p>
+      <div className="w-full h-[500px] bg-gray-900 rounded-lg">
+        <Suspense fallback={<div>Loading 3D Model...</div>}>
+          <Canvas camera={{ position: [0.5, 0.5, 0.5], fov: 30 }}>
+            <ambientLight intensity={0.6} />
+            <directionalLight position={[2, 2, 2]} />
+            <OrbitControls enableZoom={true} />
+            <HipImplantViewer />
+          </Canvas>
+        </Suspense>
+      </div>
+      <p className="mt-4 text-gray-400 text-sm">
+        Use your mouse or touch gestures to rotate, zoom, and explore the 3D model.
+      </p>
+    </div>
+  )}
+</div>
+
 
 
             {/* Accordion Section: Objectives and Constraints */}
