@@ -7,10 +7,22 @@ const ProjectDetails = () => {
   const navigate = useNavigate();
   const project = location.state?.project;
 
-  const [activeSection, setActiveSection] = useState("");
+
+  const [openSections, setOpenSections] = useState({
+      patientProfile: true,
+      objectives: true,
+      solution: true,
+      resp: true,
+      learning: true,
+      results: true,
+    });
+
 
   const toggleSection = (section) => {
-    setActiveSection((prev) => (prev === section ? "" : section));
+    setOpenSections((prev) => ({
+      ...prev,
+      [section]: !prev[section], // Toggle the specific section
+    }));
   };
 
   if (!project) {
@@ -108,7 +120,7 @@ const ProjectDetails = () => {
   <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
     Patient Profile
   </h3>
-  {activeSection === "patientProfile" && (
+  {openSections["patientProfile"] && (
     <div className="p-6 bg-gray-800 text-white rounded-lg">
       <p className="mb-4 text-lg">
         Our patient, <strong className="text-yellow-400">Kate Austen</strong>, uses a colostomy bag and often experiences frequent detachment of her current bag during physical activities due to a failure in the snap-in mechanism.
@@ -132,7 +144,7 @@ const ProjectDetails = () => {
   <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
     Establishing Objectives and Constraints
   </h3>
-  {activeSection === "objectives" && (
+  {openSections["objectives"] && (
     <div className="p-6 bg-gray-800 text-white rounded-lg">
       <p className="mb-6 text-lg">
         For this milestone, the team gathered information about our unique design challenge, defined a need statement, and identified a set of objectives and constraints. These aspects were fundamental to formulating an engineering problem solution.
@@ -178,7 +190,7 @@ const ProjectDetails = () => {
   <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
     Proposed Solution
   </h3>
-  {activeSection === "solution" && (
+  {openSections["solution"] && (
     <div className="p-6 bg-gray-800 text-white rounded-lg">
       <p className="mb-6 text-lg">
         The <span className="text-yellow-400 font-bold">Twist-Lock Ostomy</span> was designed to address coupling failure and ensure enhanced usability for users:
@@ -222,7 +234,7 @@ const ProjectDetails = () => {
   <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
     Responsibilities and Contributions
   </h3>
-  {activeSection === "resp" && (
+  {openSections["resp"] && (
     <div className="p-6 bg-gray-800 text-white rounded-lg">
       <ul className="list-disc pl-5 space-y-6 text-lg">
         {/* Team Manager Section */}
@@ -266,7 +278,7 @@ const ProjectDetails = () => {
   <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
   💭 Project Learning Opportunities and Challenges
   </h3>
-  {activeSection === "learning" && (
+  {openSections["learning"] && (
     <div className="p-6 bg-gray-800 text-white rounded-lg">
       <ul className="list-disc pl-5 space-y-6 text-lg">
         {/* Project Learning Section */}
@@ -326,7 +338,7 @@ const ProjectDetails = () => {
   <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
     Final Results, Thoughts, & Regrets
   </h3>
-  {activeSection === "results" && (
+  {openSections["results"] && (
     <div className="p-6 bg-gray-800 text-white rounded-lg">
       <p className="italic text-yellow-400 mb-6">
         "We do not learn from experience... we learn from reflecting on experience." – John Dewey

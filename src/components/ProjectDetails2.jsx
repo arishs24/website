@@ -16,10 +16,23 @@ const ProjectDetails2 = () => {
   const navigate = useNavigate();
   const project = location.state?.project;
 
-  const [activeSection, setActiveSection] = useState("");
+  // All sections start as open by default
+  const [openSections, setOpenSections] = useState({
+    patientProfile: true,
+    objectives: true,
+    solution: true,
+    materials: true,
+    responsibilities: true,
+    learningChallenges: true,
+    reflection: true,
+    "3dModel": true,
+  });
 
   const toggleSection = (section) => {
-    setActiveSection((prev) => (prev === section ? "" : section));
+    setOpenSections((prev) => ({
+      ...prev,
+      [section]: !prev[section], // Toggle the state of the clicked section
+    }));
   };
 
   if (!project) {
@@ -88,7 +101,7 @@ const ProjectDetails2 = () => {
             </div>
 
             {/* Technical Skills */}
-            <div>
+            <div className="mb-10">
               <h3 className="text-xl font-semibold mb-2">Technical Skills:</h3>
               <div className="flex flex-wrap gap-4">
                 {project.technicalSkills.map((skill, idx) => (
@@ -97,7 +110,31 @@ const ProjectDetails2 = () => {
               </div>
             </div>
           </div>
-
+{/* Interactive Hip Implant Model */}
+<div className="border border-gray-700 rounded-lg mb-10"> {/* Added bottom margin for spacing */}
+  <h3 className="text-lg font-semibold p-4 text-secondary">
+    Interactive Hip Implant Model
+  </h3>
+  {/* Content is always visible */}
+  <div className="p-6 bg-gray-800 text-white">
+    <p className="mb-4">
+      Explore the interactive 3D model of the <span className="text-yellow-400 font-bold">PEEKformance</span> hip implant:
+    </p>
+    <div className="w-full h-[500px] bg-gray-900 rounded-lg">
+      <Suspense fallback={<div>Loading 3D Model...</div>}>
+        <Canvas camera={{ position: [0.5, 0.5, 0.5], fov: 30 }}>
+          <ambientLight intensity={0.6} />
+          <directionalLight position={[2, 2, 2]} />
+          <OrbitControls enableZoom={true} />
+          <HipImplantViewer />
+        </Canvas>
+      </Suspense>
+    </div>
+    <p className="mt-4 text-gray-400 text-sm">
+      Use your mouse or touch gestures to rotate, zoom, and explore the 3D model.
+    </p>
+  </div>
+</div>
 
             {/* {project.image && (
               <img
@@ -110,25 +147,16 @@ const ProjectDetails2 = () => {
 
           {/* Right Column: Informative Sections */}
           <div className="col-span-3">
-{/* Accordion Section: Patient Profile */}
-<div
+          <div
   className="border border-gray-700 rounded-lg mb-6"
   onClick={() => toggleSection("patientProfile")}
 >
-  <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
-    Patient Profile:
+  <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer flex justify-between items-center">
+    Patient Profile: <span className="text-gray-400">↧</span>
   </h3>
-  {activeSection === "patientProfile" && (
+  {openSections["patientProfile"] && (
     <div className="p-6 bg-gray-800 text-white">
       <ul className="list-disc pl-6 space-y-6">
-        <li>
-          <strong>Symptoms:</strong>
-          <ul className="list-disc pl-6 mt-2 space-y-2">
-            <li>Severe hip, thigh, and groin pain</li>
-            <li>Morning stiffness and discomfort when sitting or walking</li>
-            <li>Nodules on toes</li>
-          </ul>
-        </li>
         <li>
           <strong>Clinical Findings:</strong>
           <ul className="list-disc pl-6 mt-2 space-y-2">
@@ -136,60 +164,39 @@ const ProjectDetails2 = () => {
             <li>WBC count (30,200)</li>
             <li>CCP levels (28 u/mL)</li>
             <li>
-              X-rays showing bone erosion and reduced joint space (Fig. 1 and
-              Fig. 2)
+              X-rays showing bone erosion and reduced joint space (<strong>Fig. 1</strong> and <strong>Fig. 2</strong>)
             </li>
           </ul>
-        </li>
-        <li>
-          <strong>Miscellaneous Notes:</strong>
-          <ul className="list-disc pl-6 mt-2 space-y-2">
-            <li>Allergic to metal</li>
-            <li>Athletic lifestyle</li>
-          </ul>
-        </li>
-        <li>
-          <strong>Patient Final Diagnosis:</strong>
-          <ul className="list-disc pl-6 mt-2 space-y-2">
-            <li>
-              <strong>Bilateral Rheumatoid Arthritis (RA):</strong> Based on
-              symptoms, inflammatory markers, CCP levels, and imaging findings.
-            </li>
-          </ul>
+          {/* Images for Fig. 1 and Fig. 2 */}
+          <div className="flex flex-wrap gap-6 mt-4">
+            <div className="w-full md:w-1/2">
+              <img
+                src="/dp/lefthip.png"
+                alt="X-ray showing bone erosion (Fig. 1)"
+                className="rounded-lg shadow-lg"
+              />
+              <p className="text-sm text-gray-400 mt-2 text-center">
+                <strong>Fig. 1:</strong> X-ray showing bone erosion
+              </p>
+            </div>
+            <div className="w-full md:w-1/2">
+              <img
+                src="/dp/righthip.png"
+                alt="X-ray showing reduced joint space (Fig. 2)"
+                className="rounded-lg shadow-lg"
+              />
+              <p className="text-sm text-gray-400 mt-2 text-center">
+                <strong>Fig. 2:</strong> X-ray showing reduced joint space
+              </p>
+            </div>
+          </div>
         </li>
       </ul>
     </div>
   )}
 </div>
 
-<div
-  className="border border-gray-700 rounded-lg mb-6"
-  onClick={() => toggleSection("3dModel")}
->
-  <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
-    Interactive Hip Implant Model
-  </h3>
-  {activeSection === "3dModel" && (
-    <div className="p-6 bg-gray-800 text-white">
-      <p className="mb-4">
-        Explore the interactive 3D model of the <span className="text-yellow-400 font-bold">PEEKformance</span> hip implant:
-      </p>
-      <div className="w-full h-[500px] bg-gray-900 rounded-lg">
-        <Suspense fallback={<div>Loading 3D Model...</div>}>
-          <Canvas camera={{ position: [0.5, 0.5, 0.5], fov: 30 }}>
-            <ambientLight intensity={0.6} />
-            <directionalLight position={[2, 2, 2]} />
-            <OrbitControls enableZoom={true} />
-            <HipImplantViewer />
-          </Canvas>
-        </Suspense>
-      </div>
-      <p className="mt-4 text-gray-400 text-sm">
-        Use your mouse or touch gestures to rotate, zoom, and explore the 3D model.
-      </p>
-    </div>
-  )}
-</div>
+
 
 
 
@@ -201,7 +208,7 @@ const ProjectDetails2 = () => {
               <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
                 Establishing Objectives and Constraints:
               </h3>
-              {activeSection === "objectives" && (
+              {openSections["objectives"] && (
                 <div className="p-4 bg-gray-800 text-white">
                   <p className="mb-4">
                   For this milestone, the team had to gather information based on our unique design challenge, define a need statement, and identify a set of objectives and constraints. These were aspects of the fundamental concepts of engineering problem solutions. 
@@ -233,15 +240,15 @@ const ProjectDetails2 = () => {
               )}
             </div>
 
-            {/* Accordion Section: Proposed Solution */}
-            <div
+{/* Accordion Section: Proposed Solution */}
+<div
   className="border border-gray-700 rounded-lg mb-6"
   onClick={() => toggleSection("solution")}
 >
   <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
     Proposed Solution:
   </h3>
-  {activeSection === "solution" && (
+  {openSections["solution"] && (
     <div className="p-4 bg-gray-800 text-white">
       <p className="mb-4">
         The <span className="text-yellow-400 font-bold">PEEKformance</span>{" "}
@@ -252,16 +259,33 @@ const ProjectDetails2 = () => {
         <li>
           <strong>Femoral Stem:</strong>
           <ul className="list-disc pl-5">
-            <li>Designed with <strong>anti-rotational fins</strong> to prevent micromotion and ensure stability during physical activity.</li>
-            <li>Features an <strong>anterior bow curve</strong> that mimics the natural femoral curvature to reduce stress during implantation.</li>
-            <li>Constructed with <strong>Zirconia with Diamond-Like Carbon (DLC) Coating</strong> to provide durability, fracture resistance, and a low-friction surface.</li>
+            <li>
+              Designed with <strong>anti-rotational fins</strong> to prevent
+              micromotion and ensure stability during physical activity.
+            </li>
+            <li>
+              Features an <strong>anterior bow curve</strong> that mimics the
+              natural femoral curvature to reduce stress during implantation.
+            </li>
+            <li>
+              Constructed with{" "}
+              <strong>Zirconia with Diamond-Like Carbon (DLC) Coating</strong>{" "}
+              to provide durability, fracture resistance, and a low-friction
+              surface.
+            </li>
           </ul>
         </li>
         <li>
           <strong>Acetabular Cup:</strong>
           <ul className="list-disc pl-5">
-            <li>Crafted from <strong>semi-crystalline polymer</strong>, offering low wear and high biocompatibility.</li>
-            <li>Features a <strong>textured surface</strong> for better grip and improved bone stability.</li>
+            <li>
+              Crafted from <strong>semi-crystalline polymer</strong>, offering
+              low wear and high biocompatibility.
+            </li>
+            <li>
+              Features a <strong>textured surface</strong> for better grip and
+              improved bone stability.
+            </li>
             <li>Includes screw holes for enhanced anchorage during surgical fixation.</li>
             <li>Reduces wear and friction for long-term durability.</li>
           </ul>
@@ -270,22 +294,45 @@ const ProjectDetails2 = () => {
           <strong>Screws:</strong>
           <ul className="list-disc pl-5">
             <li>
-              <strong>Hydroxyapatite-coated screws:</strong> Designed to promote bone growth, reduce micromotion, and enhance implant stability.
+              <strong>Hydroxyapatite-coated screws:</strong> Designed to promote
+              bone growth, reduce micromotion, and enhance implant stability.
             </li>
           </ul>
         </li>
         <li>
           <strong>Why PEEKformance?</strong>
           <ul className="list-disc pl-5">
-            <li><strong>Metal-Free:</strong> Utilizes polymer and ceramic materials to eliminate allergic reactions and improve biocompatibility.</li>
-            <li><strong>Stress Reduction:</strong> PEEK material reduces stress shielding and improves weight distribution across the implant.</li>
-            <li><strong>Durability and Comfort:</strong> Zirconia with DLC coating provides fracture resistance and longevity, while shock-absorbing liners enhance patient comfort during physical activity.</li>
+            <li>
+              <strong>Metal-Free:</strong> Utilizes polymer and ceramic materials
+              to eliminate allergic reactions and improve biocompatibility.
+            </li>
+            <li>
+              <strong>Stress Reduction:</strong> PEEK material reduces stress
+              shielding and improves weight distribution across the implant.
+            </li>
+            <li>
+              <strong>Durability and Comfort:</strong> Zirconia with DLC coating
+              provides fracture resistance and longevity, while shock-absorbing
+              liners enhance patient comfort during physical activity.
+            </li>
           </ul>
         </li>
       </ul>
+      {/* Exploded CAD View */}
+      <div className="mt-6">
+        <img
+          src="/dp/drawing.png"
+          alt="Exploded CAD view of the PEEKformance hip implant"
+          className="w-full max-w-sm rounded-lg shadow-lg"        />
+        <p className="text-sm text-gray-400 mt-2 text-center">
+          <strong>Fig. 1:</strong> Exploded CAD view of the PEEKformance hip
+          implant showcasing key components.
+        </p>
+      </div>
     </div>
   )}
 </div>
+
 <div
   className="border border-gray-700 rounded-lg mb-6"
   onClick={() => toggleSection("materials")}
@@ -293,7 +340,7 @@ const ProjectDetails2 = () => {
   <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
     Material Selection:
   </h3>
-  {activeSection === "materials" && (
+  {openSections["materials"] && (
     <div className="p-4 bg-gray-800 text-white">
       <p className="mb-4">
         The <span className="text-yellow-400 font-bold">PEEKformance</span>{" "}
@@ -301,21 +348,40 @@ const ProjectDetails2 = () => {
       </p>
       <ul className="list-decimal pl-5 space-y-4">
         <li>
-          <strong>Polyetheretherketone (PEEK):</strong> A biocompatible polymer with reinforced carbon fibers to reduce stress shielding and match bone elasticity.
+          <strong>Polyetheretherketone (PEEK):</strong> A biocompatible polymer
+          with reinforced carbon fibers to reduce stress shielding and match
+          bone elasticity.
         </li>
         <li>
-          <strong>Hydroxyapatite Coating:</strong> Applied to screw threads and surfaces to promote osseointegration and bone growth.
+          <strong>Hydroxyapatite Coating:</strong> Applied to screw threads and
+          surfaces to promote osseointegration and bone growth.
         </li>
         <li>
-          <strong>Vitamin E-Infused Polyethylene (VEHXPE):</strong> Enhances wear resistance, reduces implant degradation, and improves longevity.
+          <strong>Vitamin E-Infused Polyethylene (VEHXPE):</strong> Enhances
+          wear resistance, reduces implant degradation, and improves longevity.
         </li>
         <li>
-          <strong>Zirconia with Diamond-Like Carbon (DLC) Coating:</strong> Provides durability, fracture resistance, and a low-friction surface for improved performance and comfort.
+          <strong>Zirconia with Diamond-Like Carbon (DLC) Coating:</strong>{" "}
+          Provides durability, fracture resistance, and a low-friction surface
+          for improved performance and comfort.
         </li>
       </ul>
+      {/* Add Image Below */}
+      <div className="mt-6 flex justify-center">
+        <img
+          src="/dp/exploded.png"
+          alt="Exploded view of the PEEKformance hip implant materials"
+          className="w-full max-w-md rounded-lg shadow-lg"
+        />
+        <p className="text-sm text-gray-400 mt-2 text-center">
+          <strong>Fig. 2:</strong> Exploded view of the PEEKformance hip implant,
+          highlighting advanced material applications.
+        </p>
+      </div>
     </div>
   )}
 </div>
+
 
 <div
   className="border border-gray-700 rounded-lg mb-6"
@@ -324,7 +390,7 @@ const ProjectDetails2 = () => {
   <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
     Responsibilities and Contributions:
   </h3>
-  {activeSection === "responsibilities" && (
+  {openSections["responsibilities"] && (
     <div className="p-4 bg-gray-800 text-white">
       <ul className="list-decimal pl-5 space-y-4">
         <li>
@@ -356,7 +422,7 @@ const ProjectDetails2 = () => {
   <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
     💭 Project Learning Opportunities and Challenges
   </h3>
-  {activeSection === "learningChallenges" && (
+  {openSections["learningChallenges"] && (
     <div className="p-4 bg-gray-800 text-white">
       <ul className="list-decimal pl-5 space-y-4">
         <li>
@@ -389,9 +455,23 @@ const ProjectDetails2 = () => {
           </p>
         </li>
       </ul>
+
+      {/* Add Poster Image */}
+      <div className="mt-6 flex justify-center">
+        <img
+          src="/dp/poster.png"
+          alt="Project Poster"
+          className="w-full max-w-lg rounded-lg shadow-lg"
+        />
+        <p className="text-sm text-gray-400 mt-2 text-center">
+          <strong>Fig. 3:</strong> Final poster presentation summarizing the CAD
+          models and research findings.
+        </p>
+      </div>
     </div>
   )}
 </div>
+
 
 
             {/* Accordion Section: Final Results */}
@@ -402,7 +482,7 @@ const ProjectDetails2 = () => {
   <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
     Reflecting on the Project
   </h3>
-  {activeSection === "reflection" && (
+  {openSections["reflection"] && (
     <div className="p-4 bg-gray-800 text-white">
       <p className="italic text-yellow-400 mb-4">
         "Success is stumbling from failure to failure with no loss of
