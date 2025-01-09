@@ -325,8 +325,8 @@ const ProjectDetails2 = () => {
           alt="Exploded CAD view of the PEEKformance hip implant"
           className="w-full max-w-sm rounded-lg shadow-lg"        />
         <p className="text-sm text-gray-400 mt-2 text-center">
-          <strong>Fig. 1:</strong> Exploded CAD view of the PEEKformance hip
-          implant showcasing key components.
+          <strong>Fig. 3:</strong> Drawing of preliminary implant with all parts.
+           showcasing key components.
         </p>
       </div>
     </div>
@@ -374,7 +374,7 @@ const ProjectDetails2 = () => {
           className="w-full max-w-md rounded-lg shadow-lg"
         />
         <p className="text-sm text-gray-400 mt-2 text-center">
-          <strong>Fig. 2:</strong> Exploded view of the PEEKformance hip implant,
+          <strong>Fig. 4:</strong> Exploded view of the PEEKformance hip implant,
           highlighting advanced material applications.
         </p>
       </div>
@@ -464,7 +464,7 @@ const ProjectDetails2 = () => {
           className="w-full max-w-lg rounded-lg shadow-lg"
         />
         <p className="text-sm text-gray-400 mt-2 text-center">
-          <strong>Fig. 3:</strong> Final poster presentation summarizing the CAD
+          <strong>Fig. 5:</strong> Final poster presentation summarizing the CAD
           models and research findings.
         </p>
       </div>

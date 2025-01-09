@@ -193,7 +193,7 @@ const ProjectDetails = () => {
   {openSections["solution"] && (
     <div className="p-6 bg-gray-800 text-white rounded-lg">
       <p className="mb-6 text-lg">
-        The <span className="text-yellow-400 font-bold">Twist-Lock Ostomy</span> was designed to address coupling failure and ensure enhanced usability for users:
+        The <span className="text-yellow-400 font-bold">Twist N Go</span> was designed to address coupling failure and ensure enhanced usability for users:
       </p>
       <ul className="list-decimal pl-5 space-y-6 text-lg">
         <li>
