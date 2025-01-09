@@ -475,7 +475,8 @@ const ProjectDetails2 = () => {
 
 
             {/* Accordion Section: Final Results */}
-            <div
+ {/* Accordion Section: Final Results */}
+<div
   className="border border-gray-700 rounded-lg mb-6"
   onClick={() => toggleSection("reflection")}
 >
@@ -532,9 +533,19 @@ const ProjectDetails2 = () => {
           </p>
         </li>
       </ul>
+      <p className="mt-4 text-yellow-300">
+        **What I Could've Done Better Overall:** I could have implemented a
+        more structured project timeline with clear milestones and contingency
+        plans for unexpected delays. 
+        <br />
+        **Outcome:** This would have ensured better time management, reduced
+        last-minute stress, and allowed for deeper exploration of design
+        improvements and validation processes.
+      </p>
     </div>
   )}
 </div>
+
 
           </div>
         </div>

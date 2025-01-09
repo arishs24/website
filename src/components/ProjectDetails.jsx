@@ -358,7 +358,7 @@ const ProjectDetails = () => {
 
 
 
-          {/* Accordion Section: Final Results */}
+{/* Accordion Section: Final Results */}
 <div
   className="border border-gray-700 rounded-lg mb-6"
   onClick={() => toggleSection("results")}
@@ -370,6 +370,9 @@ const ProjectDetails = () => {
     <div className="p-6 bg-gray-800 text-white rounded-lg">
       <p className="italic text-yellow-400 mb-6">
         "We do not learn from experience... we learn from reflecting on experience." – John Dewey
+      </p>
+      <p className="mb-6">
+        This quote resonates deeply with this project, emphasizing that true growth comes from examining our actions, decisions, and their outcomes. By reflecting, I could extract meaningful lessons that shaped the process and future approaches to problem-solving.
       </p>
       <ul className="list-disc pl-5 space-y-6 text-lg">
         {/* Early Challenges Section */}
@@ -405,6 +408,14 @@ const ProjectDetails = () => {
           </p>
         </li>
       </ul>
+      <p className="mt-6 text-yellow-300">
+        **What I Could've Done Better Overall:** I could have allocated more
+        time to testing and refining the design before finalizing our prototype.
+        <br />
+        **Outcome:** This additional effort could have led to a more polished and
+        functional prototype, addressing minor design flaws and enhancing the
+        overall user experience.
+      </p>
     </div>
   )}
 </div>
