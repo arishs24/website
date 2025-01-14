@@ -589,6 +589,56 @@ technicalSkills: ["✅CAD Using Autodesk Inventor 2025", "✅Engineering Sketche
       source_code_link: "https://github.com/arishs24/iremia",
     },
     {
+      name: "Islamic Hub",
+      description:
+        "Developed an Advanced Islamic Desktop Companion, calculating prayer times, locating nearby restaurants and mosques, interactive Quran feature, etc.",
+      tags: [
+        {
+          name: "JavaFX",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "OOP",
+          color: "green-text-gradient",
+        },
+        {
+          name: "JSON",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "API",
+          color: "green-text-gradient",
+        },
+      ],
+      image: "/islam.png",
+      source_code_link: "https://github.com/arishs24/IslamicHub",
+    },
+    {
+      name: "Weather App using Pygame",
+      description:
+        "Developed a Weather App using Pygame, integrating APIs and live-updates through data parsing.",
+      tags: [
+        {
+          name: "Python (Pygame)",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "JSON",
+          color: "green-text-gradient",
+        },
+        {
+          name: "API",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "OpenAI",
+          color: "green-text-gradient",
+        },
+      ],
+      image: "/weather.jpeg",
+      source_code_link: "https://github.com/arishs24/iremia",
+    },
+    {
       name: "Portfolio Website",
       description:
         "Designed and developed a personal portfolio using ThreeJS to showcase 3D models and animations, creating an interactive and visually impressive user experience.",
