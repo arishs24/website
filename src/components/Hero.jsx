@@ -83,12 +83,13 @@ const Hero = () => {
             {/* Resume Button */}
             <a
               href="/resume.pdf"
-              download
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-white text-3xl bg-green-600 hover:bg-green-500 p-3 rounded-full transition-colors"
-              title="Download Resume"
-            >
-              <FaFileDownload />
-            </a>
+              title="Open Resume"
+>
+  <FaFileDownload />
+</a>
           </div>
         </div>
       </div>

@@ -371,6 +371,43 @@ technicalSkills: ["✅CAD Using Autodesk Inventor 2025", "✅Engineering Sketche
   
   const projects = [
     {
+      name: "FitBud",
+      description:
+        "FitBud is a real-time motion monitoring and workout optimization system that leverages machine learning to classify exercises like bicep curls, providing actionable feedback such as 'move up' or 'move left' to improve form and performance while ensuring accuracy and safety.",
+      tags: [
+        {
+          name: "Python",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Machine Learning",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Arduino",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "RAG",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "C++",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "Socket.IO",
+          color: "yellow-text-gradient",
+        },
+        {
+          name: "React",
+          color: "red-text-gradient",
+        },
+      ],
+      image: "/fitbud.png",
+      source_code_link: "https://github.com/arishs24/FitBud",
+    },
+    {
       name: "Aqua Boost",
       description:
         "Aqua Boost is an advanced hydration system designed to optimize water intake by utilizing bioimpedance sensors to monitor and analyze the body's hydration levels in real-time, ensuring precise and personalized hydration management.",
@@ -445,6 +482,113 @@ technicalSkills: ["✅CAD Using Autodesk Inventor 2025", "✅Engineering Sketche
       source_code_link: "https://github.com/arishs24/inventory_tracker",
     },
     {
+      name: "MedVault XR",
+      description:
+        "Developed an augmented reality (AR) solution to provide immersive consultations, medication guidance, and chronic disease management. The platform replicates an in-person pharmacy experience virtually, empowering rural patients to understand and use their medications effectively.",
+      tags: [
+        {
+          name: "Blockchain",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Augmented Reality",
+          color: "green-text-gradient",
+        },
+        {
+          name: "React",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "Firebase",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "AR.js",
+          color: "green-text-gradient",
+        },
+        {
+          name: "TailwindCSS",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "OpenAI",
+          color: "green-text-gradient",
+        },
+      ],
+      image: "/Pharm.png",
+      source_code_link: "https://github.com/arishs24/MedVaultXR",
+    },
+    {
+      name: "JellyAR",
+      description:
+        "Created a system that automatically applies augmented reality (AR) effects and visual filters to video clips based on the content of the conversation, enhancing the visual appeal and engagement of the videos.",
+      tags: [
+        {
+          name: "Augemented Reality",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Python",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Tensor Flow",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "Three JS",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "OpenCV",
+          color: "green-text-gradient",
+        },
+        {
+          name: "FFMPEG",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: "/Jelly.png",
+      source_code_link: "https://github.com/arishs24/JellyAR",
+    },
+    {
+      name: "Iremia (Raspberry Pi Fitness Tracker)",
+      description:
+        "Developed a Raspberry Pi-integrated fitness tracking and monitoring system that tracks key health metrics and provides real-time feedback to enhance workout effectiveness and health monitoring.",
+      tags: [
+        {
+          name: "Raspberry Pi",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Python",
+          color: "green-text-gradient",
+        },
+        {
+          name: "IoT",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "Flask",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "EMG Sensor",
+          color: "green-text-gradient",
+        },
+        {
+          name: "React",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "OpenAI",
+          color: "green-text-gradient",
+        },
+      ],
+      image: "/workout.png",
+      source_code_link: "https://github.com/arishs24/iremia",
+    },
+    {
       name: "Portfolio Website",
       description:
         "Designed and developed a personal portfolio using ThreeJS to showcase 3D models and animations, creating an interactive and visually impressive user experience.",
@@ -475,7 +619,7 @@ technicalSkills: ["✅CAD Using Autodesk Inventor 2025", "✅Engineering Sketche
         },
       ],
       image: tripguide,
-      source_code_link: "https://github.com/arishs24/Portfolio-Website",
+      source_code_link: "https://github.com/arishs24/website",
     },
   ];
   
