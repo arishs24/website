@@ -76,6 +76,18 @@ import {
   
   const experiences = [
     {
+      title: "Computational Neuroscience Researcher",
+      company_name: "Johns Hopkins Univeristy | NeuroData Lab",
+      icon: "/hopkin.jpeg",
+      iconBg: "#383E56",
+      date: "July 2024 - Present",
+      points: [
+        "Developed and optimized machine learning algorithms for analyzing complex neural data to support insights in neuroscience and clinical research.",
+        "Improved computational efficiency of algorithms using advanced data processing techniques, contributing to more accurate and robust research outcomes.",
+        "Collaborated with a multidisciplinary team to design models aimed at understanding neural patterns and enhancing data-driven decision-making in healthcare."
+      ],
+    },
+    {
       title: "Orthopaedic Clinical Research Intern",
       company_name: "Hamilton Health Sciences | Juravinski Hospital",
       icon: starbucks,
@@ -93,7 +105,7 @@ import {
       company_name: "Headstarter AI",
       icon: tesla,
       iconBg: "#E6DEDD",
-      date: "July 2024 - Present",
+      date: "July 2024 - September 2024",
       points: [
         "Built 5+ API apps and APIs using NextJS, OpenAI, Pinecone, StripeAPI with 98% accuracy as seen by 1000 users.",
         "Developed projects from design to deployment leading 4+ engineering fellows using MVC design patterns.",
@@ -211,6 +223,19 @@ export const education = [
 
 
 export const volunteerExperiences = [
+  {
+    title: "Frequency Writer - McMaster Engineering Journal",
+    company_name: "McMaster Engineering Society",
+    icon: "/mac.jpg",
+    iconBg: "#FF0000",
+    date: "September 2024 - Present",
+    points: [
+    "Wrote engaging and research-backed articles for The Frequency, McMaster Engineering's student journal.",
+    "Collaborated with the editorial team to pitch ideas, refine drafts, and align content with the journal's themes.",
+    "Conducted thorough research and interviews to ensure accuracy and depth in articles."
+    ],
+    link: 'https://macengsociety.ca/pdfs/frequency/TheFrequency_fall_2024.pdf',
+    },
   {
     title: "Dialysis Assistant",
     company_name: "Trillium Health Partners",
