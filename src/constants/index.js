@@ -396,6 +396,47 @@ technicalSkills: ["✅CAD Using Autodesk Inventor 2025", "✅Engineering Sketche
   
   const projects = [
     {
+      name: "Baymax (Healthcare Robot Assistant)",
+      description:
+        "Baymax Bot is a health and general companion robot designed to provide personalized care for users of all ages. Featuring a custom-trained voice model, a fine-tuned ChatGPT API, and real-time emotion detection, the robot delivers tailored medical and emotional support. Built with a Raspberry Pi, motors, servos, voltage regulators, and 3D-printed components, Baymax Bot physically interacts with its environment while a React-based web app and secure data storage ensure a safe, interactive, and user-friendly healthcare experience for children, adults, and seniors alike.",
+      tags: [
+        {
+          name: "Python",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "MOSFETs, Voltage Regulators & Motor Controllers",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Tensor Flow",
+          color: "green-text-gradient",
+        },
+        {
+          name: "OpenCV",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "Raspberry Pi",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "React",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "Firebase",
+          color: "yellow-text-gradient",
+        },
+        {
+          name: "React",
+          color: "red-text-gradient",
+        },
+      ],
+      image: "/IMG_4283.jpg",
+      source_code_link: "https://github.com/subodh-thallada/Baymax-UofT-Hacks-12-",
+    },
+    {
       name: "FitBud",
       description:
         "FitBud is a real-time motion monitoring and workout optimization system that leverages machine learning to classify exercises like bicep curls, providing actionable feedback such as 'move up' or 'move left' to improve form and performance while ensuring accuracy and safety.",
