@@ -1,16 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from './components';
-import ProjectDetails from './components/ProjectDetails'; // Import the new ProjectDetails component
+import ProjectDetails from './components/ProjectDetails';
+import ProjectDetails2 from './components/ProjectDetails2';
+import ProjectDetails3 from './components/ProjectDetails3';
+import ProjectDetails4 from './components/ProjectDetails4';
 import DP1Page from "./components/DP1Page";
-import ProjectDetails2 from './components/ProjectDetails2'; // Import the new ProjectDetails component
-
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        {/* Main Page with all sections */}
         <Route
           path="/"
           element={
@@ -32,9 +32,10 @@ const App = () => {
           }
         />
 
-        {/* Project Details Page */}
         <Route path="/project/0" element={<ProjectDetails />} />
         <Route path="/project/1" element={<ProjectDetails2 />} />
+        <Route path="/project/2" element={<ProjectDetails3 />} />
+        <Route path="/project/3" element={<ProjectDetails4 />} />
         <Route path="/dp1" element={<DP1Page />} />
       </Routes>
     </Router>

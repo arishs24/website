@@ -43,7 +43,7 @@ const About = () => {
           variants={fadeIn('', '', 0.1, 1)}
           className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          👋 Hello World! I’m Arish Shahab – a Biomedical Engineering and Health Sciences student at McMaster University with a passion for combining technology and healthcare to create meaningful solutions.<br /><br />
+          👋 Hello World! I’m Arish Shahab, a Biomedical Engineering and Health Sciences student at McMaster University with a passion for combining technology and healthcare to create meaningful solutions.<br /><br />
           
           📚 I’ve gained valuable experience working at institutions like Johns Hopkins University, where I optimized machine learning models for neuroscience research, and Hamilton Health Sciences, where I contributed to advancements in orthopedic applications. These experiences have equipped me with skills in computational modeling, machine learning, and biomedical device design.<br /><br />
           

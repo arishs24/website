@@ -392,13 +392,105 @@ technicalSkills: ["✅CAD Using Autodesk Inventor 2025", "✅Engineering Sketche
     image: prost,
     source_code_link: "https://github.com/arishs24/dp1",
   },
+  {
+    name: "Design Project 3 - FlexAid",
+    description: "A smart rehabilitation assistant with resistance training, real-time motion feedback, and data visualization for injury recovery.",
+    sections: {
+      "Patient Profile": "The target demographic includes adults (18+) recovering from muscle injuries such as strains, overuse injuries, or partial tears. These users range from casual gym-goers to athletes. The biggest challenge they face is maintaining proper form during recovery exercises, which can lead to reinjury if not corrected.",
+      "Objectives and Constraints": "The goal was to guide users through proper rehabilitation with live feedback, adjustable resistance, and tracking — within constraints of fit, budget, and safety for all users.",
+      "Proposed Solution": "FlexAid is a wearable device with a servo-controlled resistance band, orientation sensor for motion tracking, and a Raspberry Pi interface. It alerts users when improper form is detected and tracks progress over time.",
+      "Responsibilities and Contributions": "As the SME, I designed the servo mount, gear holders, and casing using Autodesk Inventor. I led the mechanical design integration, helped with final assembly, and worked with both hardware and software teams to ensure seamless fit and function.",
+      "Project Learning Opportunities and Challenges": "I gained hands-on experience designing motion systems using bevel gears, learned the importance of tolerancing in CAD, and improved cross-team communication. We iterated through several 3D print revisions to achieve stability and motion control.",
+      "Final Results": "This project taught me that iteration and testing are just as important as initial planning. I would've allocated more time for hands-on testing earlier in the design phase to refine mechanics and feedback calibration.",
+    },
+    role: "Subject Matter Expert",
+    softSkills: ["✅Teamwork & Communication", "✅Adaptability", "✅Critical Thinking", "✅Interdisciplinary Collaboration"],
+    technicalSkills: ["✅CAD Using Autodesk Inventor 2025", "✅Bevel Gear Design", "✅3D Printing", "✅Mechanical Assembly", "✅Sensor Integration"],
+    tags: [
+      { name: "Rehabilitation", color: "blue-text-gradient" },
+      { name: "Mechanical Design", color: "green-text-gradient" },
+      { name: "Raspberry Pi", color: "pink-text-gradient" },
+    ],
+    //image: flexaid, // Make sure to import this image at the top of your file
+    source_code_link: "https://github.com/arishs24/flexaid",
+  },
+  {
+    name: "Design Project 4 - EZ-STEP",
+    description: "A wearable foot-drop assistive device that uses force sensors and a servo-driven gear system to support running for MS patients.",
+    sections: {
+      "Patient Profile": "Bradley, an adult with Multiple Sclerosis, has foot drop in his left leg and cannot run. Our goal was to create a wearable assistive device to aid his dorsiflexion, allowing him to regain confidence and mobility in running exercises.",
+      "Objectives and Constraints": "We aimed to support gait correction, ensure comfort, track cadence, and allow for real-time feedback. Constraints included size, safety, compatibility with Raspberry Pi and FSRs, and use of approved printable materials.",
+      "Proposed Solution": "EZ-STEP features a bicycle-inspired chain and gear mechanism, a servo motor triggered by FSR sensors, and a custom 3D-printed mount. It supports dorsiflexion based on gait timing, with a UI interface and real-time alerts.",
+      "Responsibilities and Contributions": "As Subject Matter Expert, I designed and printed mechanical components, helped optimize servo alignment, contributed to the DHF and final memo, and supported physical testing and iteration.",
+      "Project Learning Opportunities and Challenges": "I learned to account for servo friction and mechanical tolerance, and saw firsthand how poor placement can affect functionality. Real-time testing provided critical feedback.",
+      "Final Results": "We successfully built a working prototype that provides functional assistance. With further refinement and comfort testing, EZ-STEP can be a viable rehabilitation support device for foot drop patients.",
+    },
+    role: "Subject Matter Expert",
+    softSkills: [
+      "✅Team Collaboration",
+      "✅Problem Solving",
+      "✅Documentation",
+      "✅Mechanical Debugging",
+    ],
+    technicalSkills: [
+      "✅3D CAD with Inventor",
+      "✅FSR Integration",
+      "✅Servo Calibration",
+      "✅Gear System Design",
+    ],
+    tags: [
+      { name: "Biomedical", color: "blue-text-gradient" },
+      { name: "Assistive Tech", color: "green-text-gradient" },
+      { name: "Mechatronics", color: "pink-text-gradient" },
+    ],
+    //image: ezstep, // make sure to import or define ezstep image
+    source_code_link: "https://github.com/arishs24/ezstep", // replace with your actual repo link
+  }
+  
 ];
   
   const projects = [
+    // {
+    //   name: "SupraScan (Early Diagnostic Tool for PSP (Progressive Supraunclear Palsy)",
+    //   description:
+    //     "Developed a 3D CNN model analyzing PET/MRI scans for early PSP detection, achieving 75% accuracy and reducing false positives using detection of Tau protein and amyloid beta buildup",
+    //   tags: [
+    //     {
+    //       name: "Python",
+    //       color: "blue-text-gradient",
+    //     },
+    //     {
+    //       name: "TensorFlow",
+    //       color: "green-text-gradient",
+    //     },
+    //     {
+    //       name: "PyTorch",
+    //       color: "green-text-gradient",
+    //     },
+    //     {
+    //       name: "OpenCV",
+    //       color: "pink-text-gradient",
+    //     },
+    //     {
+    //       name: "Scikit-learn",
+    //       color: "pink-text-gradient",
+    //     },
+    //     {
+    //       name: "Streamlit",
+    //       color: "pink-text-gradient",
+    //     },
+    //     {
+    //       name: "FastAPI",
+    //       color: "yellow-text-gradient",
+    //     },
+    //   ],
+    //   image: "/psp.png",
+    //   source_code_link: "https://github.com/arishs24/SupraScan",
+    // },
     {
       name: "Baymax (Healthcare Robot Assistant)",
       description:
-        "Baymax Bot is a health and general companion robot designed to provide personalized care for users of all ages. Featuring a custom-trained voice model, a fine-tuned ChatGPT API, and real-time emotion detection, the robot delivers tailored medical and emotional support. Built with a Raspberry Pi, motors, servos, voltage regulators, and 3D-printed components, Baymax Bot physically interacts with its environment while a React-based web app and secure data storage ensure a safe, interactive, and user-friendly healthcare experience for children, adults, and seniors alike.",
+        "Baymax Bot is a health and general companion robot designed to provide personalized care for users of all ages. Featuring a custom-trained voice model, a fine-tuned ChatGPT API, and real-time OpenCV emotion detection, the robot delivers tailored medical and emotional support. Built with a Raspberry Pi, motors, servos, voltage regulators, and 3D-printed components.",
       tags: [
         {
           name: "Python",
