@@ -403,21 +403,32 @@ technicalSkills: ["✅CAD Using Autodesk Inventor 2025", "✅Engineering Sketche
       "Project Learning Opportunities and Challenges": "I gained hands-on experience designing motion systems using bevel gears, learned the importance of tolerancing in CAD, and improved cross-team communication. We iterated through several 3D print revisions to achieve stability and motion control.",
       "Final Results": "This project taught me that iteration and testing are just as important as initial planning. I would've allocated more time for hands-on testing earlier in the design phase to refine mechanics and feedback calibration.",
     },
-    role: "Subject Matter Expert",
-    softSkills: ["✅Teamwork & Communication", "✅Adaptability", "✅Critical Thinking", "✅Interdisciplinary Collaboration"],
-    technicalSkills: ["✅CAD Using Autodesk Inventor 2025", "✅Bevel Gear Design", "✅3D Printing", "✅Mechanical Assembly", "✅Sensor Integration"],
-    tags: [
-      { name: "Rehabilitation", color: "blue-text-gradient" },
-      { name: "Mechanical Design", color: "green-text-gradient" },
-      { name: "Raspberry Pi", color: "pink-text-gradient" },
-    ],
+    role: "Project Coordinator & Computing Subteam",
+softSkills: [
+  "✅Team Communication & Scheduling",
+  "✅Technical Documentation",
+  "✅Adaptability",
+  "✅Cross-Team Collaboration"
+],
+technicalSkills: [
+  "✅Machine Learning Logic for Personalized Resistance",
+  "✅GUI Development using Tkinter (Python)",
+  "✅Sensor Data Integration & Real-Time Feedback",
+  "✅Backend Logic for Raspberry Pi",
+  "✅Basic Mechanical Support (3D Printing, Assembly)"
+],
+tags: [
+  { name: "Rehabilitation", color: "blue-text-gradient" },
+  { name: "Computing Systems", color: "green-text-gradient" },
+  { name: "Raspberry Pi", color: "pink-text-gradient" }
+],
     //image: flexaid, // Make sure to import this image at the top of your file
     source_code_link: "https://github.com/arishs24/flexaid",
   },
   {
     name: "Design Project 4 - EZ-STEP",
     description: "A wearable foot-drop assistive device that uses force sensors and a servo-driven gear system to support running for MS patients.",
-    sections: {
+    sections: {                         
       "Patient Profile": "Bradley, an adult with Multiple Sclerosis, has foot drop in his left leg and cannot run. Our goal was to create a wearable assistive device to aid his dorsiflexion, allowing him to regain confidence and mobility in running exercises.",
       "Objectives and Constraints": "We aimed to support gait correction, ensure comfort, track cadence, and allow for real-time feedback. Constraints included size, safety, compatibility with Raspberry Pi and FSRs, and use of approved printable materials.",
       "Proposed Solution": "EZ-STEP features a bicycle-inspired chain and gear mechanism, a servo motor triggered by FSR sensors, and a custom 3D-printed mount. It supports dorsiflexion based on gait timing, with a UI interface and real-time alerts.",
