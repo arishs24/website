@@ -73,6 +73,9 @@ const ProjectDetails3 = () => {
     className="rounded-lg shadow-md mb-4 w-full max-h-[400px] object-contain"
   />
 
+<p className="text-sm text-gray-400 mt-2">Fig 1: Final design and version of FlexAid.</p>
+
+
           <p className="text-white text-[18px] leading-relaxed">
             <span className="text-yellow-300 font-semibold">FlexAid</span> is a wearable rehabilitation device designed to guide users through upper-limb recovery exercises by detecting motion in real time, providing personalized resistance, and offering immediate visual feedback. 
             <br /><br />
@@ -219,6 +222,8 @@ const ProjectDetails3 = () => {
       alt="Tkinter UI Screenshot"
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
+                  <p className="text-sm text-gray-400 mt-2">Fig 2: Data transmission from Raspberry Pi to frontend, displaying on graph using Matplotlib and Tkinter.</p>
+
                 </ul>
               </>
             ))}
@@ -290,6 +295,8 @@ def adjust_servo_resistance(y_avg, angular_velocity, min_flexion, max_flexion, s
       alt="Tkinter UI Screenshot"
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
+                  <p className="text-sm text-gray-400 mt-2">Fig 4: Gear Iteration, comparing prelim, with final.</p>
+
 
     <p>
       <strong>Iteration 2 – Form Correction Logic:</strong><br />
@@ -307,6 +314,9 @@ def adjust_servo_resistance(y_avg, angular_velocity, min_flexion, max_flexion, s
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
 
+<p className="text-sm text-gray-400 mt-2">Fig5 : Showing quick run down of initial code iteration, with basic commands.</p>
+
+
     <p>
       <strong>Iteration 4 – GUI & Patient Feedback:</strong><br />
       I designed and integrated a Tkinter GUI to visualize form tracking and feedback. Patient testers found this version more helpful, and we refined the layout using <code>matplotlib</code> to show motion graphs and resistance trends. Final tweaks were made to optimize for low-lag performance on Raspberry Pi.
@@ -317,6 +327,9 @@ def adjust_servo_resistance(y_avg, angular_velocity, min_flexion, max_flexion, s
       alt="Tkinter UI Screenshot"
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
+
+<p className="text-sm text-gray-400 mt-2">Fig 6: Tkinter UI, showing patient info page.</p>
+
 
     <p>
       These iterations emphasized user-centered design and data-informed refinement. Each version brought us closer to a solution that was not only technically functional but also intuitive and motivating for patients to use independently.
@@ -363,16 +376,20 @@ def adjust_servo_resistance(y_avg, angular_velocity, min_flexion, max_flexion, s
         🧠 This project wasn’t just about building a prototype,it was about learning how to bring code, components, and people together toward one goal. And often, that meant unlearning what I thought I knew. There were countless moments I’d revisit my logic and ask, <strong>Is this really the cleanest way? Is there a better method that makes this more modular, readable, or user-safe?</strong> One of the biggest wins was when we restructured our calibration logic around a flexible threshold range instead of relying on strict positional checks. That change alone simplified our flow and boosted accuracy significantly.
       </aside>
 
-      <p>
-        <strong>Initial Hurdles:</strong><br />
-        In the early development stages, aligning the orientation sensor values with consistent thresholds was difficult. Noise, drift, and inconsistent arm movement made it hard to establish a baseline. Rather than giving up, I focused on smoothing techniques and logical conditions to eliminate false alerts. Our breakthrough came from redefining the threshold not as a fixed point, but as a window.
-      </p>
-
       <img
       src="/dp/gear.png"
       alt="Tkinter UI Screenshot"
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
+                  <p className="text-sm text-gray-400 mt-2">Fig 7: Initial hurdle with gear sizing and placement.</p>
+
+      <p>
+        <strong>Initial Hurdles:</strong><br />
+        In the early development stages, aligning the orientation sensor values with consistent thresholds was difficult. Noise, drift, and inconsistent arm movement made it hard to establish a baseline. Rather than giving up, I focused on smoothing techniques and logical conditions to eliminate false alerts. Our breakthrough came from redefining the threshold not as a fixed point, but as a window.
+      </p>
+
+
+
 
       <p>
         <strong>Backend Complexity & Physical Constraints:</strong><br />
@@ -384,6 +401,8 @@ def adjust_servo_resistance(y_avg, angular_velocity, min_flexion, max_flexion, s
       alt="Tkinter UI Screenshot"
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
+                  <p className="text-sm text-gray-400 mt-2">Fig 8: Initial code idea, which was scrapped as did not work well with actual idea, used JSON.</p>
+
 
       <p>
         <strong>Team Collaboration & Technical Communication:</strong><br />

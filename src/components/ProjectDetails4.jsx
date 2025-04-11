@@ -128,6 +128,8 @@ const ProjectDetails4 = () => {
       alt="Tkinter UI Screenshot"
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
+      <p className="text-sm text-gray-400 mt-2">Fig 1: Support foot flexion during running with gear chain.</p>
+
 
                   <li>Remain lightweight and wearable</li>
                   <li>Provide accurate cadence feedback</li>
@@ -156,6 +158,8 @@ const ProjectDetails4 = () => {
       alt="Tkinter UI Screenshot"
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
+          <p className="text-sm text-gray-400 mt-2">Fig 2: Gear Chain CAD Model.</p>
+
 
               <li>Servo motor activates based on sensor timing</li>
               <li>Two FSR sensors under heel and ball of foot</li>
@@ -164,6 +168,8 @@ const ProjectDetails4 = () => {
       alt="Tkinter UI Screenshot"
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
+              <p className="text-sm text-gray-400 mt-2">Fig 3: FSR Placement, ball and heel.</p>
+
 
               <li>App GUI visualizes step count, alerts, and cadence</li>
               <li>Adjustable housing fits various footwear types</li>
@@ -173,6 +179,9 @@ const ProjectDetails4 = () => {
       alt="Tkinter UI Screenshot"
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
+
+<p className="text-sm text-gray-400 mt-2">Fig 4: Full Assembled model for adjustable housing fits.</p>
+
             </ul>
           ))}
 
@@ -270,6 +279,8 @@ while True:
       alt="Tkinter UI Screenshot"
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
+                  <p className="text-sm text-gray-400 mt-2">Fig 5: Drawing which made us question if our design is good.</p>
+
 
     <p>
       <strong>Servo Sync & FSR Timing:</strong><br />
