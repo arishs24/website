@@ -89,7 +89,7 @@ const ProjectDetails3 = () => {
             <div className="p-6 bg-gray-800 rounded-lg border border-gray-700 shadow-md">
   <h3 className="text-secondary font-semibold text-[20px] mb-3">Role:</h3>
   <p className="text-white text-[18px] leading-relaxed">
-    <span className="font-semibold text-yellow-300">Project Coordinator</span> — I was responsible for leading and scheduling all team meetings outside of Design Studio, recording discussion notes during official sessions, and maintaining clear communication with our TA throughout the design process. I also compiled and submitted the final Logbook documenting all non-studio meetings to ensure alignment across all subteams.
+    <span className="font-semibold text-yellow-300">Project Coordinator</span> , I was responsible for leading and scheduling all team meetings outside of Design Studio, recording discussion notes during official sessions, and maintaining clear communication with our TA throughout the design process. I also compiled and submitted the final Logbook documenting all non-studio meetings to ensure alignment across all subteams.
   </p>
 
   {/* Toggle Button */}
@@ -155,7 +155,7 @@ const ProjectDetails3 = () => {
           <div className="lg:col-span-9 space-y-6">
             {renderSection("Patient Profile", "patientProfile", openSections, toggleSection, (
               <p className="text-[18px] text-white leading-relaxed">
-                Our patient demographic included adults recovering from upper limb injuries. The major challenge was ensuring correct rehab form without external support. Our solution aimed to offer real-time correction, data visualization, and guided rehab—bridging gaps in solo physiotherapy sessions.
+                Our patient demographic included adults recovering from upper limb injuries. The major challenge was ensuring correct rehab form without external support. Our solution aimed to offer real-time correction, data visualization, and guided rehab,bridging gaps in solo physiotherapy sessions.
               </p>
             ))}
 
@@ -327,22 +327,22 @@ def adjust_servo_resistance(y_avg, angular_velocity, min_flexion, max_flexion, s
 {renderSection("💭 Learning Opportunities & Challenges", "learningChallenges", openSections, toggleSection, (
   <div className="space-y-6 text-[17px] text-white leading-relaxed">
     <aside>
-      👤 One of the biggest realizations I had during this project was that designing for rehabilitation isn't just about the tech — it's about *timing, comfort, and clarity.* Every time I asked myself, “Would I actually trust this device to guide my recovery?”, I discovered new gaps in how we presented feedback or structured our data flow. The complexity of integrating real-time servo motion with user-specific sensor data pushed me to rethink how feedback loops should feel — not just how they should function. It wasn’t enough to get a signal; we had to *translate* it in a way that was actionable and smooth for the user.
+      👤 One of the biggest realizations I had during this project was that designing for rehabilitation isn't just about the tech , it's about <strong>timing, comfort, and clarity.</strong> Every time I asked myself, “Would I actually trust this device to guide my recovery?”, I discovered new gaps in how we presented feedback or structured our data flow. The complexity of integrating real-time servo motion with user-specific sensor data pushed me to rethink how feedback loops should feel , not just how they should function. It wasn’t enough to get a signal; we had to <strong>translate</strong> it in a way that was actionable and smooth for the user.
     </aside>
 
     <p>
       <strong>Machine Learning & Personalized Resistance:</strong><br />
-      One of the most technically rewarding yet demanding components of this project was implementing a machine learning-inspired logic system that adjusted servo motor resistance based on individual user calibration. Leading this part of the system, I had to translate sensor data into meaningful mechanical response—balancing accuracy, responsiveness, and user safety. Debugging involved extensive iteration as I refined how the servo responded to sensor-detected movement in real-time.
+      One of the most technically rewarding yet demanding components of this project was implementing a machine learning-inspired logic system that adjusted servo motor resistance based on individual user calibration. Leading this part of the system, I had to translate sensor data into meaningful mechanical response, balancing accuracy, responsiveness, and user safety. Debugging involved extensive iteration as I refined how the servo responded to sensor-detected movement in real-time.
     </p>
 
     <p>
       <strong>Graphical Interface & Real-Time Feedback:</strong><br />
-      Creating the GUI using Tkinter involved integrating real-time orientation sensor data with graphical feedback. I designed a clean layout that could dynamically display form tracking and motion graphs using <code>matplotlib</code>. The challenge lay in building a responsive interface that wouldn’t lag while rendering live values. This part taught me to optimize data processing and UI responsiveness under Raspberry Pi limitations. I kept asking myself: *Is this readable during a workout?* *Will the average user know what to do next?*
+      Creating the GUI using Tkinter involved integrating real-time orientation sensor data with graphical feedback. I designed a clean layout that could dynamically display form tracking and motion graphs using <code>matplotlib</code>. The challenge lay in building a responsive interface that wouldn’t lag while rendering live values. This part taught me to optimize data processing and UI responsiveness under Raspberry Pi limitations. I kept asking myself: <strong>Is this readable during a workout? Will the average user know what to do next?</strong>
     </p>
 
     <p>
       <strong>Cross-Subteam Integration:</strong><br />
-      Working with teammates from mechanical and electrical subteams exposed the importance of technical translation—converting abstract computing logic into practical control for motors and gears. I learned to align my backend systems with physical limitations, bridging the computing subteam’s goals with the mechanical constraints of the build.
+      Working with teammates from mechanical and electrical subteams exposed the importance of technical translation,converting abstract computing logic into practical control for motors and gears. I learned to align my backend systems with physical limitations, bridging the computing subteam’s goals with the mechanical constraints of the build.
     </p>
 
     <p>
@@ -360,7 +360,7 @@ def adjust_servo_resistance(y_avg, angular_velocity, min_flexion, max_flexion, s
 
     <div className="space-y-6 text-[17px] text-white leading-relaxed">
       <aside>
-        🧠 This project wasn’t just about building a prototype—it was about learning how to bring code, components, and people together toward one goal. And often, that meant unlearning what I thought I knew. There were countless moments I’d revisit my logic and ask, *Is this really the cleanest way?* *Is there a better method that makes this more modular, readable, or user-safe?* One of the biggest wins was when we restructured our calibration logic around a flexible threshold range instead of relying on strict positional checks. That change alone simplified our flow and boosted accuracy significantly.
+        🧠 This project wasn’t just about building a prototype,it was about learning how to bring code, components, and people together toward one goal. And often, that meant unlearning what I thought I knew. There were countless moments I’d revisit my logic and ask, <strong>Is this really the cleanest way? Is there a better method that makes this more modular, readable, or user-safe?</strong> One of the biggest wins was when we restructured our calibration logic around a flexible threshold range instead of relying on strict positional checks. That change alone simplified our flow and boosted accuracy significantly.
       </aside>
 
       <p>
@@ -376,7 +376,7 @@ def adjust_servo_resistance(y_avg, angular_velocity, min_flexion, max_flexion, s
 
       <p>
         <strong>Backend Complexity & Physical Constraints:</strong><br />
-        Building real-time feedback systems required handling GPIO delays, buffering sensor reads, and syncing them with servo output. The feedback loop needed to be both fast and safe—an ongoing challenge as we balanced performance with control precision. I learned to debug across hardware and software layers simultaneously, building stronger problem-solving habits.
+        Building real-time feedback systems required handling GPIO delays, buffering sensor reads, and syncing them with servo output. The feedback loop needed to be both fast and safe,an ongoing challenge as we balanced performance with control precision. I learned to debug across hardware and software layers simultaneously, building stronger problem-solving habits.
       </p>
 
       <img
@@ -387,12 +387,12 @@ def adjust_servo_resistance(y_avg, angular_velocity, min_flexion, max_flexion, s
 
       <p>
         <strong>Team Collaboration & Technical Communication:</strong><br />
-        In addition to leading the computing logic, I served as the Project Coordinator—organizing meetings, maintaining logs, and managing communications with the TA. Balancing these organizational duties with a heavy technical workload pushed me to improve both my technical writing and time management.
+        In addition to leading the computing logic, I served as the Project Coordinator, organizing meetings, maintaining logs, and managing communications with the TA. Balancing these organizational duties with a heavy technical workload pushed me to improve both my technical writing and time management.
       </p>
 
       <p>
         <strong>Growth & Takeaways:</strong><br />
-        I walked away from FlexAid with more than just a working prototype—I walked away with a deeper respect for collaborative systems engineering. I’ve learned that iteration is not a sign of failure but a signal that you’re moving closer to a solution that actually works.
+        I walked away from FlexAid with more than just a working prototype, I walked away with a deeper respect for collaborative systems engineering. I’ve learned that iteration is not a sign of failure but a signal that you’re moving closer to a solution that actually works.
       </p>
 
       <p className="text-yellow-300">

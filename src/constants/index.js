@@ -422,8 +422,8 @@ tags: [
   { name: "Computing Systems", color: "green-text-gradient" },
   { name: "Raspberry Pi", color: "pink-text-gradient" }
 ],
-    //image: flexaid, // Make sure to import this image at the top of your file
-    source_code_link: "https://github.com/arishs24/flexaid",
+image: "/dp3.jpg", // make sure to import or define ezstep image
+source_code_link: "https://github.com/arishs24/flexaid",
   },
   {
     name: "Design Project 4 - EZ-STEP",
@@ -454,7 +454,7 @@ tags: [
       { name: "Assistive Tech", color: "green-text-gradient" },
       { name: "Mechatronics", color: "pink-text-gradient" },
     ],
-    //image: ezstep, // make sure to import or define ezstep image
+    image: "/woo.png", // make sure to import or define ezstep image
     source_code_link: "https://github.com/arishs24/ezstep", // replace with your actual repo link
   }
   
