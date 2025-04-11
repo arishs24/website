@@ -1,11 +1,23 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from './components';
+import {
+  About,
+  Contact,
+  Experience,
+  Feedbacks,
+  Hero,
+  Navbar,
+  Tech,
+  Works,
+  StarsCanvas,
+} from './components';
 import ProjectDetails from './components/ProjectDetails';
 import ProjectDetails2 from './components/ProjectDetails2';
 import ProjectDetails3 from './components/ProjectDetails3';
 import ProjectDetails4 from './components/ProjectDetails4';
 import DP1Page from "./components/DP1Page";
+import References from "./components/References";
+
 
 const App = () => {
   return (
@@ -24,6 +36,8 @@ const App = () => {
               <Tech />
               <Works />
               <Feedbacks />
+              <References /> 
+
               <div className="relative z-0">
                 <Contact />
                 <StarsCanvas />
@@ -31,7 +45,6 @@ const App = () => {
             </div>
           }
         />
-
         <Route path="/project/0" element={<ProjectDetails />} />
         <Route path="/project/1" element={<ProjectDetails2 />} />
         <Route path="/project/2" element={<ProjectDetails3 />} />
