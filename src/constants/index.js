@@ -76,6 +76,18 @@ import {
   
   const experiences = [
     {
+      title: "Software Engineering Intern",
+      company_name: "Harvard Medical School | Foot & Ankle Research and Innovation Lab",
+      icon: "/harvard.png",
+      iconBg: "#800000",
+      date: "July 2025 - Present",
+      points: [
+        "Designed and implemented software solutions to support computational orthopedic research, including data processing pipelines and custom simulation tools.",
+        "Developed scalable software applications integrating biomechanical models and surgical planning tools, enhancing research efficiency and usability.",
+        "Collaborated closely with biomedical engineers and orthopedic surgeons to translate research needs into robust, user-friendly software products."
+      ],
+    },
+    {
       title: "Computational Neuroscience Researcher",
       company_name: "Johns Hopkins Univeristy | NeuroData Lab",
       icon: "/hopkin.jpeg",
@@ -88,7 +100,20 @@ import {
       ],
     },
     {
-      title: "Orthopaedic Clinical Research Intern",
+      title: "Brain-Computer Interface Researcher",
+      company_name: "Emory University | SNeL.AI Lab",
+      icon: "/emory.png",
+      iconBg: "#002147",
+      date: "April 2025 - Present",
+      points: [
+        "Investigated advanced brain-computer interface (BCI) systems focusing on silent speech decoding and neural signal processing.",
+        "Enhanced machine learning pipelines for real-time neural data analysis, improving system accuracy and reducing processing latency.",
+        "Collaborated with cross-institutional teams, contributing to publications and conference presentations on cutting-edge BCI technologies."
+      ],
+    },
+    
+    {
+      title: "Clinical Researcher",
       company_name: "Hamilton Health Sciences | Juravinski Hospital",
       icon: starbucks,
       iconBg: "#383E56",

@@ -40,22 +40,22 @@ const About = () => {
         </motion.div>
 
         <motion.p
-          variants={fadeIn('', '', 0.1, 1)}
-          className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
-        >
-          👋 Hello World! I’m Arish Shahab, a Biomedical Engineering and Health Sciences student at McMaster University with a passion for combining technology and healthcare to create meaningful solutions.<br /><br />
-          
-          📚 I’ve gained valuable experience working at institutions like Johns Hopkins University, where I optimized machine learning models for neuroscience research, and Hamilton Health Sciences, where I contributed to advancements in orthopedic applications. These experiences have equipped me with skills in computational modeling, machine learning, and biomedical device design.<br /><br />
-          
-          🌱 In addition to research, I’ve developed impactful projects like Aqua Boost, a wearable hydration monitor that utilizes bioimpedance sensors to prevent dehydration complications, and Iremia, a stress-tracking wearable device with real-time personalized support. These projects reflect my dedication to addressing real-world healthcare challenges through innovative design and technology.<br /><br />
-          
-          🚀 Beyond academics, I enjoy mentoring others, writing for McMaster’s engineering journal The Frequency, and collaborating on ideas that push the boundaries of healthcare innovation.
+  variants={fadeIn('', '', 0.1, 1)}
+  className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+>
+  👋 Hello! I’m Arish Shahab, a Biomedical Engineering and Health Sciences student at McMaster University, passionate about fusing technology and healthcare to drive meaningful innovation.<br /><br />
 
-<br /><br />
-          
-          ⚽ Hobbies: Reading, Traveling, Playing Basketball, Working Out, Cooking, Exploring Research<br /><br />
-          💬 Let's Chat About: Biomedical Engineering, Drug Delivery Systems, AI in Healthcare, Medical Research, Lung Disease Treatment
-        </motion.p>
+  📚 I’ve built hands-on experience through research at Harvard Medical School’s Foot & Ankle Research and Innovation Lab, where I contribute to computational orthopedic modeling, as well as at Johns Hopkins University and Emory University, where I’ve worked on brain-computer interface systems and machine learning for neuroscience. My background spans computational modeling, medical AI, and biomedical device design.<br /><br />
+
+  🌱 Alongside research, I lead impactful projects like SupraScan, an AI-powered early detection tool for Progressive Supranuclear Palsy using PET and MRI scans, and Iremia, a stress-tracking wearable offering real-time personalized feedback. These reflect my drive to solve real-world healthcare challenges through innovative engineering and design.<br /><br />
+
+  🚀 Outside the lab, I mentor students with research, write for McMaster’s engineering journal <i>The Frequency</i>, and collaborate on projects that advance healthcare technology and innovation.<br /><br />
+
+  ⚽ Hobbies: Reading, Traveling, Basketball, Working Out, Cooking, Exploring Cutting-Edge Research<br /><br />
+  
+  💬 Let’s Connect: Biomedical Engineering, Drug Delivery Systems, AI in Healthcare, Medical Research, Neurotechnology, Rehabilitation Innovation
+</motion.p>
+
       </div>
 
       <div className='w-full md:w-1/3 flex justify-center items-center mt-10 md:mt-0'>
