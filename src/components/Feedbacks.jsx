@@ -8,45 +8,40 @@ import { education } from "../constants";
 
 const EducationCard = ({ index, school, degree, field, date, image }) => (
   <motion.div
-    variants={fadeIn("", "spring", index * 0.5, 0.75)}
-    className='bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full'
+    variants={fadeIn("", "spring", index * 0.2, 0.8)}
+    className="bg-[#0f1222]/80 border border-white/5 rounded-2xl p-6 flex items-center gap-5 shadow-lg shadow-black/40 backdrop-blur"
   >
-    <div className='mt-1'>
-      <p className='text-white tracking-wider text-[18px]'>{school}</p>
-      <div className='mt-7 flex justify-between items-center gap-1'>
-        <div className='flex-1 flex flex-col'>
-          <p className='text-white font-medium text-[16px]'>
-            <span className='blue-text-gradient'>{degree}</span> in {field}
-          </p>
-          <p className='mt-1 text-secondary text-[12px]'>{date}</p>
-        </div>
-        <img
-          src={image}
-          alt={`education-${school}`}
-          className='w-10 h-10 rounded-full object-cover'
-        />
-      </div>
+    <img
+      src={image}
+      alt={school}
+      className="w-20 h-20 rounded-2xl object-cover ring-2 ring-white/10"
+    />
+    <div>
+      <p className="text-xs uppercase tracking-[0.3em] text-white/50">{date}</p>
+      <h3 className="text-white text-2xl font-semibold mt-1">{school}</h3>
+      <p className="text-[#A78BFA] font-semibold text-sm mt-2">{degree}</p>
+      <p className="text-white/70 text-sm">{field}</p>
     </div>
   </motion.div>
 );
 
 const Feedbacks = () => {
   return (
-    <div className={`mt-12 bg-black-100 rounded-[20px]`}>
-      <div
-        className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
-      >
-        <motion.div variants={textVariant()}>
-          <p className={styles.sectionSubText}>My Education</p>
-          <h2 className={styles.sectionHeadText}>Education.</h2>
-        </motion.div>
-      </div>
-      <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
+    <section className="mt-12">
+      <motion.div variants={textVariant()}>
+        <p className={styles.sectionSubText}>academic trail</p>
+        <h2 className={styles.sectionHeadText}>education.</h2>
+        <p className="mt-4 text-white/70 max-w-2xl">
+          programs, cohorts, and communities where i'm studying health sciences + engineering.
+        </p>
+      </motion.div>
+
+      <div className="mt-10 grid gap-6 md:grid-cols-2">
         {education.map((edu, index) => (
           <EducationCard key={edu.school} index={index} {...edu} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
@@ -9,146 +8,160 @@ import SectionWrapper from "../hoc/SectionWrapper";
 import { projects, universityProjects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
+const tabs = {
+  projects: {
+    label: "featured builds",
+    accent: "#A78BFA",
+    description: "ai agents, clinical tooling, and hardware/software mixes built outside the classroom.",
+    data: projects,
+  },
+  universityProjects: {
+    label: "studio & capstone",
+    accent: "#34D399",
+    description: "biomed engineering design sprints from mcmaster's IBH program.",
+    data: universityProjects,
+  },
+};
+
 const ProjectCard = ({
   index,
-  name,
-  description,
-  tags,
-  image,
-  source_code_link,
-  onClick,
+  project,
+  accent,
   isUniversityProject,
+  onClick,
 }) => {
+  const { name, description, tags, image, source_code_link } = project;
+
   return (
     <motion.div
-      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-      onClick={!isUniversityProject ? null : onClick} // Allow click only for university projects
-      className={`cursor-pointer group ${!isUniversityProject && "hover:shadow-2xl"}`}
+      variants={fadeIn("up", "spring", index * 0.15, 0.8)}
+      className="bg-[#0f1222]/80 border border-white/5 rounded-2xl p-5 flex flex-col gap-4 shadow-lg shadow-black/40 backdrop-blur"
     >
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full shadow-lg"
-      >
-        <div className="relative w-full h-[230px]">
-          <img
-            src={image}
-            alt="project_image"
-            className="w-full h-full object-cover rounded-2xl"
-          />
+      <div className="relative h-56 w-full overflow-hidden rounded-2xl">
+        <img src={image} alt={name} className="w-full h-full object-cover" />
+        {!isUniversityProject && (
+          <button
+            onClick={() => window.open(source_code_link, "_blank")}
+            className="absolute top-4 right-4 bg-white/90 text-black text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-2 hover:bg-white"
+          >
+            <img src={github} alt="github" className="w-4 h-4" />
+            repo
+          </button>
+        )}
+      </div>
 
-          {/* GitHub Icon (Visible only for projects) */}
-          {!isUniversityProject && (
-            <div className="absolute inset-0 flex justify-end m-3 card-img_hover opacity-0 group-hover:opacity-100 transition-opacity">
-              <div
-                onClick={(e) => {
-                  e.stopPropagation(); // Prevent parent click
-                  window.open(source_code_link, "_blank");
-                }}
-                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:scale-110 transition-transform"
-              >
-                <img
-                  src={github}
-                  alt="source code"
-                  className="w-1/2 h-1/2 object-contain"
-                />
-              </div>
-            </div>
-          )}
+      <div className="space-y-3">
+        <div className="flex items-start justify-between gap-4">
+          <div>
+            <p className="text-xs uppercase tracking-[0.3em] text-white/50">build</p>
+            <h3 className="text-white text-2xl font-semibold">{name}</h3>
+          </div>
+          <span
+            className="text-xs font-semibold uppercase tracking-[0.2em]"
+            style={{ color: accent }}
+          >
+            {isUniversityProject ? "studio" : "solo"}
+          </span>
         </div>
+        <p className="text-white/70 text-[15px] leading-relaxed">{description}</p>
+      </div>
 
-        {/* Project Details */}
-        <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
+      <div className="flex flex-wrap gap-2">
+        {tags.map((tag) => (
+          <span
+            key={`${name}-${tag.name}`}
+            className="px-3 py-1 rounded-full text-xs bg-white/5 text-white/70"
+          >
+            #{tag.name}
+          </span>
+        ))}
+      </div>
 
-          {/* "Click for more info" (Visible only for university projects) */}
-          {isUniversityProject && (
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              className="mt-4 text-sm text-[#915EFF] underline hover:text-white transition-colors"
-              onClick={onClick}
-            >
-              Click for more info
-            </motion.button>
-          )}
-        </div>
-
-        {/* Tags */}
-        <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <motion.p
-              whileHover={{ scale: 1.1 }}
-              key={`${name}-${tag.name}`}
-              className={`text-[14px] ${tag.color}`}
-            >
-              #{tag.name}
-            </motion.p>
-          ))}
-        </div>
-      </Tilt>
+      {isUniversityProject && (
+        <button
+          onClick={onClick}
+          className="mt-auto text-sm text-white/80 underline hover:text-white text-left"
+        >
+          deep dive → 
+        </button>
+      )}
     </motion.div>
   );
 };
 
 const Works = () => {
-  const [activeSection, setActiveSection] = useState("projects");
+  const [activeTab, setActiveTab] = useState("projects");
   const navigate = useNavigate();
-
-  const displayedProjects =
-    activeSection === "projects" ? projects : universityProjects;
+  const current = tabs[activeTab];
 
   return (
     <>
-      {/* Header */}
       <motion.div variants={textVariant()}>
-        <p id="projects" className={`${styles.sectionSubText}`}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects</h2>
+        <p id="projects" className={styles.sectionSubText}>ship logs</p>
+        <h2 className={styles.sectionHeadText}>{current.label}.</h2>
+        <p className="mt-4 text-white/70 max-w-3xl">{current.description}</p>
       </motion.div>
 
-      {/* Section Tabs */}
-      <div className="flex justify-center gap-4 mt-10">
-        <button
-          onClick={() => setActiveSection("projects")}
-          className={`px-4 py-2 text-white rounded-lg ${
-            activeSection === "projects" ? "bg-[#915EFF]" : "bg-gray-500"
-          } hover:scale-105 transition-transform`}
-        >
-          Projects
-        </button>
-        <button
-          onClick={() => setActiveSection("universityProjects")}
-          className={`px-4 py-2 text-white rounded-lg ${
-            activeSection === "universityProjects"
-              ? "bg-[#915EFF]"
-              : "bg-gray-500"
-          } hover:scale-105 transition-transform`}
-        >
-          University Projects
-        </button>
+      <div className="flex flex-wrap gap-3 mt-10">
+        {Object.entries(tabs).map(([key, tab]) => (
+          <button
+            key={key}
+            onClick={() => setActiveTab(key)}
+            className={`px-5 py-2 rounded-full text-sm uppercase tracking-[0.2em] transition-all ${
+              activeTab === key
+                ? "bg-white text-black shadow-xl shadow-black/40"
+                : "bg-white/5 text-white/70 hover:bg-white/10"
+            }`}
+          >
+            {tab.label}
+          </button>
+        ))}
       </div>
 
-      {/* Projects Display */}
-      <div className="mt-20 flex flex-wrap gap-7 justify-center">
-        {displayedProjects.map((project, index) => (
-          <div
-            key={`project-${index}`}
-            className="sm:w-[45%] md:w-[30%] w-full"
-          >
+      <div className="mt-12 grid gap-6 md:grid-cols-2">
+        {current.data && current.data.length > 0 ? (
+          current.data.map((project, index) => (
             <ProjectCard
+              key={`${current.label}-${project.name}-${index}`}
               index={index}
-              {...project}
+              project={project}
+              accent={current.accent}
+              isUniversityProject={activeTab === "universityProjects"}
               onClick={() =>
                 navigate(`/project/${index}`, { state: { project } })
               }
-              isUniversityProject={activeSection === "universityProjects"}
             />
-          </div>
-        ))}
+          ))
+        ) : (
+          <p className="text-white/60">no projects here yet.</p>
+        )}
       </div>
+
+      {/* Always-visible university projects section so they don't disappear */}
+      {activeTab === "projects" && tabs.universityProjects.data?.length > 0 && (
+        <div className="mt-16">
+          <h3 className="text-white text-2xl font-semibold mb-4">
+            university projects.
+          </h3>
+          <p className="text-white/70 text-sm mb-6 max-w-3xl">
+            studio + capstone work from mcmaster's IBH program — the hands-on design side of my degree.
+          </p>
+          <div className="grid gap-6 md:grid-cols-2">
+            {tabs.universityProjects.data.map((project, index) => (
+              <ProjectCard
+                key={`university-${project.name}-${index}`}
+                index={index}
+                project={project}
+                accent={tabs.universityProjects.accent}
+                isUniversityProject={true}
+                onClick={() =>
+                  navigate(`/project/${index}`, { state: { project } })
+                }
+              />
+            ))}
+          </div>
+        </div>
+      )}
     </>
   );
 };

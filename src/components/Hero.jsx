@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaFileDownload } from "react-icons/fa";
 import styles from "../styles";
-import { ComputersCanvas } from "./canvas";
 
 const roles = ["Biomedical Engineer", "Medical Researcher", "Software Engineer", "Aspiring Neurosurgeon"];
 
@@ -39,31 +38,31 @@ const Hero = () => {
   const typedText = useTypewriter(roles);
 
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
+    <section className="relative w-full h-[60vh] mx-auto flex items-center overflow-hidden">
       <div
-        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`relative z-10 w-full max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-center gap-5`}
       >
-        <div className="flex flex-col justify-center items-center mt-5">
+        <div className="flex flex-col justify-center items-center">
           <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
-          <div className="w-1 sm:h-80 h-40 violet-gradient" />
+          <div className="w-1 h-32 violet-gradient" />
         </div>
 
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
+        <div className="flex-1">
+          <h1 className={`text-5xl sm:text-6xl font-black text-white`}>
             Hi, I'm <span className="text-[#915EFF]">Arish</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            <span>{typedText}</span> <br className="sm:block hidden" />
+          <p className={`text-xl sm:text-2xl mt-2 text-white-100`}>
+            <span>{typedText}</span>
           </p>
 
           {/* Buttons Section with Icons */}
-          <div className="mt-6 flex gap-6 relative z-10">
+          <div className="mt-6 flex gap-4 relative z-10">
             {/* LinkedIn Button */}
             <a
               href="https://www.linkedin.com/in/arishshahab/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white text-3xl bg-blue-600 hover:bg-blue-500 p-3 rounded-full transition-colors"
+              className="text-white text-2xl bg-blue-600 hover:bg-blue-500 p-2.5 rounded-full transition-colors"
               title="LinkedIn Profile"
             >
               <FaLinkedin />
@@ -74,7 +73,7 @@ const Hero = () => {
               href="https://github.com/arishs24"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white text-3xl bg-gray-800 hover:bg-gray-700 p-3 rounded-full transition-colors"
+              className="text-white text-2xl bg-gray-800 hover:bg-gray-700 p-2.5 rounded-full transition-colors"
               title="GitHub Profile"
             >
               <FaGithub />
@@ -85,36 +84,13 @@ const Hero = () => {
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white text-3xl bg-green-600 hover:bg-green-500 p-3 rounded-full transition-colors"
+              className="text-white text-2xl bg-green-600 hover:bg-green-500 p-2.5 rounded-full transition-colors"
               title="Open Resume"
->
-  <FaFileDownload />
-</a>
+            >
+              <FaFileDownload />
+            </a>
           </div>
         </div>
-      </div>
-
-      {/* Ensure Canvas has no pointer events */}
-      <div className="absolute inset-0 z-0">
-        <ComputersCanvas />
-      </div>
-
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
-        <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
-            <motion.div
-              animate={{
-                y: [0, 24, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              className="w-3 h-3 rounded-full bg-secondary mb-1"
-            />
-          </div>
-        </a>
       </div>
     </section>
   );

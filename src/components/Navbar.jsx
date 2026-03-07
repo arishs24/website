@@ -5,7 +5,7 @@ import styles from '../styles';
 import { navLinks } from '../constants';
 import { logo, menu, close } from '../assets';
 
-const Navbar = () => {
+const Navbar = ({ currentPage, onChangePage }) => {
   const [active, setActive] = useState('');
   const [toggle, setToggle] = useState(false);
 
@@ -17,7 +17,11 @@ const Navbar = () => {
           className="flex items-center gap-2"
           onClick={() => {
             setActive('');
-            window.scrollTo(0, 0);
+            if (onChangePage) {
+              onChangePage('about');
+            } else {
+              window.scrollTo(0, 0);
+            }
           }}
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
@@ -30,10 +34,17 @@ const Navbar = () => {
           {navLinks.map((navLink) => (
             <li
               key={navLink.id}
-              className={`${active === navLink.title ? 'text-white' : 'text-secondary'} hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(navLink.title)}
+              className={`${(currentPage === navLink.id || active === navLink.title) ? 'text-white' : 'text-secondary'} hover:text-white text-[18px] font-medium cursor-pointer`}
+              onClick={() => {
+                setActive(navLink.title);
+                if (onChangePage) {
+                  onChangePage(navLink.id);
+                }
+              }}
             >
-              <a href={`#${navLink.id}`}>{navLink.title}</a>
+              <button type="button">
+                {navLink.title}
+              </button>
             </li>
           ))}
         </ul>
@@ -49,13 +60,18 @@ const Navbar = () => {
               {navLinks.map((navLink) => (
                 <li
                   key={navLink.id}
-                  className={`${active === navLink.title ? 'text-white' : 'text-secondary'} font-medium cursor-pointer`}
+                  className={`${(currentPage === navLink.id || active === navLink.title) ? 'text-white' : 'text-secondary'} font-medium cursor-pointer`}
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(navLink.title);
+                    if (onChangePage) {
+                      onChangePage(navLink.id);
+                    }
                   }}
                 >
-                  <a href={`#${navLink.id}`}>{navLink.title}</a>
+                  <button type="button">
+                    {navLink.title}
+                  </button>
                 </li>
               ))}
             </ul>

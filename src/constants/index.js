@@ -52,28 +52,6 @@ import {
   ];
 
   
-  
-  const services = [
-    {
-      title: "Biomedical Engineering Researcher",
-      icon: web,
-    },
-    {
-      title: "Innovative Project Developer",
-      icon: mobile,
-    },
-    {
-      title: "Academic Achiever and Future Medical Professional",
-      icon: backend,
-    },
-    {
-      title: "Competitive Presenter and Public Speaker",
-      icon: creator,
-    },
-  ];
-  
-  
-  
   const experiences = [
     {
       title: "Software Engineering Intern",
@@ -867,4 +845,4 @@ source_code_link: "https://github.com/arishs24/flexaid",
     },
   ];
   
-  export { services, experiences, projects, technologies};
+  export { experiences, projects, technologies};
