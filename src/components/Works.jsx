@@ -1,168 +1,130 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-
-import styles from "../styles";
-import { github } from "../assets";
-import SectionWrapper from "../hoc/SectionWrapper";
 import { projects, universityProjects } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
+import SectionWrapper from "../hoc/SectionWrapper";
 
-const tabs = {
-  projects: {
-    label: "featured builds",
-    accent: "#A78BFA",
-    description: "ai agents, clinical tooling, and hardware/software mixes built outside the classroom.",
-    data: projects,
-  },
-  universityProjects: {
-    label: "studio & capstone",
-    accent: "#34D399",
-    description: "biomed engineering design sprints from mcmaster's IBH program.",
-    data: universityProjects,
-  },
+const filters = ["everything", "builds", "capstone"];
+
+const stagger = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.08 } },
 };
 
-const ProjectCard = ({
-  index,
-  project,
-  accent,
-  isUniversityProject,
-  onClick,
-}) => {
-  const { name, description, tags, image, source_code_link } = project;
+const fadeUp = {
+  hidden: { opacity: 0, y: 8 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: [0.16, 1, 0.3, 1] } },
+};
+
+const ProjectCard = ({ project, category, onClick }) => {
+  const { name, description, tags, source_code_link } = project;
+  const firstSentence = description.split(/\.\s/)[0].replace(/\.$/, "");
 
   return (
-    <motion.div
-      variants={fadeIn("up", "spring", index * 0.15, 0.8)}
-      className="bg-[#0f1222]/80 border border-white/5 rounded-2xl p-5 flex flex-col gap-4 shadow-lg shadow-black/40 backdrop-blur"
-    >
-      <div className="relative h-56 w-full overflow-hidden rounded-2xl">
-        <img src={image} alt={name} className="w-full h-full object-cover" />
-        {!isUniversityProject && (
-          <button
-            onClick={() => window.open(source_code_link, "_blank")}
-            className="absolute top-4 right-4 bg-white/90 text-black text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-2 hover:bg-white"
-          >
-            <img src={github} alt="github" className="w-4 h-4" />
-            repo
-          </button>
-        )}
+    <motion.div variants={fadeUp} className="mb-12">
+      <div className="flex items-start justify-between gap-4 mb-2">
+        <p className="text-[#c8c2b8] text-[16px] font-normal leading-snug">{name}</p>
+        <span className="text-[#252525] text-[11px] shrink-0 mt-1">{category}</span>
       </div>
 
-      <div className="space-y-3">
-        <div className="flex items-start justify-between gap-4">
-          <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-white/50">build</p>
-            <h3 className="text-white text-2xl font-semibold">{name}</h3>
-          </div>
-          <span
-            className="text-xs font-semibold uppercase tracking-[0.2em]"
-            style={{ color: accent }}
-          >
-            {isUniversityProject ? "studio" : "solo"}
-          </span>
-        </div>
-        <p className="text-white/70 text-[15px] leading-relaxed">{description}</p>
-      </div>
+      <p className="text-[#666666] text-[15px] leading-[1.85] mb-4">
+        {firstSentence}.
+      </p>
 
-      <div className="flex flex-wrap gap-2">
-        {tags.map((tag) => (
-          <span
-            key={`${name}-${tag.name}`}
-            className="px-3 py-1 rounded-full text-xs bg-white/5 text-white/70"
-          >
-            #{tag.name}
-          </span>
+      <div className="flex flex-wrap gap-x-4 gap-y-1 mb-4">
+        {tags.slice(0, 3).map((tag) => (
+          <span key={tag.name} className="text-[#2a2a2a] text-[11px]">{tag.name}</span>
         ))}
       </div>
 
-      {isUniversityProject && (
-        <button
-          onClick={onClick}
-          className="mt-auto text-sm text-white/80 underline hover:text-white text-left"
-        >
-          deep dive → 
-        </button>
-      )}
+      <div className="flex gap-6 text-[12px]">
+        {source_code_link && !onClick && (
+          <button onClick={() => window.open(source_code_link, "_blank")}
+            className="text-[#3a3a3a] hover:text-[#c8c2b8] transition-colors duration-200">
+            github ↗
+          </button>
+        )}
+        {onClick && (
+          <button onClick={onClick}
+            className="text-[#3a3a3a] hover:text-[#c8c2b8] transition-colors duration-200">
+            deep dive ↗
+          </button>
+        )}
+      </div>
     </motion.div>
   );
 };
 
 const Works = () => {
-  const [activeTab, setActiveTab] = useState("projects");
+  const [active, setActive] = useState("everything");
   const navigate = useNavigate();
-  const current = tabs[activeTab];
+
+  const showBuilds = active === "everything" || active === "builds";
+  const showCapstone = active === "everything" || active === "capstone";
 
   return (
-    <>
-      <motion.div variants={textVariant()}>
-        <p id="projects" className={styles.sectionSubText}>ship logs</p>
-        <h2 className={styles.sectionHeadText}>{current.label}.</h2>
-        <p className="mt-4 text-white/70 max-w-3xl">{current.description}</p>
-      </motion.div>
-
-      <div className="flex flex-wrap gap-3 mt-10">
-        {Object.entries(tabs).map(([key, tab]) => (
+    <div>
+      <div className="flex items-center gap-8 mb-14">
+        {filters.map((f) => (
           <button
-            key={key}
-            onClick={() => setActiveTab(key)}
-            className={`px-5 py-2 rounded-full text-sm uppercase tracking-[0.2em] transition-all ${
-              activeTab === key
-                ? "bg-white text-black shadow-xl shadow-black/40"
-                : "bg-white/5 text-white/70 hover:bg-white/10"
-            }`}
+            key={f}
+            onClick={() => setActive(f)}
+            className="relative pb-2 text-[13px] transition-colors duration-200"
+            style={{ color: active === f ? "#c8c2b8" : "#2e2e2e" }}
           >
-            {tab.label}
+            {f}
+            {active === f && (
+              <motion.div
+                layoutId="works-filter-line"
+                className="absolute bottom-0 left-0 right-0 h-px bg-[#c8c2b8]"
+                transition={{ type: "spring", stiffness: 320, damping: 32 }}
+              />
+            )}
           </button>
         ))}
       </div>
 
-      <div className="mt-12 grid gap-6 md:grid-cols-2">
-        {current.data && current.data.length > 0 ? (
-          current.data.map((project, index) => (
-            <ProjectCard
-              key={`${current.label}-${project.name}-${index}`}
-              index={index}
-              project={project}
-              accent={current.accent}
-              isUniversityProject={activeTab === "universityProjects"}
-              onClick={() =>
-                navigate(`/project/${index}`, { state: { project } })
-              }
-            />
-          ))
-        ) : (
-          <p className="text-white/60">no projects here yet.</p>
-        )}
-      </div>
-
-      {/* Always-visible university projects section so they don't disappear */}
-      {activeTab === "projects" && tabs.universityProjects.data?.length > 0 && (
-        <div className="mt-16">
-          <h3 className="text-white text-2xl font-semibold mb-4">
-            university projects.
-          </h3>
-          <p className="text-white/70 text-sm mb-6 max-w-3xl">
-            studio + capstone work from mcmaster's IBH program — the hands-on design side of my degree.
-          </p>
-          <div className="grid gap-6 md:grid-cols-2">
-            {tabs.universityProjects.data.map((project, index) => (
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={active}
+          initial={{ opacity: 0, y: 6 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -4 }}
+          transition={{ duration: 0.25 }}
+        >
+          <motion.div variants={stagger} initial="hidden" animate="show">
+            {showBuilds && projects.map((project, i) => (
               <ProjectCard
-                key={`university-${project.name}-${index}`}
-                index={index}
+                key={`build-${i}`}
                 project={project}
-                accent={tabs.universityProjects.accent}
-                isUniversityProject={true}
-                onClick={() =>
-                  navigate(`/project/${index}`, { state: { project } })
-                }
+                category="project"
               />
             ))}
-          </div>
-        </div>
-      )}
-    </>
+
+            {showCapstone && (
+              <>
+                {showBuilds && (
+                  <motion.p
+                    variants={fadeUp}
+                    className="text-[#2a2a2a] text-[10px] uppercase tracking-[0.25em] mt-4 mb-10"
+                  >
+                    capstone — mcmaster ibioMed
+                  </motion.p>
+                )}
+                {universityProjects.map((project, i) => (
+                  <ProjectCard
+                    key={`cap-${i}`}
+                    project={project}
+                    category="capstone"
+                    onClick={() => navigate(`/project/${i}`, { state: { project } })}
+                  />
+                ))}
+              </>
+            )}
+          </motion.div>
+        </motion.div>
+      </AnimatePresence>
+    </div>
   );
 };
 

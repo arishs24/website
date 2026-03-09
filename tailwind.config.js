@@ -1,19 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx}", "./node_modules/flowbite/**/*.js"],
+  content: ["./src/**/*.{js,jsx}"],
   mode: "jit",
   theme: {
     extend: {
       colors: {
-        primary: "#050816",
-        secondary: "#aaa6c3",
-        tertiary: "#151030",
-        "black-100": "#100d25",
-        "black-200": "#090325",
-        "white-100": "#f3f3f3",
+        primary: "#0c0c0c",
+        secondary: "#5e5e5e",
+        tertiary: "#131313",
+        "black-100": "#0c0c0c",
+        "black-200": "#080808",
+        "white-100": "#e5dfd4",
       },
       boxShadow: {
-        card: "0px 35px 120px -15px #211e35",
+        card: "0 0 0 1px #1f1f1f",
       },
       screens: {
         xs: "450px",
@@ -21,19 +21,11 @@ module.exports = {
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg.png')",
       },
-      animation: {
-        'marquee-slow': 'marquee 50s linear infinite',
+      fontFamily: {
+        heading: ['"EB Garamond"', "Georgia", "serif"],
+        sans: ['"Inter"', "system-ui", "-apple-system", "sans-serif"],
       },
-      keyframes: {
-        marquee: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-100%)' },
-        },
-      },
-      
     },
   },
-  plugins: [
-    require('flowbite/plugin')
-  ],
+  plugins: [],
 };

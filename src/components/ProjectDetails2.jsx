@@ -60,18 +60,18 @@ const ProjectDetails2 = () => {
   };
 
   return (
-    <div className="w-full min-h-screen bg-gray-900 p-4 md:p-10 bg-tertiary p-4 md:p-8 lg:p-10 rounded-lg">
+    <div className="w-full min-h-screen bg-[#0c0c0c] p-6 md:p-12 lg:p-16">
       {/* Back Button */}
       <button
         onClick={handleBackToProjects}
-        className="bg-[#915EFF] text-white px-3 py-2 md:px-4 md:py-2 rounded-lg mb-4"
+        className="text-[#5e5e5e] hover:text-[#e5dfd4] text-[12px] uppercase tracking-[0.25em] font-light transition-colors duration-200 mb-6 inline-block"
       >
         Back to Projects
       </button>
 
-      <div className="bg-tertiary p-10 rounded-lg">
+      <div className="">
         {/* Title Section */}
-        <h2 className="text-white font-bold text-[32px] mb-6">
+        <h2 className="font-heading text-[#e5dfd4] text-[28px] sm:text-[36px] font-normal mb-8">
           {project.name}
         </h2>
 
@@ -80,7 +80,7 @@ const ProjectDetails2 = () => {
           <div className="col-span-2">
             {/* Role */}
             <div className="mb-6">
-              <h3 className="text-secondary font-semibold text-[20px] mb-2">
+              <h3 className="text-[#5e5e5e] text-[12px] uppercase tracking-[0.25em] font-light mb-3">
                 Role:
               </h3>
               <p className="text-white">{project.role}</p>
@@ -88,11 +88,11 @@ const ProjectDetails2 = () => {
 
           {/* Skills */}
           <div>
-            <h2 className="text-2xl font-semibold mb-4">Skills:</h2>
+            <h2 className="text-[#e5dfd4] text-[14px] uppercase tracking-[0.3em] font-light mb-5">Skills</h2>
 
             {/* Soft Skills */}
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2">Soft Skills:</h3>
+              <h3 className="text-[#5e5e5e] text-[12px] uppercase tracking-[0.25em] font-light mb-3">Soft Skills</h3>
               <div className="flex flex-wrap gap-4">
                 {project.softSkills.map((skill, idx) => (
                   <TechBox key={idx} name={skill} index={idx} />
@@ -102,7 +102,7 @@ const ProjectDetails2 = () => {
 
             {/* Technical Skills */}
             <div className="mb-10">
-              <h3 className="text-xl font-semibold mb-2">Technical Skills:</h3>
+              <h3 className="text-[#5e5e5e] text-[12px] uppercase tracking-[0.25em] font-light mb-3 mt-5">Technical Skills</h3>
               <div className="flex flex-wrap gap-4">
                 {project.technicalSkills.map((skill, idx) => (
                   <TechBox key={idx} name={skill} index={idx} />
@@ -111,14 +111,14 @@ const ProjectDetails2 = () => {
             </div>
           </div>
 {/* Interactive Hip Implant Model */}
-<div className="border border-gray-700 rounded-lg mb-10"> {/* Added bottom margin for spacing */}
+<div className="border border-[#1a1a1a] rounded-lg mb-10"> {/* Added bottom margin for spacing */}
   <h3 className="text-lg font-semibold p-4 text-secondary">
     Interactive Hip Implant Model
   </h3>
   {/* Content is always visible */}
   <div className="p-6 bg-gray-800 text-white">
     <p className="mb-4">
-      Explore the interactive 3D model of the <span className="text-yellow-400 font-bold">PEEKformance</span> hip implant:
+      Explore the interactive 3D model of the <span className="text-[#c4b86a] font-bold">PEEKformance</span> hip implant:
     </p>
     <div className="w-full h-[500px] bg-gray-900 rounded-lg">
       <Suspense fallback={<div>Loading 3D Model...</div>}>
@@ -130,7 +130,7 @@ const ProjectDetails2 = () => {
         </Canvas>
       </Suspense>
     </div>
-    <p className="mt-4 text-gray-400 text-sm">
+    <p className="mt-4 text-[#5e5e5e] text-sm">
       Use your mouse or touch gestures to rotate, zoom, and explore the 3D model.
     </p>
   </div>
@@ -148,11 +148,11 @@ const ProjectDetails2 = () => {
           {/* Right Column: Informative Sections */}
           <div className="col-span-3">
           <div
-  className="border border-gray-700 rounded-lg mb-6"
+  className="border border-[#1a1a1a] rounded-lg mb-6"
   onClick={() => toggleSection("patientProfile")}
 >
   <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer flex justify-between items-center">
-    Patient Profile: <span className="text-gray-400">↧</span>
+    Patient Profile: <span className="text-[#5e5e5e]">↧</span>
   </h3>
   {openSections["patientProfile"] && (
     <div className="p-6 bg-gray-800 text-white">
@@ -175,7 +175,7 @@ const ProjectDetails2 = () => {
                 alt="X-ray showing bone erosion (Fig. 1)"
                 className="rounded-lg shadow-lg"
               />
-              <p className="text-sm text-gray-400 mt-2 text-center">
+              <p className="text-sm text-[#5e5e5e] mt-2 text-center">
                 <strong>Fig. 1:</strong> X-ray showing bone erosion
               </p>
             </div>
@@ -185,7 +185,7 @@ const ProjectDetails2 = () => {
                 alt="X-ray showing reduced joint space (Fig. 2)"
                 className="rounded-lg shadow-lg"
               />
-              <p className="text-sm text-gray-400 mt-2 text-center">
+              <p className="text-sm text-[#5e5e5e] mt-2 text-center">
                 <strong>Fig. 2:</strong> X-ray showing reduced joint space
               </p>
             </div>
@@ -202,10 +202,10 @@ const ProjectDetails2 = () => {
 
             {/* Accordion Section: Objectives and Constraints */}
             <div
-              className="border border-gray-700 rounded-lg mb-6"
+              className="border border-[#1a1a1a] rounded-lg mb-6"
               onClick={() => toggleSection("objectives")}
             >
-              <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
+              <h3 className="text-[#9a9a9a] text-[13px] uppercase tracking-[0.25em] font-light p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">
                 Establishing Objectives and Constraints:
               </h3>
               {openSections["objectives"] && (
@@ -215,7 +215,7 @@ const ProjectDetails2 = () => {
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <h4 className="font-semibold text-yellow-400 mb-2">
+                      <h4 className="font-semibold text-[#c4b86a] mb-2">
                         Objectives:
                       </h4>
                       <ul className="list-disc pl-5">
@@ -226,7 +226,7 @@ const ProjectDetails2 = () => {
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-yellow-400 mb-2">
+                      <h4 className="font-semibold text-[#c4b86a] mb-2">
                         Constraints:
                       </h4>
                       <ul className="list-disc pl-5">
@@ -242,16 +242,16 @@ const ProjectDetails2 = () => {
 
 {/* Accordion Section: Proposed Solution */}
 <div
-  className="border border-gray-700 rounded-lg mb-6"
+  className="border border-[#1a1a1a] rounded-lg mb-6"
   onClick={() => toggleSection("solution")}
 >
-  <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
+  <h3 className="text-[#9a9a9a] text-[13px] uppercase tracking-[0.25em] font-light p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">
     Proposed Solution:
   </h3>
   {openSections["solution"] && (
     <div className="p-4 bg-gray-800 text-white">
       <p className="mb-4">
-        The <span className="text-yellow-400 font-bold">PEEKformance</span>{" "}
+        The <span className="text-[#c4b86a] font-bold">PEEKformance</span>{" "}
         hip implant solution was designed to address the patient’s unique needs
         by modifying key components of the hip implant:
       </p>
@@ -324,7 +324,7 @@ const ProjectDetails2 = () => {
           src="/dp/drawing.png"
           alt="Exploded CAD view of the PEEKformance hip implant"
           className="w-full max-w-sm rounded-lg shadow-lg"        />
-        <p className="text-sm text-gray-400 mt-2 text-center">
+        <p className="text-sm text-[#5e5e5e] mt-2 text-center">
           <strong>Fig. 3:</strong> Drawing of preliminary implant with all parts.
            showcasing key components.
         </p>
@@ -334,16 +334,16 @@ const ProjectDetails2 = () => {
 </div>
 
 <div
-  className="border border-gray-700 rounded-lg mb-6"
+  className="border border-[#1a1a1a] rounded-lg mb-6"
   onClick={() => toggleSection("materials")}
 >
-  <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
+  <h3 className="text-[#9a9a9a] text-[13px] uppercase tracking-[0.25em] font-light p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">
     Material Selection:
   </h3>
   {openSections["materials"] && (
     <div className="p-4 bg-gray-800 text-white">
       <p className="mb-4">
-        The <span className="text-yellow-400 font-bold">PEEKformance</span>{" "}
+        The <span className="text-[#c4b86a] font-bold">PEEKformance</span>{" "}
         solution incorporates the following advanced materials:
       </p>
       <ul className="list-decimal pl-5 space-y-4">
@@ -373,7 +373,7 @@ const ProjectDetails2 = () => {
           alt="Exploded view of the PEEKformance hip implant materials"
           className="w-full max-w-md rounded-lg shadow-lg"
         />
-        <p className="text-sm text-gray-400 mt-2 text-center">
+        <p className="text-sm text-[#5e5e5e] mt-2 text-center">
           <strong>Fig. 4:</strong> Exploded view of the PEEKformance hip implant,
           highlighting advanced material applications.
         </p>
@@ -384,10 +384,10 @@ const ProjectDetails2 = () => {
 
 
 <div
-  className="border border-gray-700 rounded-lg mb-6"
+  className="border border-[#1a1a1a] rounded-lg mb-6"
   onClick={() => toggleSection("responsibilities")}
 >
-  <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
+  <h3 className="text-[#9a9a9a] text-[13px] uppercase tracking-[0.25em] font-light p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">
     Responsibilities and Contributions:
   </h3>
   {openSections["responsibilities"] && (
@@ -416,10 +416,10 @@ const ProjectDetails2 = () => {
 </div>
 
 <div
-  className="border border-gray-700 rounded-lg mb-6"
+  className="border border-[#1a1a1a] rounded-lg mb-6"
   onClick={() => toggleSection("learningChallenges")}
 >
-  <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
+  <h3 className="text-[#9a9a9a] text-[13px] uppercase tracking-[0.25em] font-light p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">
     💭 Project Learning Opportunities and Challenges
   </h3>
   {openSections["learningChallenges"] && (
@@ -463,7 +463,7 @@ const ProjectDetails2 = () => {
           alt="Project Poster"
           className="w-full max-w-lg rounded-lg shadow-lg"
         />
-        <p className="text-sm text-gray-400 mt-2 text-center">
+        <p className="text-sm text-[#5e5e5e] mt-2 text-center">
           <strong>Fig. 5:</strong> Final poster presentation summarizing the CAD
           models and research findings.
         </p>
@@ -477,15 +477,15 @@ const ProjectDetails2 = () => {
             {/* Accordion Section: Final Results */}
  {/* Accordion Section: Final Results */}
 <div
-  className="border border-gray-700 rounded-lg mb-6"
+  className="border border-[#1a1a1a] rounded-lg mb-6"
   onClick={() => toggleSection("reflection")}
 >
-  <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
+  <h3 className="text-[#9a9a9a] text-[13px] uppercase tracking-[0.25em] font-light p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">
     Reflecting on the Project
   </h3>
   {openSections["reflection"] && (
     <div className="p-4 bg-gray-800 text-white">
-      <p className="italic text-yellow-400 mb-4">
+      <p className="italic text-[#c4b86a] mb-4">
         "Success is stumbling from failure to failure with no loss of
         enthusiasm." – Winston Churchill
       </p>
@@ -533,7 +533,7 @@ const ProjectDetails2 = () => {
           </p>
         </li>
       </ul>
-      <p className="mt-4 text-yellow-300">
+      <p className="mt-4 text-[#e5dfd4]">
         **What I Could've Done Better Overall:** I could have implemented a
         more structured project timeline with clear milestones and contingency
         plans for unexpected delays. 

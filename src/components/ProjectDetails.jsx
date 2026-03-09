@@ -50,18 +50,18 @@ const ProjectDetails = () => {
   };
 
   return (
-    <div className="w-full min-h-screen bg-gray-900 p-4 md:p-10 bg-tertiary p-4 md:p-8 lg:p-10 rounded-lg">
+    <div className="w-full min-h-screen bg-[#0c0c0c] p-6 md:p-12 lg:p-16">
       {/* Back Button */}
       <button
         onClick={handleBackToProjects}
-        className="bg-[#915EFF] text-white px-3 py-2 md:px-4 md:py-2 rounded-lg mb-4"
+        className="text-[#5e5e5e] hover:text-[#e5dfd4] text-[12px] uppercase tracking-[0.25em] font-light transition-colors duration-200 mb-6 inline-block"
       >
         Back to Projects
       </button>
   
       <div>
         {/* Title Section */}
-        <h2 className="text-white font-bold text-[20px] md:text-[28px] lg:text-[32px] mb-6">
+        <h2 className="font-heading text-[#e5dfd4] text-[22px] sm:text-[32px] font-normal mb-8">
           {project.name}
         </h2>
 
@@ -70,7 +70,7 @@ const ProjectDetails = () => {
           <div className="col-span-2">
             {/* Role */}
             <div className="mb-6">
-              <h3 className="text-secondary font-semibold text-[20px] mb-2">
+              <h3 className="text-[#5e5e5e] text-[12px] uppercase tracking-[0.25em] font-light mb-3">
                 Role:
               </h3>
               <p className="text-white">{project.role}</p>
@@ -78,11 +78,11 @@ const ProjectDetails = () => {
 
           {/* Skills */}
           <div>
-            <h2 className="text-2xl font-semibold mb-4">Skills:</h2>
+            <h2 className="text-[#e5dfd4] text-[14px] uppercase tracking-[0.3em] font-light mb-5">Skills</h2>
 
             {/* Soft Skills */}
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2">Soft Skills:</h3>
+              <h3 className="text-[#5e5e5e] text-[12px] uppercase tracking-[0.25em] font-light mb-3">Soft Skills</h3>
               <div className="flex flex-wrap gap-4">
                 {project.softSkills.map((skill, idx) => (
                   <TechBox key={idx} name={skill} index={idx} />
@@ -92,7 +92,7 @@ const ProjectDetails = () => {
 
             {/* Technical Skills */}
             <div>
-              <h3 className="text-xl font-semibold mb-2">Technical Skills:</h3>
+              <h3 className="text-[#5e5e5e] text-[12px] uppercase tracking-[0.25em] font-light mb-3 mt-5">Technical Skills</h3>
               <div className="flex flex-wrap gap-4">
                 {project.technicalSkills.map((skill, idx) => (
                   <TechBox key={idx} name={skill} index={idx} />
@@ -114,18 +114,18 @@ const ProjectDetails = () => {
           <div className="col-span-3">
           {/* Accordion Section: Patient Profile */}
 <div
-  className="border border-gray-700 rounded-lg mb-6"
+  className="border border-[#1a1a1a] rounded-lg mb-6"
   onClick={() => toggleSection("patientProfile")}
 >
-  <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
+  <h3 className="text-[#9a9a9a] text-[13px] uppercase tracking-[0.25em] font-light p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">
     Patient Profile
   </h3>
   {openSections["patientProfile"] && (
-    <div className="p-6 bg-gray-800 text-white rounded-lg">
+    <div className="p-6 bg-[#111111] text-[#e5dfd4]">
       <p className="mb-4 text-lg">
-        Our patient, <strong className="text-yellow-400">Kate Austen</strong>, uses a colostomy bag and often experiences frequent detachment of her current bag during physical activities due to a failure in the snap-in mechanism.
+        Our patient, <strong className="text-[#c4b86a]">Kate Austen</strong>, uses a colostomy bag and often experiences frequent detachment of her current bag during physical activities due to a failure in the snap-in mechanism.
       </p>
-      <p className="mb-4 text-yellow-400 font-bold">
+      <p className="mb-4 text-[#c4b86a] font-bold">
         The bag must remain intact during long hours of physical activity that include motions of twisting and bending at the abdomen, such as jogging. It should be comfortable and tightly secured to lessen interference with daily activities, enhancing Kate's quality of life.
       </p>
       <p className="text-lg">
@@ -138,24 +138,24 @@ const ProjectDetails = () => {
 
           {/* Accordion Section: Objectives and Constraints */}
 <div
-  className="border border-gray-700 rounded-lg mb-6"
+  className="border border-[#1a1a1a] rounded-lg mb-6"
   onClick={() => toggleSection("objectives")}
 >
-  <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
+  <h3 className="text-[#9a9a9a] text-[13px] uppercase tracking-[0.25em] font-light p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">
     Establishing Objectives and Constraints
   </h3>
   {openSections["objectives"] && (
-    <div className="p-6 bg-gray-800 text-white rounded-lg">
+    <div className="p-6 bg-[#111111] text-[#e5dfd4]">
       <p className="mb-6 text-lg">
         For this milestone, the team gathered information about our unique design challenge, defined a need statement, and identified a set of objectives and constraints. These aspects were fundamental to formulating an engineering problem solution.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Objectives Section */}
         <div>
-          <h4 className="text-xl font-semibold text-yellow-400 mb-4">
+          <h4 className="text-[#e5dfd4] text-[13px] uppercase tracking-[0.2em] font-light mb-3">
             Objectives
           </h4>
-          <ul className="list-disc pl-5 space-y-2 text-lg">
+          <ul className="list-none space-y-2">
             <li>Should be durable</li>
             <li>Should be comfortable throughout extended use</li>
             <li>Should have a simplified process for attaching, adjusting, and detaching</li>
@@ -165,10 +165,10 @@ const ProjectDetails = () => {
         </div>
         {/* Constraints Section */}
         <div>
-          <h4 className="text-xl font-semibold text-yellow-400 mb-4">
+          <h4 className="text-[#e5dfd4] text-[13px] uppercase tracking-[0.2em] font-light mb-3">
             Constraints
           </h4>
-          <ul className="list-disc pl-5 space-y-2 text-lg">
+          <ul className="list-none space-y-2">
             <li>Must be safe for the skin</li>
             <li>Must be capable of containing stool securely</li>
             <li>Must accommodate frequent movement such as bending, twisting, and jogging</li>
@@ -184,16 +184,16 @@ const ProjectDetails = () => {
 
  {/* Accordion Section: Proposed Solution */}
 <div
-  className="border border-gray-700 rounded-lg mb-6"
+  className="border border-[#1a1a1a] rounded-lg mb-6"
   onClick={() => toggleSection("solution")}
 >
-  <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
+  <h3 className="text-[#9a9a9a] text-[13px] uppercase tracking-[0.25em] font-light p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">
     Proposed Solution
   </h3>
   {openSections["solution"] && (
-    <div className="p-6 bg-gray-800 text-white rounded-lg">
+    <div className="p-6 bg-[#111111] text-[#e5dfd4]">
       <p className="mb-6 text-lg">
-        The <span className="text-yellow-400 font-bold">Twist N Go</span> was designed to address coupling failure and ensure enhanced usability for users:
+        The <span className="text-[#c4b86a] font-bold">Twist N Go</span> was designed to address coupling failure and ensure enhanced usability for users:
       </p>
       <ul className="list-decimal pl-5 space-y-6 text-lg">
         <li>
@@ -217,7 +217,7 @@ const ProjectDetails = () => {
           <img
             src="/dp/whiteboard.png"
             alt="Design Process Sketch of the Twist-Lock Ostomy System"
-            className="mt-4 w-full max-w-lg border border-gray-500 rounded-lg"
+            className="mt-4 w-full max-w-lg border border-[#2a2a2a] rounded-lg"
           />
         </li>
         <li>
@@ -228,7 +228,7 @@ const ProjectDetails = () => {
           <img
             src="/dp/finalprot.png"
             alt="Final Prototype of Twist n’ Go Colostomy Bag"
-            className="mt-4 w-full max-w-lg border border-gray-500 rounded-lg"
+            className="mt-4 w-full max-w-lg border border-[#2a2a2a] rounded-lg"
           />
         </li>
       </ul>
@@ -240,15 +240,15 @@ const ProjectDetails = () => {
 
 {/* Accordion Section: Responsibilities and Contributions */}
 <div
-  className="border border-gray-700 rounded-lg mb-6"
+  className="border border-[#1a1a1a] rounded-lg mb-6"
   onClick={() => toggleSection("resp")}
 >
-  <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
+  <h3 className="text-[#9a9a9a] text-[13px] uppercase tracking-[0.25em] font-light p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">
     Responsibilities and Contributions
   </h3>
   {openSections["resp"] && (
-    <div className="p-6 bg-gray-800 text-white rounded-lg">
-      <ul className="list-disc pl-5 space-y-6 text-lg">
+    <div className="p-6 bg-[#111111] text-[#e5dfd4]">
+      <ul className="list-none space-y-4">
         {/* Team Manager Section */}
         <li>
           <strong>Team Manager:</strong>
@@ -283,15 +283,15 @@ const ProjectDetails = () => {
 
 {/* Accordion Section: Project Learning Opportunities and Challenges */}
 <div
-  className="border border-gray-700 rounded-lg mb-6"
+  className="border border-[#1a1a1a] rounded-lg mb-6"
   onClick={() => toggleSection("learning")}
 >
-  <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
+  <h3 className="text-[#9a9a9a] text-[13px] uppercase tracking-[0.25em] font-light p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">
     💭 Project Learning Opportunities and Challenges
   </h3>
   {openSections["learning"] && (
-    <div className="p-6 bg-gray-800 text-white rounded-lg">
-      <ul className="list-disc pl-5 space-y-6 text-lg">
+    <div className="p-6 bg-[#111111] text-[#e5dfd4]">
+      <ul className="list-none space-y-4">
         {/* Project Learning Section */}
         <li>
           <strong>Project Learning Opportunities and Challenges:</strong>
@@ -308,9 +308,9 @@ const ProjectDetails = () => {
           <img
             src="/dp/w2.png"
             alt="Concept Design Iteration"
-            className="mt-4 w-full max-w-lg border border-gray-500 rounded-lg"
+            className="mt-4 w-full max-w-lg border border-[#2a2a2a] rounded-lg"
           />
-          <p className="text-sm text-gray-400 mt-2 text-center">
+          <p className="text-sm text-[#5e5e5e] mt-2 text-center">
             <strong>Fig. 3:</strong> Concept design iteration showing previous ideas which we considered.
           </p>
         </li>
@@ -345,9 +345,9 @@ const ProjectDetails = () => {
           <img
             src="/dp/proty.jpg"
             alt="Low-Fidelity Prototype Construction"
-            className="mt-4 w-full max-w-lg border border-gray-500 rounded-lg"
+            className="mt-4 w-full max-w-lg border border-[#2a2a2a] rounded-lg"
           />
-          <p className="text-sm text-gray-400 mt-2 text-center">
+          <p className="text-sm text-[#5e5e5e] mt-2 text-center">
             <strong>Fig. 4:</strong> Low-fidelity prototype showcasing the construction process and initial design tests.
           </p>
         </li>
@@ -360,21 +360,21 @@ const ProjectDetails = () => {
 
 {/* Accordion Section: Final Results */}
 <div
-  className="border border-gray-700 rounded-lg mb-6"
+  className="border border-[#1a1a1a] rounded-lg mb-6"
   onClick={() => toggleSection("results")}
 >
-  <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">
+  <h3 className="text-[#9a9a9a] text-[13px] uppercase tracking-[0.25em] font-light p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">
     Final Results, Thoughts, & Regrets
   </h3>
   {openSections["results"] && (
-    <div className="p-6 bg-gray-800 text-white rounded-lg">
-      <p className="italic text-yellow-400 mb-6">
+    <div className="p-6 bg-[#111111] text-[#e5dfd4]">
+      <p className="italic text-[#c4b86a] mb-6">
         "We do not learn from experience... we learn from reflecting on experience." – John Dewey
       </p>
       <p className="mb-6">
         This quote resonates deeply with this project, emphasizing that true growth comes from examining our actions, decisions, and their outcomes. By reflecting, I could extract meaningful lessons that shaped the process and future approaches to problem-solving.
       </p>
-      <ul className="list-disc pl-5 space-y-6 text-lg">
+      <ul className="list-none space-y-4">
         {/* Early Challenges Section */}
         <li>
           <strong>Early Challenges:</strong>
@@ -408,7 +408,7 @@ const ProjectDetails = () => {
           </p>
         </li>
       </ul>
-      <p className="mt-6 text-yellow-300">
+      <p className="mt-6 text-[#e5dfd4]">
         **What I Could've Done Better Overall:** I could have allocated more
         time to testing and refining the design before finalizing our prototype.
         <br />

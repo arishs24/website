@@ -49,21 +49,21 @@ const ProjectDetails3 = () => {
   };
 
   return (
-    <div className="w-full min-h-screen bg-gray-900 p-4 md:p-10 bg-tertiary rounded-lg">
+    <div className="w-full min-h-screen bg-[#0c0c0c] p-6 md:p-12 lg:p-16">
       <button
         onClick={handleBackToProjects}
-        className="bg-[#915EFF] text-white px-4 py-2 rounded-lg mb-4"
+        className="text-[#5e5e5e] hover:text-[#e5dfd4] text-[12px] uppercase tracking-[0.25em] font-light transition-colors duration-200 mb-6 inline-block"
       >
         Back to Projects
       </button>
 
-      <div className="bg-tertiary p-10 rounded-lg">
-        <h2 className="text-white font-bold text-[32px] mb-6">
+      <div className="">
+        <h2 className="font-heading text-[#e5dfd4] text-[28px] sm:text-[36px] font-normal mb-8">
           {project.name}
         </h2>
 
-        <div className="bg-gray-800 p-6 rounded-lg border-l-4 border-[#915EFF] mb-10 shadow-lg">
-          <h3 className="text-white text-[22px] font-bold mb-3">🔍 Project Overview</h3>
+        <div className="border-l-2 border-[#a83232] pl-6 mb-10">
+          <h3 className="font-heading text-[#e5dfd4] text-[22px] font-normal mb-4">🔍 Project Overview</h3>
 
             {/* 💡 Insert image here */}
   <img
@@ -73,11 +73,11 @@ const ProjectDetails3 = () => {
     className="rounded-lg shadow-md mb-4 w-full max-h-[400px] object-contain"
   />
 
-<p className="text-sm text-gray-400 mt-2">Fig 1: Final design and version of FlexAid.</p>
+<p className="text-sm text-[#5e5e5e] mt-2">Fig 1: Final design and version of FlexAid.</p>
 
 
-          <p className="text-white text-[18px] leading-relaxed">
-            <span className="text-yellow-300 font-semibold">FlexAid</span> is a wearable rehabilitation device designed to guide users through upper-limb recovery exercises by detecting motion in real time, providing personalized resistance, and offering immediate visual feedback. 
+          <p className="text-[#9a9a9a] text-[14px] leading-relaxed font-light">
+            <span className="text-[#e5dfd4] font-semibold">FlexAid</span> is a wearable rehabilitation device designed to guide users through upper-limb recovery exercises by detecting motion in real time, providing personalized resistance, and offering immediate visual feedback. 
             <br /><br />
             As <span className="text-secondary font-semibold">Project Coordinator</span> and a member of the <span className="text-secondary font-semibold">Computing Subteam</span>, I led development of the backend logic for servo-triggered feedback, real-time calibration, and graphical data visualization using Python and Tkinter. I also organized our team’s meetings, tracked progress logs, and ensured deliverables were aligned.
             <br /><br />
@@ -89,10 +89,10 @@ const ProjectDetails3 = () => {
           {/* Left Column */}
           <div className="lg:col-span-3 flex flex-col gap-8">
             {/* Role */}
-            <div className="p-6 bg-gray-800 rounded-lg border border-gray-700 shadow-md">
-  <h3 className="text-secondary font-semibold text-[20px] mb-3">Role:</h3>
-  <p className="text-white text-[18px] leading-relaxed">
-    <span className="font-semibold text-yellow-300">Project Coordinator</span> , I was responsible for leading and scheduling all team meetings outside of Design Studio, recording discussion notes during official sessions, and maintaining clear communication with our TA throughout the design process. I also compiled and submitted the final Logbook documenting all non-studio meetings to ensure alignment across all subteams.
+            <div className="p-6 bg-[#111111] border border-[#1a1a1a]">
+  <h3 className="text-[#5e5e5e] text-[12px] uppercase tracking-[0.25em] font-light mb-3">Role:</h3>
+  <p className="text-[#9a9a9a] text-[14px] leading-relaxed font-light">
+    <span className="font-semibold text-[#e5dfd4]">Project Coordinator</span> , I was responsible for leading and scheduling all team meetings outside of Design Studio, recording discussion notes during official sessions, and maintaining clear communication with our TA throughout the design process. I also compiled and submitted the final Logbook documenting all non-studio meetings to ensure alignment across all subteams.
   </p>
 
   {/* Toggle Button */}
@@ -131,11 +131,11 @@ const ProjectDetails3 = () => {
 
 
             {/* Skills */}
-            <div className="p-6 bg-gray-800 rounded-lg border border-gray-700">
-              <h2 className="text-2xl font-semibold mb-4 text-white">Skills:</h2>
+            <div className="p-6 bg-[#111111] border border-[#1a1a1a]">
+              <h2 className="text-[#e5dfd4] text-[14px] uppercase tracking-[0.3em] font-light mb-5">Skills</h2>
               {/* Soft Skills */}
               <div className="mb-6">
-                <h3 className="text-xl font-semibold mb-3 text-secondary">Soft Skills:</h3>
+                <h3 className="text-[#5e5e5e] text-[12px] uppercase tracking-[0.25em] font-light mb-3">Soft Skills</h3>
                 <div className="flex flex-wrap gap-5">
                   {project.softSkills.map((skill, idx) => (
                     <TechBox key={idx} name={skill} index={idx} size="large" />
@@ -144,7 +144,7 @@ const ProjectDetails3 = () => {
               </div>
               {/* Technical Skills */}
               <div>
-                <h3 className="text-xl font-semibold mb-3 text-secondary">Technical Skills:</h3>
+                <h3 className="text-[#5e5e5e] text-[12px] uppercase tracking-[0.25em] font-light mb-3 mt-5">Technical Skills</h3>
                 <div className="flex flex-wrap gap-5">
                   {project.technicalSkills.map((skill, idx) => (
                     <TechBox key={idx} name={skill} index={idx} size="large" />
@@ -165,7 +165,7 @@ const ProjectDetails3 = () => {
             {renderSection("Establishing Objectives and Constraints", "objectives", openSections, toggleSection, (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="text-xl font-semibold text-yellow-400 mb-2">Objectives</h4>
+                  <h4 className="text-[#e5dfd4] text-[13px] uppercase tracking-[0.2em] font-light mb-3">Objectives</h4>
                   <ul className="list-disc pl-5 text-[17px] text-white">
                     <li>Detect and respond to poor rehab form</li>
                     <li>Customize resistance levels using ML logic</li>
@@ -174,7 +174,7 @@ const ProjectDetails3 = () => {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="text-xl font-semibold text-yellow-400 mb-2">Constraints</h4>
+                  <h4 className="text-[#e5dfd4] text-[13px] uppercase tracking-[0.2em] font-light mb-3">Constraints</h4>
                   <ul className="list-disc pl-5 text-[17px] text-white">
                     <li>Device must fit a range of users</li>
                     <li>Hardware must be Raspberry Pi-compatible</li>
@@ -200,7 +200,7 @@ const ProjectDetails3 = () => {
         Your browser does not support the video tag.
       </video>
     </div>
-                <ul className="list-disc pl-6 space-y-2 text-[17px] text-white">
+                <ul className="list-none space-y-3 text-[#9a9a9a] text-[14px] font-light">
                   <li>Orientation sensor captures motion during exercise</li>
                   <li>Servo provides user-specific resistance during bicep curls</li>
                   <li>Real-time alert system identifies improper form</li>
@@ -211,7 +211,7 @@ const ProjectDetails3 = () => {
 
             {renderSection("Computing & Integration Highlights", "computing", openSections, toggleSection, (
               <>
-                <ul className="list-disc pl-6 space-y-2 text-[17px] text-white">
+                <ul className="list-none space-y-3 text-[#9a9a9a] text-[14px] font-light">
                   <li>Developed personalized resistance algorithm using calibration thresholds</li>
                   <li>Implemented real-time feedback logic tied to FSR and orientation data</li>
                   <li>Built a Tkinter-based GUI to guide users and visualize sensor output</li>
@@ -222,14 +222,14 @@ const ProjectDetails3 = () => {
       alt="Tkinter UI Screenshot"
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
-                  <p className="text-sm text-gray-400 mt-2">Fig 2: Data transmission from Raspberry Pi to frontend, displaying on graph using Matplotlib and Tkinter.</p>
+                  <p className="text-sm text-[#5e5e5e] mt-2">Fig 2: Data transmission from Raspberry Pi to frontend, displaying on graph using Matplotlib and Tkinter.</p>
 
                 </ul>
               </>
             ))}
 
             {renderSection("Responsibilities and Contributions", "responsibilities", openSections, toggleSection, (
-              <ul className="list-disc pl-6 space-y-2 text-[17px] text-white">
+              <ul className="list-none space-y-3 text-[#9a9a9a] text-[14px] font-light">
                 <li>Organized external meetings and submitted logbook documentation</li>
                 <li>Served as Note-Taker and primary TA liaison during studio</li>
                 <li>Led computing subteam in developing machine learning backend</li>
@@ -246,7 +246,7 @@ const ProjectDetails3 = () => {
   This section of the code manages real-time motion tracking and feedback logic. It reads continuous orientation data, compares it against personalized calibration thresholds, and triggers servo motor responses or buzzer alerts when improper form is detected. It also updates the graphical interface using Tkinter and Matplotlib, allowing users to monitor their exercise progress live.
 </p>
 
-    <div className="max-h-[500px] overflow-y-scroll bg-gray-900 rounded-md p-4 border border-gray-700">
+    <div className="max-h-[500px] overflow-y-scroll bg-[#080808] rounded-sm p-4 border border-[#1a1a1a]">
       <pre className="language-python text-sm">
         <code className="language-python">
 {`# Excerpt from Team_6_DP3_PythonProgram.py
@@ -276,7 +276,7 @@ def adjust_servo_resistance(y_avg, angular_velocity, min_flexion, max_flexion, s
         </code>
       </pre>
     </div>
-    <p className="text-sm text-gray-400 italic">
+    <p className="text-sm text-[#5e5e5e] italic">
       ⚠️ View is scrollable. Full source available in GitHub or local download.
     </p>
   </div>
@@ -295,7 +295,7 @@ def adjust_servo_resistance(y_avg, angular_velocity, min_flexion, max_flexion, s
       alt="Tkinter UI Screenshot"
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
-                  <p className="text-sm text-gray-400 mt-2">Fig 4: Gear Iteration, comparing prelim, with final.</p>
+                  <p className="text-sm text-[#5e5e5e] mt-2">Fig 4: Gear Iteration, comparing prelim, with final.</p>
 
 
     <p>
@@ -314,7 +314,7 @@ def adjust_servo_resistance(y_avg, angular_velocity, min_flexion, max_flexion, s
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
 
-<p className="text-sm text-gray-400 mt-2">Fig5 : Showing quick run down of initial code iteration, with basic commands.</p>
+<p className="text-sm text-[#5e5e5e] mt-2">Fig5 : Showing quick run down of initial code iteration, with basic commands.</p>
 
 
     <p>
@@ -328,7 +328,7 @@ def adjust_servo_resistance(y_avg, angular_velocity, min_flexion, max_flexion, s
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
 
-<p className="text-sm text-gray-400 mt-2">Fig 6: Tkinter UI, showing patient info page.</p>
+<p className="text-sm text-[#5e5e5e] mt-2">Fig 6: Tkinter UI, showing patient info page.</p>
 
 
     <p>
@@ -367,7 +367,7 @@ def adjust_servo_resistance(y_avg, angular_velocity, min_flexion, max_flexion, s
 
 {renderSection("Final Reflections", "reflection", openSections, toggleSection, (
   <>
-    <p className="italic text-yellow-400 mb-4">
+    <p className="italic text-[#c4b86a] mb-4">
       "The best way to predict the future is to invent it." – Alan Kay
     </p>
 
@@ -381,7 +381,7 @@ def adjust_servo_resistance(y_avg, angular_velocity, min_flexion, max_flexion, s
       alt="Tkinter UI Screenshot"
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
-                  <p className="text-sm text-gray-400 mt-2">Fig 7: Initial hurdle with gear sizing and placement.</p>
+                  <p className="text-sm text-[#5e5e5e] mt-2">Fig 7: Initial hurdle with gear sizing and placement.</p>
 
       <p>
         <strong>Initial Hurdles:</strong><br />
@@ -401,7 +401,7 @@ def adjust_servo_resistance(y_avg, angular_velocity, min_flexion, max_flexion, s
       alt="Tkinter UI Screenshot"
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
-                  <p className="text-sm text-gray-400 mt-2">Fig 8: Initial code idea, which was scrapped as did not work well with actual idea, used JSON.</p>
+                  <p className="text-sm text-[#5e5e5e] mt-2">Fig 8: Initial code idea, which was scrapped as did not work well with actual idea, used JSON.</p>
 
 
       <p>
@@ -414,7 +414,7 @@ def adjust_servo_resistance(y_avg, angular_velocity, min_flexion, max_flexion, s
         I walked away from FlexAid with more than just a working prototype, I walked away with a deeper respect for collaborative systems engineering. I’ve learned that iteration is not a sign of failure but a signal that you’re moving closer to a solution that actually works.
       </p>
 
-      <p className="text-yellow-300">
+      <p className="text-[#e5dfd4]">
         <strong>What I Could’ve Done Better:</strong> I could have allocated more time for early-stage testing, particularly for the servo-triggered feedback system.<br />
         <strong>Outcome:</strong> This would’ve exposed integration bugs sooner, allowing for a smoother calibration experience and improved performance leading up to Expo.
       </p>
@@ -432,9 +432,9 @@ def adjust_servo_resistance(y_avg, angular_velocity, min_flexion, max_flexion, s
 
 // Reusable toggle section
 const renderSection = (title, key, openSections, toggleSection, content) => (
-  <div className="border border-gray-700 rounded-lg" onClick={() => toggleSection(key)}>
-    <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">{title}</h3>
-    {openSections[key] && <div className="p-6 bg-gray-800">{content}</div>}
+  <div className="border border-[#1a1a1a] mb-5" onClick={() => toggleSection(key)}>
+    <h3 className="text-[#9a9a9a] text-[13px] uppercase tracking-[0.25em] font-light p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">{title}</h3>
+    {openSections[key] && <div className="p-6 bg-[#111111]">{content}</div>}
   </div>
 );
 

@@ -47,51 +47,41 @@ const ProjectDetails4 = () => {
   };
 
   return (
-    <div className="w-full min-h-screen bg-gray-900 p-4 md:p-10 bg-tertiary rounded-lg">
+    <div className="w-full min-h-screen bg-[#0c0c0c] p-6 md:p-12 lg:p-16">
       <button
         onClick={handleBackToProjects}
-        className="bg-[#915EFF] text-white px-4 py-2 rounded-lg mb-4"
+        className="text-[#5e5e5e] hover:text-[#e5dfd4] text-[12px] uppercase tracking-[0.25em] font-light transition-colors duration-200 mb-6 inline-block"
       >
         Back to Projects
       </button>
 
       {/* Project Overview Section */}
-      <div className="bg-gray-800 p-6 rounded-lg border-l-4 border-[#915EFF] mb-10 shadow-lg">
-        <h3 className="text-white text-[22px] font-bold mb-3">🔍 Project Overview</h3>
-        <p className="text-white text-[18px] leading-relaxed">
-          <span className="text-yellow-300 font-semibold">EZ Step</span> is a wearable foot-drop rehabilitation device designed to support patients with neurological disorders such as Multiple Sclerosis. It uses foot sensors and servo-driven actuation to assist foot lift during running while providing cadence data and step tracking. 
+      <div className="border-l-2 border-[#a83232] pl-6 mb-10">
+        <h3 className="font-heading text-[#e5dfd4] text-[22px] font-normal mb-4">🔍 Project Overview</h3>
+        <p className="text-[#9a9a9a] text-[14px] leading-relaxed font-light">
+          <span className="text-[#e5dfd4] font-semibold">EZ Step</span> is a wearable foot-drop rehabilitation device designed to support patients with neurological disorders such as Multiple Sclerosis. It uses foot sensors and servo-driven actuation to assist foot lift during running while providing cadence data and step tracking. 
           <br /><br />
           As a <span className="text-secondary font-semibold">Subject Matter Expert</span>, I contributed research that influenced the design direction and mechanical choices. I also supported servo testing and mechanical iteration while leading documentation for our DHF and industry summary memo.
         </p>
 
-            {/* 🎥 Embed your demo video here */}
-    <div className="my-6 rounded-lg overflow-hidden shadow-lg">
-      <video
-        controls
-        className="w-full max-h-[480px] rounded-lg"
-      >
-        <source src="/dp/dp4.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
         {/* Left Column */}
         <div className="lg:col-span-3 flex flex-col gap-8">
           {/* Role */}
-          <div className="p-6 bg-gray-800 rounded-lg border border-gray-700 shadow-md">
-            <h3 className="text-secondary font-semibold text-[20px] mb-3">Role:</h3>
-            <p className="text-white text-[18px] leading-relaxed">
-              <span className="text-yellow-300 font-semibold">Subject Matter Expert</span> , I compiled and maintained our research database, ensuring all technical decisions were supported by credible literature. I also led the completion of our team’s written documentation, DHF entries, and project summary memo, and assisted in mechanical testing of the servo-foot interface.
+          <div className="p-6 bg-[#111111] border border-[#1a1a1a]">
+            <h3 className="text-[#5e5e5e] text-[12px] uppercase tracking-[0.25em] font-light mb-3">Role:</h3>
+            <p className="text-[#9a9a9a] text-[14px] leading-relaxed font-light">
+              <span className="text-[#e5dfd4] font-semibold">Subject Matter Expert</span> , I compiled and maintained our research database, ensuring all technical decisions were supported by credible literature. I also led the completion of our team’s written documentation, DHF entries, and project summary memo, and assisted in mechanical testing of the servo-foot interface.
             </p>
           </div>
 
           {/* Skills */}
-          <div className="p-6 bg-gray-800 rounded-lg border border-gray-700">
-            <h2 className="text-2xl font-semibold mb-4 text-white">Skills:</h2>
+          <div className="p-6 bg-[#111111] border border-[#1a1a1a]">
+            <h2 className="text-[#e5dfd4] text-[14px] uppercase tracking-[0.3em] font-light mb-5">Skills</h2>
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-secondary">Soft Skills:</h3>
+              <h3 className="text-[#5e5e5e] text-[12px] uppercase tracking-[0.25em] font-light mb-3">Soft Skills</h3>
               <div className="flex flex-wrap gap-5">
                 {project.softSkills.map((skill, idx) => (
                   <TechBox key={idx} name={skill} index={idx} size="large" />
@@ -99,7 +89,7 @@ const ProjectDetails4 = () => {
               </div>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-3 text-secondary">Technical Skills:</h3>
+              <h3 className="text-[#5e5e5e] text-[12px] uppercase tracking-[0.25em] font-light mb-3 mt-5">Technical Skills</h3>
               <div className="flex flex-wrap gap-5">
                 {project.technicalSkills.map((skill, idx) => (
                   <TechBox key={idx} name={skill} index={idx} size="large" />
@@ -120,7 +110,7 @@ const ProjectDetails4 = () => {
           {renderSection("Establishing Objectives and Constraints", "objectives", openSections, toggleSection, (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <h4 className="text-xl font-semibold text-yellow-400 mb-2">Objectives</h4>
+                <h4 className="text-[#e5dfd4] text-[13px] uppercase tracking-[0.2em] font-light mb-3">Objectives</h4>
                 <ul className="list-disc pl-5 text-white text-[17px]">
                   <li>Support foot flexion during running</li>
                   <img
@@ -128,7 +118,7 @@ const ProjectDetails4 = () => {
       alt="Tkinter UI Screenshot"
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
-      <p className="text-sm text-gray-400 mt-2">Fig 1: Support foot flexion during running with gear chain.</p>
+      <p className="text-sm text-[#5e5e5e] mt-2">Fig 1: Support foot flexion during running with gear chain.</p>
 
 
                   <li>Remain lightweight and wearable</li>
@@ -138,7 +128,7 @@ const ProjectDetails4 = () => {
                 </ul>
               </div>
               <div>
-                <h4 className="text-xl font-semibold text-yellow-400 mb-2">Constraints</h4>
+                <h4 className="text-[#e5dfd4] text-[13px] uppercase tracking-[0.2em] font-light mb-3">Constraints</h4>
                 <ul className="list-disc pl-5 text-white text-[17px]">
                   <li>Use only approved components</li>
                   <li>Servo response must be low-latency</li>
@@ -151,14 +141,14 @@ const ProjectDetails4 = () => {
           ))}
 
           {renderSection("Proposed Solution", "solution", openSections, toggleSection, (
-            <ul className="list-disc pl-6 space-y-2 text-white text-[17px]">
+            <ul className="list-none space-y-3 text-[#9a9a9a] text-[14px] font-light">
               <li>Chain and gear mechanism inspired by bike drivetrain</li>
               <img
       src="/dp/chain.png"
       alt="Tkinter UI Screenshot"
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
-          <p className="text-sm text-gray-400 mt-2">Fig 2: Gear Chain CAD Model.</p>
+          <p className="text-sm text-[#5e5e5e] mt-2">Fig 2: Gear Chain CAD Model.</p>
 
 
               <li>Servo motor activates based on sensor timing</li>
@@ -168,7 +158,7 @@ const ProjectDetails4 = () => {
       alt="Tkinter UI Screenshot"
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
-              <p className="text-sm text-gray-400 mt-2">Fig 3: FSR Placement, ball and heel.</p>
+              <p className="text-sm text-[#5e5e5e] mt-2">Fig 3: FSR Placement, ball and heel.</p>
 
 
               <li>App GUI visualizes step count, alerts, and cadence</li>
@@ -180,13 +170,13 @@ const ProjectDetails4 = () => {
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
 
-<p className="text-sm text-gray-400 mt-2">Fig 4: Full Assembled model for adjustable housing fits.</p>
+<p className="text-sm text-[#5e5e5e] mt-2">Fig 4: Full Assembled model for adjustable housing fits.</p>
 
             </ul>
           ))}
 
 {renderSection("Responsibilities and Contributions", "responsibilities", openSections, toggleSection, (
-            <ul className="list-disc pl-6 space-y-2 text-white text-[17px]">
+            <ul className="list-none space-y-3 text-[#9a9a9a] text-[14px] font-light">
               <li>Built research database with cited sources</li>
               <li>Wrote final industry memo and DHF summaries</li>
               <li>Supported servo testing and mechanical fitment</li>
@@ -196,7 +186,7 @@ const ProjectDetails4 = () => {
           ))}
 
 {renderSection("🧠 Computing & Integration Highlights", "computing", openSections, toggleSection, (
-  <ul className="list-disc pl-6 space-y-2 text-[17px] text-white">
+  <ul className="list-none space-y-3 text-[#9a9a9a] text-[14px] font-light">
     <li>Developed and iterated all backend logic for foot-drop detection and servo response</li>
     <li>Created frontend UI for displaying cadence and heel/toe activation status</li>
     <li>Calibrated force-sensitive resistors (FSRs) for accurate gait phase detection</li>
@@ -209,7 +199,7 @@ const ProjectDetails4 = () => {
   <div className="space-y-6 text-[17px] text-white leading-relaxed">
     <p><strong>Iteration 1 – Concept Mockup:</strong><br />Built a basic servo-gear prototype without FSR input. This helped us visualize motion range and gear clearance but lacked dynamic timing.</p>
 
-    <div className="max-h-[500px] overflow-y-scroll bg-gray-900 rounded-md p-4 border border-gray-700">
+    <div className="max-h-[500px] overflow-y-scroll bg-[#080808] rounded-sm p-4 border border-[#1a1a1a]">
       <pre className="language-python text-sm">
         <code className="language-python">
 {`# Excerpt from Iteration2.py
@@ -279,7 +269,7 @@ while True:
       alt="Tkinter UI Screenshot"
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
-                  <p className="text-sm text-gray-400 mt-2">Fig 5: Drawing which made us question if our design is good.</p>
+                  <p className="text-sm text-[#5e5e5e] mt-2">Fig 5: Drawing which made us question if our design is good.</p>
 
 
     <p>
@@ -317,7 +307,7 @@ while True:
 
 {renderSection("Final Reflections", "reflection", openSections, toggleSection, (
   <>
-    <p className="italic text-yellow-400 mb-4">
+    <p className="italic text-[#c4b86a] mb-4">
       "Design is not just what it looks like and feels like. Design is how it works." , Steve Jobs
     </p>
 
@@ -346,7 +336,7 @@ while True:
         This project pushed me to slow down and listen,to teammates, to the hardware, and to the simulated user feedback. I used to think a successful build was one that <strong>worked</strong>. Now I know it’s one that works <strong>well enough to forget it’s even there.</strong> That’s what we aimed for with EZ Step.
       </p>
 
-      <p className="text-yellow-300">
+      <p className="text-[#e5dfd4]">
         <strong>What I Could’ve Done Better:</strong> Started gait testing and servo timing trials much earlier in the design cycle.<br />
         <strong>Outcome:</strong> Would’ve exposed comfort issues sooner and allowed us to optimize real-time responsiveness more gradually.
       </p>
@@ -361,9 +351,9 @@ while True:
 };
 
 const renderSection = (title, key, openSections, toggleSection, content) => (
-  <div className="border border-gray-700 rounded-lg" onClick={() => toggleSection(key)}>
-    <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer">{title}</h3>
-    {openSections[key] && <div className="p-6 bg-gray-800">{content}</div>}
+  <div className="border border-[#1a1a1a] mb-5" onClick={() => toggleSection(key)}>
+    <h3 className="text-[#9a9a9a] text-[13px] uppercase tracking-[0.25em] font-light p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">{title}</h3>
+    {openSections[key] && <div className="p-6 bg-[#111111]">{content}</div>}
   </div>
 );
 

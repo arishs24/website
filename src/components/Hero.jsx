@@ -1,97 +1,54 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import { FaLinkedin, FaGithub, FaFileDownload } from "react-icons/fa";
-import styles from "../styles";
 
-const roles = ["Biomedical Engineer", "Medical Researcher", "Software Engineer", "Aspiring Neurosurgeon"];
-
-const useTypewriter = (words, loop = true, speed = 150, delay = 800) => {
-  const [text, setText] = useState('');
-  const [deleting, setDeleting] = useState(false);
-  const [wordIndex, setWordIndex] = useState(0);
-  const timeoutRef = useRef(null);
-
-  useEffect(() => {
-    const handleTyping = () => {
-      const currentWord = words[wordIndex];
-      setText(prev => deleting ? currentWord.substring(0, prev.length - 1) : currentWord.substring(0, prev.length + 1));
-
-      if (!deleting && text === currentWord) {
-        setTimeout(() => setDeleting(true), delay);
-      } else if (deleting && text === '') {
-        setDeleting(false);
-        setWordIndex(prev => (prev + 1) % words.length);
-      }
-
-      const typingSpeed = deleting ? speed / 2 : speed;
-      timeoutRef.current = setTimeout(handleTyping, typingSpeed);
-    };
-
-    timeoutRef.current = setTimeout(handleTyping, speed);
-    return () => clearTimeout(timeoutRef.current);
-  }, [text, deleting, wordIndex, words, speed, delay]);
-
-  return text;
-};
+const links = [
+  { label: "linkedin", href: "https://www.linkedin.com/in/arishshahab/" },
+  { label: "github", href: "https://github.com/arishs24" },
+  { label: "resume", href: "/resume.pdf" },
+  { label: "schedule a call", href: "https://calendly.com/arish-shahab1/30min" },
+];
 
 const Hero = () => {
-  const typedText = useTypewriter(roles);
-
   return (
-    <section className="relative w-full h-[60vh] mx-auto flex items-center overflow-hidden">
-      <div
-        className={`relative z-10 w-full max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-center gap-5`}
+    <section className="max-w-2xl mx-auto sm:px-16 px-6 pt-40 sm:pt-52 pb-10">
+
+      <motion.h1
+        initial={{ opacity: 0, y: 18 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
+        className="font-heading text-[#e5dfd4] text-[80px] sm:text-[104px] font-normal leading-[0.95] tracking-tight mb-12"
       >
-        <div className="flex flex-col justify-center items-center">
-          <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
-          <div className="w-1 h-32 violet-gradient" />
-        </div>
+        Arish<br />Shahab
+      </motion.h1>
 
-        <div className="flex-1">
-          <h1 className={`text-5xl sm:text-6xl font-black text-white`}>
-            Hi, I'm <span className="text-[#915EFF]">Arish</span>
-          </h1>
-          <p className={`text-xl sm:text-2xl mt-2 text-white-100`}>
-            <span>{typedText}</span>
-          </p>
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="text-[#888888] text-[16px] leading-[1.85] mb-12"
+      >
+        i'm studying integrated biomedical engineering and health sciences at mcmaster university. i want to be a physician and i build things along the way.
+      </motion.p>
 
-          {/* Buttons Section with Icons */}
-          <div className="mt-6 flex gap-4 relative z-10">
-            {/* LinkedIn Button */}
-            <a
-              href="https://www.linkedin.com/in/arishshahab/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white text-2xl bg-blue-600 hover:bg-blue-500 p-2.5 rounded-full transition-colors"
-              title="LinkedIn Profile"
-            >
-              <FaLinkedin />
-            </a>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.4, delay: 0.55 }}
+        className="flex flex-wrap gap-x-7 gap-y-3"
+      >
+        {links.map(({ label, href }) => (
+          <a
+            key={label}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[13px] text-[#3a3a3a] hover:text-[#c8c2b8] transition-colors duration-300"
+          >
+            {label} ↗
+          </a>
+        ))}
+      </motion.div>
 
-            {/* GitHub Button */}
-            <a
-              href="https://github.com/arishs24"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white text-2xl bg-gray-800 hover:bg-gray-700 p-2.5 rounded-full transition-colors"
-              title="GitHub Profile"
-            >
-              <FaGithub />
-            </a>
-
-            {/* Resume Button */}
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white text-2xl bg-green-600 hover:bg-green-500 p-2.5 rounded-full transition-colors"
-              title="Open Resume"
-            >
-              <FaFileDownload />
-            </a>
-          </div>
-        </div>
-      </div>
     </section>
   );
 };

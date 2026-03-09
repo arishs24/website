@@ -1,18 +1,15 @@
-// src/hoc/SectionWrapper.jsx
-import { motion } from 'framer-motion';
-import styles from "../styles";
-import { staggerContainer } from '../utils/motion';
+import { motion } from "framer-motion";
 
 const SectionWrapper = (Component, idName) => function HOC() {
   return (
     <motion.section
-      variants={staggerContainer()}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, amount: 0.25 }}
-      className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.03 }}
+      transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+      className="max-w-2xl mx-auto sm:px-16 px-6 pt-20 pb-32 relative z-0"
     >
-      <span className='hash-span' id={idName}>&nbsp;</span>
+      <span className="hash-span" id={idName}>&nbsp;</span>
       <Component />
     </motion.section>
   );

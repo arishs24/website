@@ -1,81 +1,59 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-
-import styles from '../styles';
-import { navLinks } from '../constants';
-import { logo, menu, close } from '../assets';
+import React, { useState } from "react";
+import { navLinks } from "../constants";
 
 const Navbar = ({ currentPage, onChangePage }) => {
-  const [active, setActive] = useState('');
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}>
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <Link
-          to="/"
-          className="flex items-center gap-2"
-          onClick={() => {
-            setActive('');
-            if (onChangePage) {
-              onChangePage('about');
-            } else {
-              window.scrollTo(0, 0);
-            }
-          }}
+    <nav className="w-full fixed top-0 z-20 bg-[#0d0d0d]/90 backdrop-blur-md">
+      <div className="max-w-2xl mx-auto sm:px-16 px-6 py-6 flex justify-between items-center">
+        <button
+          onClick={() => onChangePage?.("about")}
+          className="text-[#2e2e2e] hover:text-[#c8c2b8] text-[13px] font-light transition-colors duration-300"
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-          <p className='text-white text-[18px] font-bold cursor-pointer flex'>
-            Arish &nbsp;
-            <span className='sm:block hidden'>| Shahab</span>
-          </p>
-        </Link>
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
-          {navLinks.map((navLink) => (
-            <li
-              key={navLink.id}
-              className={`${(currentPage === navLink.id || active === navLink.title) ? 'text-white' : 'text-secondary'} hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => {
-                setActive(navLink.title);
-                if (onChangePage) {
-                  onChangePage(navLink.id);
-                }
-              }}
-            >
-              <button type="button">
-                {navLink.title}
+          arish shahab
+        </button>
+
+        {/* Desktop */}
+        <ul className="hidden sm:flex gap-9">
+          {navLinks.map((link) => (
+            <li key={link.id}>
+              <button
+                onClick={() => onChangePage?.(link.id)}
+                className="text-[12px] font-light transition-colors duration-300 tracking-wide"
+                style={{ color: currentPage === link.id ? "#c8c2b8" : "#2e2e2e" }}
+              >
+                {link.title}
               </button>
             </li>
           ))}
         </ul>
-        <div className="sm:hidden flex flex-1 justify-end items-center">
-          <img
-            src={toggle ? close : menu}
-            alt="menu"
-            className='w-[28px] h-[28px] object-contain cursor-pointer'
+
+        {/* Mobile */}
+        <div className="sm:hidden relative">
+          <button
             onClick={() => setToggle(!toggle)}
-          />
-          <div className={`${!toggle ? 'hidden' : 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
-            <ul className='list-none flex flex-col gap-4'>
-              {navLinks.map((navLink) => (
-                <li
-                  key={navLink.id}
-                  className={`${(currentPage === navLink.id || active === navLink.title) ? 'text-white' : 'text-secondary'} font-medium cursor-pointer`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(navLink.title);
-                    if (onChangePage) {
-                      onChangePage(navLink.id);
-                    }
-                  }}
-                >
-                  <button type="button">
-                    {navLink.title}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
+            className="text-[#2e2e2e] hover:text-[#c8c2b8] transition-colors text-[12px] font-light tracking-wide"
+          >
+            {toggle ? "close" : "menu"}
+          </button>
+          {toggle && (
+            <div className="absolute top-10 right-0 bg-[#0d0d0d] border border-[#1a1a1a] p-6 min-w-[150px]">
+              <ul className="flex flex-col gap-5">
+                {navLinks.map((link) => (
+                  <li key={link.id}>
+                    <button
+                      onClick={() => { setToggle(false); onChangePage?.(link.id); }}
+                      className="text-[12px] font-light transition-colors tracking-wide"
+                      style={{ color: currentPage === link.id ? "#c8c2b8" : "#2e2e2e" }}
+                    >
+                      {link.title}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </nav>

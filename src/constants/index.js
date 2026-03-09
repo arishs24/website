@@ -46,6 +46,10 @@ import {
       title: "Projects",
     },
     {
+      id: "news",
+      title: "Press",
+    },
+    {
       id: "contact",
       title: "Contact",
     },
@@ -54,53 +58,82 @@ import {
   
   const experiences = [
     {
-      title: "Software Engineering Intern",
-      company_name: "Harvard Medical School | Foot & Ankle Research and Innovation Lab",
+      title: "Co-Founder",
+      company_name: "Amano",
       icon: "/harvard.png",
       iconBg: "#800000",
-      date: "July 2025 - Present",
+      date: "August 2025 – Present",
       points: [
-        "Designed and implemented software solutions to support computational orthopedic research, including data processing pipelines and custom simulation tools.",
-        "Developed scalable software applications integrating biomechanical models and surgical planning tools, enhancing research efficiency and usability.",
-        "Collaborated closely with biomedical engineers and orthopedic surgeons to translate research needs into robust, user-friendly software products."
+        "Hearing loss affects 1 in 5 people. Most will never afford the existing solution. Amano is changing that — building the world's most accessible hearing aid with clinical partnerships at Harvard Medical School and St. Joseph's Healthcare Hamilton.",
+        "Navigating hardware development, regulatory pathways, and clinical validation simultaneously while keeping the device affordable enough to actually reach the people who need it.",
+      ],
+    },
+    {
+      title: "Biomedical Engineer",
+      company_name: "Harvard Medical School & Massachusetts General Hospital",
+      icon: "/harvard.png",
+      iconBg: "#800000",
+      date: "April 2025 – Present",
+      points: [
+        "Applying finite element analysis and machine learning to model how musculoskeletal structures respond to force — so orthopedic surgeons can personalize decisions before they enter the room.",
+        "Building CT-to-FEA automation pipelines and surgical planning tools for the Foot & Ankle Research and Innovation Lab. Translating computational models into software that clinicians actually use.",
+      ],
+    },
+    {
+      title: "Software Engineer",
+      company_name: "AlgoSurg (YC W18)",
+      icon: "/harvard.png",
+      iconBg: "#383E56",
+      date: "November 2025 – Present",
+      points: [
+        "Automating the hours surgeons currently spend on pre-operative planning — so they spend more of it with the patient.",
+        "Building AI-driven surgical simulation and decision-support systems. Working at the intersection of clinical workflow and computational precision.",
+      ],
+    },
+    {
+      title: "ML Researcher",
+      company_name: "University Health Network (UHN)",
+      icon: starbucks,
+      iconBg: "#383E56",
+      date: "November 2025 – Present",
+      points: [
+        "Teaching models to understand the arc of rehabilitation — predicting improvement, plateau, and silent regression before it shows on a chart.",
+        "Developing predictive pipelines for functional outcome forecasting and recovery pathway optimization.",
       ],
     },
     {
       title: "Computational Neuroscience Researcher",
-      company_name: "Johns Hopkins Univeristy | NeuroData Lab",
+      company_name: "Johns Hopkins University",
       icon: "/hopkin.jpeg",
       iconBg: "#383E56",
-      date: "July 2024 - Present",
+      date: "October 2024 – January 2026",
       points: [
-        "Developed and optimized machine learning algorithms for analyzing complex neural data to support insights in neuroscience and clinical research.",
-        "Improved computational efficiency of algorithms using advanced data processing techniques, contributing to more accurate and robust research outcomes.",
-        "Collaborated with a multidisciplinary team to design models aimed at understanding neural patterns and enhancing data-driven decision-making in healthcare."
+        "Built ML-driven models to study brain function and disease in the NeuroData Lab.",
+        "Collaborated with the Crone Lab on brain-computer interface synchronization — working on the problem of translating neural signals into reliable, real-time control.",
+        "Contributed to publications and conference presentations on BCI technology and signal processing.",
       ],
     },
     {
-      title: "Brain-Computer Interface Researcher",
-      company_name: "Emory University | SNeL.AI Lab",
-      icon: "/emory.png",
-      iconBg: "#002147",
-      date: "April 2025 - Present",
+      title: "ML Researcher",
+      company_name: "RBC Borealis",
+      icon: shopify,
+      iconBg: "#383E56",
+      date: "September 2025 – December 2025",
       points: [
-        "Investigated advanced brain-computer interface (BCI) systems focusing on silent speech decoding and neural signal processing.",
-        "Enhanced machine learning pipelines for real-time neural data analysis, improving system accuracy and reducing processing latency.",
-        "Collaborated with cross-institutional teams, contributing to publications and conference presentations on cutting-edge BCI technologies."
+        "Conducted volumetric brain analysis using ML for early neurodegeneration detection.",
+        "Developed scalable pipelines for processing and modeling large-scale neuroimaging datasets.",
       ],
     },
-    
     {
       title: "Clinical Researcher",
       company_name: "Hamilton Health Sciences | Juravinski Hospital",
       icon: starbucks,
       iconBg: "#383E56",
-      date: "July 2024 - Present",
+      date: "June 2024 – September 2025",
       points: [
-        "Conducted a multi-centre longitudinal study on wait times for hip/knee replacements in osteoarthritis patients under Dr. Thomas Wood",
-        "Engineered and maintained a robust SQL and REDCap database for 3,000 patients, improving data retrieval time by 20%.",
-        "Developed advanced machine learning models with over 85% accuracy to predict patient trajectories based on pre-operative symptoms.",
-        "Monitored pre-operative and post-operative pain, functional ability, and opioid use through the administration of standardized questionnaires, including the H/KOOS-JR and EQ5D",
+        "Multi-centre longitudinal study on wait times for hip/knee arthroplasty in osteoarthritis patients under Dr. Thomas Wood.",
+        "Managed a SQL and REDCap database covering 3,000 patients. Developed ML models with 85%+ accuracy to predict functional trajectories from pre-operative symptoms.",
+        "Administered H/KOOS-JR and EQ5D questionnaires to track pain, function, and opioid use across the surgical continuum.",
       ],
     },
     {
@@ -108,25 +141,10 @@ import {
       company_name: "Headstarter AI",
       icon: tesla,
       iconBg: "#E6DEDD",
-      date: "July 2024 - September 2024",
+      date: "July 2024 – September 2024",
       points: [
-        "Built 5+ API apps and APIs using NextJS, OpenAI, Pinecone, StripeAPI with 98% accuracy as seen by 1000 users.",
-        "Developed projects from design to deployment leading 4+ engineering fellows using MVC design patterns.",
-        "Coached by Amazon, Bloomberg, and Capital One engineers on Agile, CI/CD, Git, and microservice patterns."
-      ],
-    },
-    {
-      title: "Biomedical Device Researcher",
-      company_name: "University of Waterloo",
-      icon: shopify,
-      iconBg: "#383E56",
-      date: "Jan 2022 - Jan 2023",
-      points: [
-        "Collaborated with Professor George Shaker to optimize a ligand-targeted, smart liposomal drug delivery system for ILD treatment.",
-        "Developed machine learning algorithms with Python, TensorFlow, and Keras, improving drug delivery targeting by 15%.",
-        "Utilized AI techniques with Keras and Scikit-learn to analyze large datasets of patient responses and refine drug delivery protocols, enhancing treatment efficacy by 20%.",
-        "Designed and simulated biomedical engineering models using MATLAB and COMSOL to test the behavior of liposomal drug delivery in virtual environments, reducing the need for initial physical trials by 30%."
-
+        "Built and shipped 5+ production applications using Next.js, OpenAI, Pinecone, and Stripe — reached 1,000+ users.",
+        "Led a team of 4 engineers from design to deployment. Mentored by engineers from Amazon, Bloomberg, and Capital One.",
       ],
     },
     {
@@ -134,25 +152,21 @@ import {
       company_name: "Shoppers Drug Mart",
       icon: meta,
       iconBg: "#E6DEDD",
-      date: "Sept 2022 - Present",
+      date: "September 2022 – Present",
       points: [
-        "Assisted pharmacists in dispensing over 1,000 prescription medications to patients weekly.",
-        "Managed inventory, ensuring 98% accuracy in ordering and restocking supplies, utilizing inventory management software.",
-        "Coordinated with insurance companies to verify coverage and managed pre-authorization processes, improving patient access to medications by 20%.",
-        "Utilized pharmacy management software to streamline operations and enhance workflow efficiency."
+        "Dispensing 1,000+ prescriptions weekly. Coordinating insurance pre-authorization and managing clinical inventory.",
+        "The closest I get to patients before medical school — a daily reminder of why the system needs better tools.",
       ],
     },
     {
-    title: "Robotics Mentor",
+      title: "Robotics Mentor",
       company_name: "Canadian School of Young Scholars",
       icon: csys,
       iconBg: "#E6DEDD",
-      date: "Jan 2017 - May 2022",
+      date: "January 2017 – May 2022",
       points: [
-        "Guided students in designing and programming EV3 and VEX robots using LEGO Mindstorms, leveraging Python and JavaScript.",
-        "Developed and implemented software algorithms using Python and EV3-G to control EV3 robots, improving task completion efficiency by 25%.",
-        "Created a Rubik's Cube solver using advanced algorithms and AI techniques, showcasing practical applications of software engineering."
-
+        "Taught students to design, build, and program EV3 and VEX robots. Coached competition teams.",
+        "Where I learned that teaching is the fastest way to understand something — and that most kids just need someone to show them the tools exist.",
       ],
     },
   ];
@@ -227,66 +241,61 @@ export const education = [
 
 export const volunteerExperiences = [
   {
-    title: "Frequency Writer - McMaster Engineering Journal",
-    company_name: "McMaster Engineering Society",
+    title: "Frequency Writer",
+    company_name: "The Frequency — McMaster Engineering Society",
     icon: "/mac.jpg",
     iconBg: "#FF0000",
-    date: "September 2024 - Present",
+    date: "September 2024 – Present",
     points: [
-    "Wrote engaging and research-backed articles for The Frequency, McMaster Engineering's student journal.",
-    "Collaborated with the editorial team to pitch ideas, refine drafts, and align content with the journal's themes.",
-    "Conducted thorough research and interviews to ensure accuracy and depth in articles."
+      "Writing research-backed articles for McMaster Engineering's student journal. The work of making technical ideas legible to people who almost understand them.",
+      "Pitching, drafting, and refining pieces that sit at the edge of engineering and clinical relevance.",
     ],
     link: 'https://macengsociety.ca/pdfs/frequency/TheFrequency_fall_2024.pdf',
-    },
+  },
   {
     title: "Dialysis Assistant",
     company_name: "Trillium Health Partners",
     icon: thp,
     iconBg: "#E8A317",
-    date: "May 2024 - Present",
+    date: "May 2024 – Present",
     points: [
-      "Supported outpatient visits at the Outpatient Speakman Renal Dialysis Care Center.",
-      "Conducted patient intake and maintained accurate records.",
-      "Collaborated with nephrologists and nurses to ensure optimal patient outcomes in dialysis care"
-    ]
+      "Supporting outpatient visits at the Speakman Renal Dialysis Care Centre. Patient intake, record management, care coordination.",
+      "Three to five hours per session, multiple times a week, for patients who have no other option. It recalibrates what 'urgency' means.",
+    ],
   },
   {
-    
     title: "Clinical Shadowing",
-    company_name: "Juravinski Hospital, Royal Oak Clinic, Renal Care Centre",
+    company_name: "Juravinski Hospital · Royal Oak Clinic · Renal Care Centre",
     icon: shadow,
     iconBg: "#1E90FF",
-    date: "Sept 2022- Present",
+    date: "September 2022 – Present",
     points: [
-      "Juravinski Hospital - Orthopaedics, Dr. Thomas Wood, MD. Clinical & Surgery",
-      "Royal Oak Clinic - Family Medicine, Dr. Evis Skendaj, MD.",
-      "Renal Care Centre - Dialysis, Dr. Sharn Bhandal, MD."
-    ]
+      "Orthopaedics — Dr. Thomas Wood, MD. Clinical and surgical observation at Juravinski Hospital.",
+      "Family Medicine — Dr. Evis Skendaj, MD. Royal Oak Clinic.",
+      "Nephrology — Dr. Sharn Bhandal, MD. Renal Care Centre, dialysis.",
+    ],
   },
   {
-    
     title: "Biomedical Team Lead",
     company_name: "Eclipto Network",
     icon: shadow,
     iconBg: "#1E90FF",
-    date: "Mar 2024 - July 2024",
+    date: "March 2024 – July 2024",
     points: [
-      "- Led biomedical research projects, fostering innovation and enhancing team engagement.",
-      "- Directed brainstorming sessions using advanced methodologies to solve complex scientific issues."
-    ]
+      "Led biomedical research projects from ideation through structured execution.",
+      "Ran brainstorming sessions and technical reviews for cross-disciplinary problems at the intersection of life science and engineering.",
+    ],
   },
   {
-    title: "STEM Teacher Assistant",
+    title: "STEM Teaching Assistant",
     company_name: "Mathstronauts",
     icon: math,
     iconBg: "#00000",
-    date: "Jan 2020 - Feb 2022",
+    date: "January 2020 – February 2022",
     points: [
-      "Provided comprehensive assistance to students on a variety of technical projects, specializing in graphic design, programming, and 3D modeling.",
-      "Leveraged advanced tools such as CAD and AutoCAD to enhance project outcomes and ensure precision in design and execution."
-    ]
-  }
+      "Taught kids programming, 3D modelling, and CAD. The goal was never the project — it was the moment they stopped asking for permission to build.",
+    ],
+  },
 ];
 
 export const publishedResearch = [
@@ -351,28 +360,6 @@ export const publishedResearch = [
 ];
 
 export const universityProjects = [
-  {
-    name: "Design Project 1 - Ostomy Bag",
-    description: "A user-friendly ostomy bag with a twist-and-lock mechanism designed for active users.",
-    sections: {
-      "Patient Profile": "Our patient, Tahani Al-Jamil, has an ostomy and uses a two-piece drainable system. She has a very physically demanding job that requires frequent twisting and bending of the abdomen. Unfortunately during these types of activities, Tahani experiences a frequent failure of the snap-in coupling of the flange and the pouch. With regular use, including a frequent need to adjust bag positioning, Tahani has found that the coupling loses its secure connection resulting in her ostomy bag falling off on multiple occasions. ",
-      "Objectives and Constraints": "The goal was to develop a secure and comfortable ostomy bag, considering constraints like material safety, ease of use, and durability.",
-      "Proposed Solution": "The Twist-Lock Ostomy was designed to specifically address the uncoupling failure the patient experiences while also limiting bag movement. ",
-      "Responsibilities and Contributions": "As a coordinator, I recommended kinetic tape and took notes during team meetings.Our solution consists of two main components: 1. **First Component:** two-part twist-lock system. 1. the flange has a set of tabs that can be fitted into the slots present on the bag. The bag will then have to be fitted to the flange and twisted down so it locks in place.  2. Further supported by velcro attachments (see Figure 2) 2. **Second Component:** an elastic strap to stabilize the bag. 1. two clips on either side of the elastic band will then allow the user to secure the ends to the waistband of their pants in a desired position.",
-      "Project Learning Opportunities and Challenges": "Learned to collaborate effectively and handle user-centric design challenges.",
-      "Final Results": "Overall, I am really happy with the outcome of our final design. There is always room for improvement; however, I am proud of the way our team was able to develop and communicate ideas that led to the creation of a unique prototype to meet our patients' needs. The challenges we had faced along the way had given way to several learning opportunities that contributed to the iterative nature of the project, emphasizing the importance of adaptability, through testing, and continuous refinement in the engineering design process. This project helped reinforce the importance of time management and organization, as many milestones and conceptual designs required the team to meet outside of class hours. There was also a significant emphasis on problem-solving throughout the project. This is because developing an engineering solution is often iterative and dynamic, involving several stages of adjustments and modifications. Our team was ultimately able to address these challenges in our final design and create a product that met the majority of the objectives we had identified.",
-    },
-    role: "Manager",
-    softSkills: ["✅Teamwork & Collaboration", "✅Oral & Written Communication", "✅Problem-solving", "✅Time Management"],
-technicalSkills: ["✅Engineering Sketches", "✅Material Analysis", "✅Gantt Charts Design and Editing"],
-    tags: [
-      { name: "Biomedical", color: "blue-text-gradient" },
-      { name: "User-Centric Design", color: "green-text-gradient" },
-      { name: "Stress Testing", color: "pink-text-gradient" },
-    ],
-    image: bag,
-    source_code_link: "https://github.com/arishs24/dp1",
-  },
   {
     name: "Design Project 2 - Hip Implant",
     description: "Redesigning and 3D-modelling a hip implant that addresses aseptic loosening while promoting bone regrowth. ",
