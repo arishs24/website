@@ -5,97 +5,97 @@ import SectionWrapper from "../hoc/SectionWrapper";
 const workEntries = [
   {
     company: "Amano",
-    role: "co-founder",
-    date: "aug 2025 – present",
-    desc: "building the world's most accessible hearing aid. hearing loss affects 1 in 5 globally, most will never afford what already exists. working with harvard medical school and st. joseph's healthcare hamilton.",
+    role: "Co-Founder",
+    date: "Aug 2025 – Present",
+    desc: "Building the world's most accessible hearing aid. Hearing loss affects 1 in 5 globally, most will never afford what already exists. Working with Harvard Medical School and St. Joseph's Healthcare Hamilton.",
   },
   {
     company: "Harvard Medical School & MGH",
-    role: "biomedical engineer",
-    date: "apr 2025 – present",
-    desc: "using ml and finite element analysis to model how the musculoskeletal system responds to force. automating ct-to-fea pipelines so orthopedic surgeons can make better decisions before entering the or.",
+    role: "Biomedical Engineer",
+    date: "Apr 2025 – Present",
+    desc: "Using ML and finite element analysis to model how the musculoskeletal system responds to force. Automating CT-to-FEA pipelines so orthopedic surgeons can make better decisions before entering the OR.",
   },
   {
     company: "AlgoSurg (YC W18)",
-    role: "software engineer",
-    date: "nov 2025 – present",
-    desc: "automating the hours surgeons spend on pre-operative planning. building ai-driven surgical simulation and decision-support systems.",
+    role: "Software Engineer",
+    date: "Nov 2025 – Present",
+    desc: "Automating the hours surgeons spend on pre-operative planning. Building AI-driven surgical simulation and decision-support systems.",
   },
   {
     company: "University Health Network",
-    role: "ml researcher",
-    date: "nov 2025 – present",
-    desc: "building models that predict when a rehabilitation patient is improving, plateauing, or quietly declining, before the clinical team notices.",
+    role: "ML Researcher",
+    date: "Nov 2025 – Present",
+    desc: "Building models that predict when a rehabilitation patient is improving, plateauing, or quietly declining, before the clinical team notices.",
   },
   {
     company: "Johns Hopkins University",
-    role: "computational neuroscience researcher",
-    date: "oct 2024 – jan 2026",
-    desc: "ml models for brain function and disease in the neurodata lab. worked on bci signal synchronization with the crone lab. contributed to publications on bci technology.",
+    role: "Computational Neuroscience Researcher",
+    date: "Oct 2024 – Jan 2026",
+    desc: "ML models for brain function and disease in the NeuroData Lab. Worked on BCI signal synchronization with the Crone Lab. Contributed to publications on BCI technology.",
   },
   {
     company: "RBC Borealis",
-    role: "ml researcher",
-    date: "sep 2025 – dec 2025",
-    desc: "volumetric brain analysis using ml for early neurodegeneration detection. developed scalable pipelines for large-scale neuroimaging datasets.",
+    role: "ML Researcher",
+    date: "Sep 2025 – Dec 2025",
+    desc: "Volumetric brain analysis using ML for early neurodegeneration detection. Developed scalable pipelines for large-scale neuroimaging datasets.",
   },
   {
     company: "Hamilton Health Sciences",
-    role: "clinical researcher",
-    date: "jun 2024 – sep 2025",
-    desc: "multi-centre study on hip/knee arthroplasty wait times under dr. thomas wood. managed a database covering 3,000 patients. built ml models predicting functional outcomes with 85%+ accuracy.",
+    role: "Clinical Researcher",
+    date: "Jun 2024 – Sep 2025",
+    desc: "Multi-centre study on hip/knee arthroplasty wait times under Dr. Thomas Wood. Managed a database covering 3,000 patients. Built ML models predicting functional outcomes with 85%+ accuracy.",
   },
   {
     company: "Headstarter AI",
-    role: "software engineering fellow",
-    date: "jul 2024 – sep 2024",
-    desc: "built 5+ production apps in 7 weeks using next.js, openai, and stripe. reached 1,000+ users. mentored by engineers from amazon, bloomberg, and capital one.",
+    role: "Software Engineering Fellow",
+    date: "Jul 2024 – Sep 2024",
+    desc: "Built 5+ production apps in 7 weeks using Next.js, OpenAI, and Stripe. Reached 1,000+ users. Mentored by engineers from Amazon, Bloomberg, and Capital One.",
   },
   {
     company: "Shoppers Drug Mart",
-    role: "pharmacy assistant",
-    date: "sep 2022 – present",
-    desc: "dispensing 1,000+ prescriptions weekly. the closest i get to patients before medical school, and a daily reminder of why the system needs better tools.",
+    role: "Pharmacy Assistant",
+    date: "Sep 2022 – Present",
+    desc: "Dispensing 1,000+ prescriptions weekly. The closest I get to patients before medical school, and a daily reminder of why the system needs better tools.",
   },
 ];
 
 const communityEntries = [
   {
     company: "The Frequency",
-    role: "writer",
-    date: "sep 2024 – present",
-    desc: "writing research-backed articles for mcmaster engineering's student journal. making technical ideas legible to people who almost understand them.",
+    role: "Writer",
+    date: "Sep 2024 – Present",
+    desc: "Writing research-backed articles for McMaster Engineering's student journal. Making technical ideas legible to people who almost understand them.",
     link: "https://macengsociety.ca/pdfs/frequency/TheFrequency_fall_2024.pdf",
   },
   {
     company: "Trillium Health Partners",
-    role: "dialysis volunteer",
-    date: "may 2024 – present",
-    desc: "supporting outpatient visits at the speakman renal dialysis care centre. patient intake, record management, care coordination.",
+    role: "Dialysis Volunteer",
+    date: "May 2024 – Present",
+    desc: "Supporting outpatient visits at the Speakman Renal Dialysis Care Centre. Patient intake, record management, care coordination.",
   },
   {
     company: "Juravinski / Royal Oak / Renal Care Centre",
-    role: "clinical shadowing",
-    date: "sep 2022 – present",
-    desc: "orthopaedics with dr. thomas wood. family medicine with dr. evis skendaj. nephrology with dr. sharn bhandal.",
+    role: "Clinical Shadowing",
+    date: "Sep 2022 – Present",
+    desc: "Orthopaedics with Dr. Thomas Wood. Family Medicine with Dr. Evis Skendaj. Nephrology with Dr. Sharn Bhandal.",
   },
   {
     company: "Eclipto Network",
-    role: "biomedical team lead",
-    date: "mar 2024 – jul 2024",
-    desc: "led research projects at the intersection of life science and engineering. ran technical reviews and brainstorming sessions.",
+    role: "Biomedical Team Lead",
+    date: "Mar 2024 – Jul 2024",
+    desc: "Led research projects at the intersection of life science and engineering. Ran technical reviews and brainstorming sessions.",
   },
   {
     company: "Mathstronauts",
-    role: "stem teaching assistant",
-    date: "jan 2020 – feb 2022",
-    desc: "taught kids programming, 3d modeling, and cad. the goal was never the project, it was the moment they stopped asking for permission to build.",
+    role: "STEM Teaching Assistant",
+    date: "Jan 2020 – Feb 2022",
+    desc: "Taught kids programming, 3D modeling, and CAD. The goal was never the project, it was the moment they stopped asking for permission to build.",
   },
 ];
 
 const tabs = {
-  work: { label: "work", data: workEntries },
-  community: { label: "community", data: communityEntries },
+  work: { label: "Work", data: workEntries },
+  community: { label: "Community", data: communityEntries },
 };
 
 const stagger = {
@@ -113,14 +113,14 @@ const Entry = ({ item }) => (
     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-3">
       <div>
         <p className="text-[#c8c2b8] text-[16px] font-normal leading-tight">{item.company}</p>
-        <p className="text-[#3a3a3a] text-[12px] mt-1.5">{item.role}</p>
+        <p className="text-[#5a5856] text-[12px] mt-1.5">{item.role}</p>
       </div>
-      <p className="text-[#252525] text-[12px] shrink-0 sm:mt-0.5">{item.date}</p>
+      <p className="text-[#4a4846] text-[12px] shrink-0 sm:mt-0.5">{item.date}</p>
     </div>
-    <p className="text-[#666666] text-[15px] leading-[1.85]">{item.desc}</p>
+    <p className="text-[#787674] text-[15px] leading-[1.85]">{item.desc}</p>
     {item.link && (
       <a href={item.link} target="_blank" rel="noopener noreferrer"
-        className="inline-block mt-3 text-[12px] text-[#3a3a3a] hover:text-[#c8c2b8] transition-colors duration-200">
+        className="inline-block mt-3 text-[12px] text-[#5a5856] hover:text-[#c8c2b8] transition-colors duration-200">
         read ↗
       </a>
     )}

@@ -5,13 +5,13 @@ const Navbar = ({ currentPage, onChangePage }) => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="w-full fixed top-0 z-20 bg-[#0d0d0d]/90 backdrop-blur-md">
+    <nav className="w-full fixed top-0 z-20 bg-[#181614]/90 backdrop-blur-md border-b border-[#242220]">
       <div className="max-w-2xl mx-auto sm:px-16 px-6 py-6 flex justify-between items-center">
         <button
           onClick={() => onChangePage?.("about")}
-          className="text-[#2e2e2e] hover:text-[#c8c2b8] text-[13px] font-light transition-colors duration-300"
+          className="text-[#555250] hover:text-[#c8c2b8] text-[13px] font-light transition-colors duration-300"
         >
-          arish shahab
+          Arish Shahab
         </button>
 
         {/* Desktop */}
@@ -21,7 +21,7 @@ const Navbar = ({ currentPage, onChangePage }) => {
               <button
                 onClick={() => onChangePage?.(link.id)}
                 className="text-[12px] font-light transition-colors duration-300 tracking-wide"
-                style={{ color: currentPage === link.id ? "#c8c2b8" : "#2e2e2e" }}
+                style={{ color: currentPage === link.id ? "#c8c2b8" : "#555250" }}
               >
                 {link.title}
               </button>
@@ -33,7 +33,7 @@ const Navbar = ({ currentPage, onChangePage }) => {
         <div className="sm:hidden relative">
           <button
             onClick={() => setToggle(!toggle)}
-            className="text-[#2e2e2e] hover:text-[#c8c2b8] transition-colors text-[12px] font-light tracking-wide"
+            className="text-[#555250] hover:text-[#c8c2b8] transition-colors text-[12px] font-light tracking-wide"
           >
             {toggle ? "close" : "menu"}
           </button>
@@ -45,7 +45,7 @@ const Navbar = ({ currentPage, onChangePage }) => {
                     <button
                       onClick={() => { setToggle(false); onChangePage?.(link.id); }}
                       className="text-[12px] font-light transition-colors tracking-wide"
-                      style={{ color: currentPage === link.id ? "#c8c2b8" : "#2e2e2e" }}
+                      style={{ color: currentPage === link.id ? "#c8c2b8" : "#555250" }}
                     >
                       {link.title}
                     </button>

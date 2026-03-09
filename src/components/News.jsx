@@ -4,31 +4,31 @@ import SectionWrapper from "../hoc/SectionWrapper";
 
 const newsItems = [
   {
-    title: "like a flight simulator for brain surgery: arish shahab takes home health care prize at princeton",
+    title: "Like a flight simulator for brain surgery: Arish Shahab takes home health care prize at Princeton",
     source: "McMaster Faculty of Health Sciences",
-    date: "dec 2025",
+    date: "Dec 2025",
     url: "https://healthsci.mcmaster.ca/like-a-flight-simulator-for-brain-surgery-undergrad-arish-shahab-takes-home-health-care-prize-at-princeton-engineering-competition/",
   },
   {
-    title: "meet the next generation of medical entrepreneurs",
+    title: "Meet the next generation of medical entrepreneurs",
     source: "McMaster Faculty of Health Sciences",
     date: "2025",
     url: "https://healthsci.mcmaster.ca/meet-the-next-generation-of-medical-entrepreneurs/",
   },
   {
-    title: "like a flight simulator for brain surgery: undergrad wins at princeton engineering competition",
+    title: "Like a flight simulator for brain surgery: Undergrad wins at Princeton engineering competition",
     source: "Education News Canada",
-    date: "dec 16, 2025",
+    date: "Dec 16, 2025",
     url: "https://educationnewscanada.com/article/education/level/university/1/1176503/b-like-a-flight-simulator-for-brain-surgery-undergrad-wins-at-princeton-engineering-competition.html",
   },
   {
-    title: "1st place in healthcare at hackprinceton",
+    title: "1st Place in Healthcare at HackPrinceton",
     source: "LinkedIn",
-    date: "dec 2025",
+    date: "Dec 2025",
     url: "https://www.linkedin.com/posts/arishshahab_we-won-1st-place-in-healthcare-at-hackprinceton-activity-7393782950242422784-kRpK/",
   },
   {
-    title: "mcmaster president steve orsini on the hackprinceton win",
+    title: "McMaster President Steve Orsini on the HackPrinceton win",
     source: "X / @SteveOrsini",
     date: "2025",
     url: "https://x.com/SteveOrsini/status/2000995669931384966",
@@ -59,10 +59,10 @@ const News = () => {
           <motion.li key={i} variants={fadeUp}>
             <a href={item.url} target="_blank" rel="noopener noreferrer" className="group block">
               <div className="flex items-baseline justify-between gap-6 mb-2">
-                <p className="text-[#2e2e2e] text-[12px]">{item.source}</p>
+                <p className="text-[#505050] text-[12px]">{item.source}</p>
                 <p className="text-[#222222] text-[12px] shrink-0">{item.date}</p>
               </div>
-              <p className="text-[#666666] text-[15px] leading-[1.85] group-hover:text-[#c8c2b8] transition-colors duration-300">
+              <p className="text-[#787674] text-[15px] leading-[1.85] group-hover:text-[#c8c2b8] transition-colors duration-300">
                 {item.title} ↗
               </p>
             </a>

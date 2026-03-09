@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { projects, universityProjects } from "../constants";
 import SectionWrapper from "../hoc/SectionWrapper";
 
-const filters = ["everything", "builds", "capstone"];
+const filters = ["Everything", "Builds", "Capstone"];
 
 const stagger = {
   hidden: {},
@@ -24,10 +24,10 @@ const ProjectCard = ({ project, category, onClick }) => {
     <motion.div variants={fadeUp} className="mb-12">
       <div className="flex items-start justify-between gap-4 mb-2">
         <p className="text-[#c8c2b8] text-[16px] font-normal leading-snug">{name}</p>
-        <span className="text-[#252525] text-[11px] shrink-0 mt-1">{category}</span>
+        <span className="text-[#4a4846] text-[11px] shrink-0 mt-1">{category}</span>
       </div>
 
-      <p className="text-[#666666] text-[15px] leading-[1.85] mb-4">
+      <p className="text-[#787674] text-[15px] leading-[1.85] mb-4">
         {firstSentence}.
       </p>
 
@@ -40,14 +40,14 @@ const ProjectCard = ({ project, category, onClick }) => {
       <div className="flex gap-6 text-[12px]">
         {source_code_link && !onClick && (
           <button onClick={() => window.open(source_code_link, "_blank")}
-            className="text-[#3a3a3a] hover:text-[#c8c2b8] transition-colors duration-200">
-            github ↗
+            className="text-[#5a5856] hover:text-[#c8c2b8] transition-colors duration-200">
+            GitHub ↗
           </button>
         )}
         {onClick && (
           <button onClick={onClick}
-            className="text-[#3a3a3a] hover:text-[#c8c2b8] transition-colors duration-200">
-            deep dive ↗
+            className="text-[#5a5856] hover:text-[#c8c2b8] transition-colors duration-200">
+            Deep dive ↗
           </button>
         )}
       </div>
@@ -59,8 +59,8 @@ const Works = () => {
   const [active, setActive] = useState("everything");
   const navigate = useNavigate();
 
-  const showBuilds = active === "everything" || active === "builds";
-  const showCapstone = active === "everything" || active === "capstone";
+  const showBuilds = active === "Everything" || active === "Builds";
+  const showCapstone = active === "Everything" || active === "Capstone";
 
   return (
     <div>
@@ -108,7 +108,7 @@ const Works = () => {
                     variants={fadeUp}
                     className="text-[#2a2a2a] text-[10px] uppercase tracking-[0.25em] mt-4 mb-10"
                   >
-                    capstone — mcmaster ibioMed
+                    Capstone — McMaster iBioMed
                   </motion.p>
                 )}
                 {universityProjects.map((project, i) => (
