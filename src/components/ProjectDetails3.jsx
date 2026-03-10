@@ -52,7 +52,7 @@ const ProjectDetails3 = () => {
     <div className="w-full min-h-screen bg-[#0c0c0c] p-6 md:p-12 lg:p-16">
       <button
         onClick={handleBackToProjects}
-        className="text-[#5e5e5e] hover:text-[#e5dfd4] text-[12px] uppercase tracking-[0.25em] font-light transition-colors duration-200 mb-6 inline-block"
+        className="text-[#9a9896] hover:text-[#e5dfd4] text-[12px] uppercase tracking-[0.25em] font-normal transition-colors duration-200 mb-6 inline-block"
       >
         Back to Projects
       </button>
@@ -73,10 +73,10 @@ const ProjectDetails3 = () => {
     className="rounded-lg shadow-md mb-4 w-full max-h-[400px] object-contain"
   />
 
-<p className="text-sm text-[#5e5e5e] mt-2">Fig 1: Final design and version of FlexAid.</p>
+<p className="text-sm text-[#9a9896] mt-2">Fig 1: Final design and version of FlexAid.</p>
 
 
-          <p className="text-[#9a9a9a] text-[14px] leading-relaxed font-light">
+          <p className="text-[#b0aeac] text-[14px] leading-relaxed font-normal">
             <span className="text-[#e5dfd4] font-semibold">FlexAid</span> is a wearable rehabilitation device designed to guide users through upper-limb recovery exercises by detecting motion in real time, providing personalized resistance, and offering immediate visual feedback. 
             <br /><br />
             As <span className="text-secondary font-semibold">Project Coordinator</span> and a member of the <span className="text-secondary font-semibold">Computing Subteam</span>, I led development of the backend logic for servo-triggered feedback, real-time calibration, and graphical data visualization using Python and Tkinter. I also organized our team’s meetings, tracked progress logs, and ensured deliverables were aligned.
@@ -90,8 +90,8 @@ const ProjectDetails3 = () => {
           <div className="lg:col-span-3 flex flex-col gap-8">
             {/* Role */}
             <div className="p-6 bg-[#111111] border border-[#1a1a1a]">
-  <h3 className="text-[#5e5e5e] text-[12px] uppercase tracking-[0.25em] font-light mb-3">Role:</h3>
-  <p className="text-[#9a9a9a] text-[14px] leading-relaxed font-light">
+  <h3 className="text-[#9a9896] text-[12px] uppercase tracking-[0.25em] font-normal mb-3">Role:</h3>
+  <p className="text-[#b0aeac] text-[14px] leading-relaxed font-normal">
     <span className="font-semibold text-[#e5dfd4]">Project Coordinator</span> , I was responsible for leading and scheduling all team meetings outside of Design Studio, recording discussion notes during official sessions, and maintaining clear communication with our TA throughout the design process. I also compiled and submitted the final Logbook documenting all non-studio meetings to ensure alignment across all subteams.
   </p>
 
@@ -132,10 +132,10 @@ const ProjectDetails3 = () => {
 
             {/* Skills */}
             <div className="p-6 bg-[#111111] border border-[#1a1a1a]">
-              <h2 className="text-[#e5dfd4] text-[14px] uppercase tracking-[0.3em] font-light mb-5">Skills</h2>
+              <h2 className="text-[#e5dfd4] text-[14px] uppercase tracking-[0.3em] font-normal mb-5">Skills</h2>
               {/* Soft Skills */}
               <div className="mb-6">
-                <h3 className="text-[#5e5e5e] text-[12px] uppercase tracking-[0.25em] font-light mb-3">Soft Skills</h3>
+                <h3 className="text-[#9a9896] text-[12px] uppercase tracking-[0.25em] font-normal mb-3">Soft Skills</h3>
                 <div className="flex flex-wrap gap-5">
                   {project.softSkills.map((skill, idx) => (
                     <TechBox key={idx} name={skill} index={idx} size="large" />
@@ -144,7 +144,7 @@ const ProjectDetails3 = () => {
               </div>
               {/* Technical Skills */}
               <div>
-                <h3 className="text-[#5e5e5e] text-[12px] uppercase tracking-[0.25em] font-light mb-3 mt-5">Technical Skills</h3>
+                <h3 className="text-[#9a9896] text-[12px] uppercase tracking-[0.25em] font-normal mb-3 mt-5">Technical Skills</h3>
                 <div className="flex flex-wrap gap-5">
                   {project.technicalSkills.map((skill, idx) => (
                     <TechBox key={idx} name={skill} index={idx} size="large" />
@@ -165,7 +165,7 @@ const ProjectDetails3 = () => {
             {renderSection("Establishing Objectives and Constraints", "objectives", openSections, toggleSection, (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="text-[#e5dfd4] text-[13px] uppercase tracking-[0.2em] font-light mb-3">Objectives</h4>
+                  <h4 className="text-[#e5dfd4] text-[13px] uppercase tracking-[0.2em] font-normal mb-3">Objectives</h4>
                   <ul className="list-disc pl-5 text-[17px] text-white">
                     <li>Detect and respond to poor rehab form</li>
                     <li>Customize resistance levels using ML logic</li>
@@ -174,7 +174,7 @@ const ProjectDetails3 = () => {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="text-[#e5dfd4] text-[13px] uppercase tracking-[0.2em] font-light mb-3">Constraints</h4>
+                  <h4 className="text-[#e5dfd4] text-[13px] uppercase tracking-[0.2em] font-normal mb-3">Constraints</h4>
                   <ul className="list-disc pl-5 text-[17px] text-white">
                     <li>Device must fit a range of users</li>
                     <li>Hardware must be Raspberry Pi-compatible</li>
@@ -200,7 +200,7 @@ const ProjectDetails3 = () => {
         Your browser does not support the video tag.
       </video>
     </div>
-                <ul className="list-none space-y-3 text-[#9a9a9a] text-[14px] font-light">
+                <ul className="list-none space-y-3 text-[#b0aeac] text-[14px] font-normal">
                   <li>Orientation sensor captures motion during exercise</li>
                   <li>Servo provides user-specific resistance during bicep curls</li>
                   <li>Real-time alert system identifies improper form</li>
@@ -211,7 +211,7 @@ const ProjectDetails3 = () => {
 
             {renderSection("Computing & Integration Highlights", "computing", openSections, toggleSection, (
               <>
-                <ul className="list-none space-y-3 text-[#9a9a9a] text-[14px] font-light">
+                <ul className="list-none space-y-3 text-[#b0aeac] text-[14px] font-normal">
                   <li>Developed personalized resistance algorithm using calibration thresholds</li>
                   <li>Implemented real-time feedback logic tied to FSR and orientation data</li>
                   <li>Built a Tkinter-based GUI to guide users and visualize sensor output</li>
@@ -222,14 +222,14 @@ const ProjectDetails3 = () => {
       alt="Tkinter UI Screenshot"
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
-                  <p className="text-sm text-[#5e5e5e] mt-2">Fig 2: Data transmission from Raspberry Pi to frontend, displaying on graph using Matplotlib and Tkinter.</p>
+                  <p className="text-sm text-[#9a9896] mt-2">Fig 2: Data transmission from Raspberry Pi to frontend, displaying on graph using Matplotlib and Tkinter.</p>
 
                 </ul>
               </>
             ))}
 
             {renderSection("Responsibilities and Contributions", "responsibilities", openSections, toggleSection, (
-              <ul className="list-none space-y-3 text-[#9a9a9a] text-[14px] font-light">
+              <ul className="list-none space-y-3 text-[#b0aeac] text-[14px] font-normal">
                 <li>Organized external meetings and submitted logbook documentation</li>
                 <li>Served as Note-Taker and primary TA liaison during studio</li>
                 <li>Led computing subteam in developing machine learning backend</li>
@@ -276,7 +276,7 @@ def adjust_servo_resistance(y_avg, angular_velocity, min_flexion, max_flexion, s
         </code>
       </pre>
     </div>
-    <p className="text-sm text-[#5e5e5e] italic">
+    <p className="text-sm text-[#9a9896] italic">
       ⚠️ View is scrollable. Full source available in GitHub or local download.
     </p>
   </div>
@@ -295,7 +295,7 @@ def adjust_servo_resistance(y_avg, angular_velocity, min_flexion, max_flexion, s
       alt="Tkinter UI Screenshot"
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
-                  <p className="text-sm text-[#5e5e5e] mt-2">Fig 4: Gear Iteration, comparing prelim, with final.</p>
+                  <p className="text-sm text-[#9a9896] mt-2">Fig 4: Gear Iteration, comparing prelim, with final.</p>
 
 
     <p>
@@ -314,7 +314,7 @@ def adjust_servo_resistance(y_avg, angular_velocity, min_flexion, max_flexion, s
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
 
-<p className="text-sm text-[#5e5e5e] mt-2">Fig5 : Showing quick run down of initial code iteration, with basic commands.</p>
+<p className="text-sm text-[#9a9896] mt-2">Fig5 : Showing quick run down of initial code iteration, with basic commands.</p>
 
 
     <p>
@@ -328,7 +328,7 @@ def adjust_servo_resistance(y_avg, angular_velocity, min_flexion, max_flexion, s
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
 
-<p className="text-sm text-[#5e5e5e] mt-2">Fig 6: Tkinter UI, showing patient info page.</p>
+<p className="text-sm text-[#9a9896] mt-2">Fig 6: Tkinter UI, showing patient info page.</p>
 
 
     <p>
@@ -381,7 +381,7 @@ def adjust_servo_resistance(y_avg, angular_velocity, min_flexion, max_flexion, s
       alt="Tkinter UI Screenshot"
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
-                  <p className="text-sm text-[#5e5e5e] mt-2">Fig 7: Initial hurdle with gear sizing and placement.</p>
+                  <p className="text-sm text-[#9a9896] mt-2">Fig 7: Initial hurdle with gear sizing and placement.</p>
 
       <p>
         <strong>Initial Hurdles:</strong><br />
@@ -401,7 +401,7 @@ def adjust_servo_resistance(y_avg, angular_velocity, min_flexion, max_flexion, s
       alt="Tkinter UI Screenshot"
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
-                  <p className="text-sm text-[#5e5e5e] mt-2">Fig 8: Initial code idea, which was scrapped as did not work well with actual idea, used JSON.</p>
+                  <p className="text-sm text-[#9a9896] mt-2">Fig 8: Initial code idea, which was scrapped as did not work well with actual idea, used JSON.</p>
 
 
       <p>
@@ -433,7 +433,7 @@ def adjust_servo_resistance(y_avg, angular_velocity, min_flexion, max_flexion, s
 // Reusable toggle section
 const renderSection = (title, key, openSections, toggleSection, content) => (
   <div className="border border-[#1a1a1a] mb-5" onClick={() => toggleSection(key)}>
-    <h3 className="text-[#9a9a9a] text-[13px] uppercase tracking-[0.25em] font-light p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">{title}</h3>
+    <h3 className="text-[#b0aeac] text-[13px] uppercase tracking-[0.25em] font-normal p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">{title}</h3>
     {openSections[key] && <div className="p-6 bg-[#111111]">{content}</div>}
   </div>
 );

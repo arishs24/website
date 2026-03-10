@@ -23,11 +23,11 @@ const ProjectCard = ({ project, category, onClick }) => {
   return (
     <motion.div variants={fadeUp} className="mb-12">
       <div className="flex items-start justify-between gap-4 mb-2">
-        <p className="text-[#c8c2b8] text-[16px] font-normal leading-snug">{name}</p>
-        <span className="text-[#4a4846] text-[11px] shrink-0 mt-1">{category}</span>
+        <p className="text-[#e5dfd4] text-[16px] font-medium leading-snug">{name}</p>
+        <span className="text-[#7a7876] text-[11px] shrink-0 mt-1">{category}</span>
       </div>
 
-      <p className="text-[#787674] text-[15px] leading-[1.85] mb-4">
+      <p className="text-[#a8a6a4] text-[15px] font-normal leading-[1.9] mb-4">
         {firstSentence}.
       </p>
 
@@ -40,13 +40,13 @@ const ProjectCard = ({ project, category, onClick }) => {
       <div className="flex gap-6 text-[12px]">
         {source_code_link && !onClick && (
           <button onClick={() => window.open(source_code_link, "_blank")}
-            className="text-[#5a5856] hover:text-[#c8c2b8] transition-colors duration-200">
+            className="text-[#8a8886] hover:text-[#c8c2b8] transition-colors duration-200">
             GitHub ↗
           </button>
         )}
         {onClick && (
           <button onClick={onClick}
-            className="text-[#5a5856] hover:text-[#c8c2b8] transition-colors duration-200">
+            className="text-[#8a8886] hover:text-[#c8c2b8] transition-colors duration-200">
             Deep dive ↗
           </button>
         )}
@@ -70,7 +70,7 @@ const Works = () => {
             key={f}
             onClick={() => setActive(f)}
             className="relative pb-2 text-[13px] transition-colors duration-200"
-            style={{ color: active === f ? "#c8c2b8" : "#2e2e2e" }}
+            style={{ color: active === f ? "#c8c2b8" : "#555250" }}
           >
             {f}
             {active === f && (

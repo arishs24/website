@@ -34,7 +34,7 @@ const Contact = () => {
 
   return (
     <div>
-      <p className="text-[#888888] text-[15px] leading-[1.85] mb-14">
+      <p className="text-[#b0aeac] text-[15px] leading-[1.85] mb-14">
         For research collaborations, project inquiries, or anything else.{" "}
         <a href="mailto:arish.shahab1@gmail.com"
           className="text-[#c8c2b8] hover:opacity-60 transition-opacity">
@@ -65,7 +65,7 @@ const Contact = () => {
         </div>
 
         <button type="submit"
-          className="w-fit text-[13px] text-[#5a5856] hover:text-[#c8c2b8] transition-colors duration-200">
+          className="w-fit text-[13px] text-[#8a8886] hover:text-[#c8c2b8] transition-colors duration-200">
           {loading ? "Sending..." : "Send →"}
         </button>
       </form>

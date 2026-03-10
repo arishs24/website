@@ -50,7 +50,7 @@ const ProjectDetails4 = () => {
     <div className="w-full min-h-screen bg-[#0c0c0c] p-6 md:p-12 lg:p-16">
       <button
         onClick={handleBackToProjects}
-        className="text-[#5e5e5e] hover:text-[#e5dfd4] text-[12px] uppercase tracking-[0.25em] font-light transition-colors duration-200 mb-6 inline-block"
+        className="text-[#9a9896] hover:text-[#e5dfd4] text-[12px] uppercase tracking-[0.25em] font-normal transition-colors duration-200 mb-6 inline-block"
       >
         Back to Projects
       </button>
@@ -58,7 +58,7 @@ const ProjectDetails4 = () => {
       {/* Project Overview Section */}
       <div className="border-l-2 border-[#a83232] pl-6 mb-10">
         <h3 className="font-heading text-[#e5dfd4] text-[22px] font-normal mb-4">🔍 Project Overview</h3>
-        <p className="text-[#9a9a9a] text-[14px] leading-relaxed font-light">
+        <p className="text-[#b0aeac] text-[14px] leading-relaxed font-normal">
           <span className="text-[#e5dfd4] font-semibold">EZ Step</span> is a wearable foot-drop rehabilitation device designed to support patients with neurological disorders such as Multiple Sclerosis. It uses foot sensors and servo-driven actuation to assist foot lift during running while providing cadence data and step tracking. 
           <br /><br />
           As a <span className="text-secondary font-semibold">Subject Matter Expert</span>, I contributed research that influenced the design direction and mechanical choices. I also supported servo testing and mechanical iteration while leading documentation for our DHF and industry summary memo.
@@ -71,17 +71,17 @@ const ProjectDetails4 = () => {
         <div className="lg:col-span-3 flex flex-col gap-8">
           {/* Role */}
           <div className="p-6 bg-[#111111] border border-[#1a1a1a]">
-            <h3 className="text-[#5e5e5e] text-[12px] uppercase tracking-[0.25em] font-light mb-3">Role:</h3>
-            <p className="text-[#9a9a9a] text-[14px] leading-relaxed font-light">
+            <h3 className="text-[#9a9896] text-[12px] uppercase tracking-[0.25em] font-normal mb-3">Role:</h3>
+            <p className="text-[#b0aeac] text-[14px] leading-relaxed font-normal">
               <span className="text-[#e5dfd4] font-semibold">Subject Matter Expert</span> , I compiled and maintained our research database, ensuring all technical decisions were supported by credible literature. I also led the completion of our team’s written documentation, DHF entries, and project summary memo, and assisted in mechanical testing of the servo-foot interface.
             </p>
           </div>
 
           {/* Skills */}
           <div className="p-6 bg-[#111111] border border-[#1a1a1a]">
-            <h2 className="text-[#e5dfd4] text-[14px] uppercase tracking-[0.3em] font-light mb-5">Skills</h2>
+            <h2 className="text-[#e5dfd4] text-[14px] uppercase tracking-[0.3em] font-normal mb-5">Skills</h2>
             <div className="mb-6">
-              <h3 className="text-[#5e5e5e] text-[12px] uppercase tracking-[0.25em] font-light mb-3">Soft Skills</h3>
+              <h3 className="text-[#9a9896] text-[12px] uppercase tracking-[0.25em] font-normal mb-3">Soft Skills</h3>
               <div className="flex flex-wrap gap-5">
                 {project.softSkills.map((skill, idx) => (
                   <TechBox key={idx} name={skill} index={idx} size="large" />
@@ -89,7 +89,7 @@ const ProjectDetails4 = () => {
               </div>
             </div>
             <div>
-              <h3 className="text-[#5e5e5e] text-[12px] uppercase tracking-[0.25em] font-light mb-3 mt-5">Technical Skills</h3>
+              <h3 className="text-[#9a9896] text-[12px] uppercase tracking-[0.25em] font-normal mb-3 mt-5">Technical Skills</h3>
               <div className="flex flex-wrap gap-5">
                 {project.technicalSkills.map((skill, idx) => (
                   <TechBox key={idx} name={skill} index={idx} size="large" />
@@ -110,7 +110,7 @@ const ProjectDetails4 = () => {
           {renderSection("Establishing Objectives and Constraints", "objectives", openSections, toggleSection, (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <h4 className="text-[#e5dfd4] text-[13px] uppercase tracking-[0.2em] font-light mb-3">Objectives</h4>
+                <h4 className="text-[#e5dfd4] text-[13px] uppercase tracking-[0.2em] font-normal mb-3">Objectives</h4>
                 <ul className="list-disc pl-5 text-white text-[17px]">
                   <li>Support foot flexion during running</li>
                   <img
@@ -118,7 +118,7 @@ const ProjectDetails4 = () => {
       alt="Tkinter UI Screenshot"
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
-      <p className="text-sm text-[#5e5e5e] mt-2">Fig 1: Support foot flexion during running with gear chain.</p>
+      <p className="text-sm text-[#9a9896] mt-2">Fig 1: Support foot flexion during running with gear chain.</p>
 
 
                   <li>Remain lightweight and wearable</li>
@@ -128,7 +128,7 @@ const ProjectDetails4 = () => {
                 </ul>
               </div>
               <div>
-                <h4 className="text-[#e5dfd4] text-[13px] uppercase tracking-[0.2em] font-light mb-3">Constraints</h4>
+                <h4 className="text-[#e5dfd4] text-[13px] uppercase tracking-[0.2em] font-normal mb-3">Constraints</h4>
                 <ul className="list-disc pl-5 text-white text-[17px]">
                   <li>Use only approved components</li>
                   <li>Servo response must be low-latency</li>
@@ -141,14 +141,14 @@ const ProjectDetails4 = () => {
           ))}
 
           {renderSection("Proposed Solution", "solution", openSections, toggleSection, (
-            <ul className="list-none space-y-3 text-[#9a9a9a] text-[14px] font-light">
+            <ul className="list-none space-y-3 text-[#b0aeac] text-[14px] font-normal">
               <li>Chain and gear mechanism inspired by bike drivetrain</li>
               <img
       src="/dp/chain.png"
       alt="Tkinter UI Screenshot"
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
-          <p className="text-sm text-[#5e5e5e] mt-2">Fig 2: Gear Chain CAD Model.</p>
+          <p className="text-sm text-[#9a9896] mt-2">Fig 2: Gear Chain CAD Model.</p>
 
 
               <li>Servo motor activates based on sensor timing</li>
@@ -158,7 +158,7 @@ const ProjectDetails4 = () => {
       alt="Tkinter UI Screenshot"
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
-              <p className="text-sm text-[#5e5e5e] mt-2">Fig 3: FSR Placement, ball and heel.</p>
+              <p className="text-sm text-[#9a9896] mt-2">Fig 3: FSR Placement, ball and heel.</p>
 
 
               <li>App GUI visualizes step count, alerts, and cadence</li>
@@ -170,13 +170,13 @@ const ProjectDetails4 = () => {
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
 
-<p className="text-sm text-[#5e5e5e] mt-2">Fig 4: Full Assembled model for adjustable housing fits.</p>
+<p className="text-sm text-[#9a9896] mt-2">Fig 4: Full Assembled model for adjustable housing fits.</p>
 
             </ul>
           ))}
 
 {renderSection("Responsibilities and Contributions", "responsibilities", openSections, toggleSection, (
-            <ul className="list-none space-y-3 text-[#9a9a9a] text-[14px] font-light">
+            <ul className="list-none space-y-3 text-[#b0aeac] text-[14px] font-normal">
               <li>Built research database with cited sources</li>
               <li>Wrote final industry memo and DHF summaries</li>
               <li>Supported servo testing and mechanical fitment</li>
@@ -186,7 +186,7 @@ const ProjectDetails4 = () => {
           ))}
 
 {renderSection("🧠 Computing & Integration Highlights", "computing", openSections, toggleSection, (
-  <ul className="list-none space-y-3 text-[#9a9a9a] text-[14px] font-light">
+  <ul className="list-none space-y-3 text-[#b0aeac] text-[14px] font-normal">
     <li>Developed and iterated all backend logic for foot-drop detection and servo response</li>
     <li>Created frontend UI for displaying cadence and heel/toe activation status</li>
     <li>Calibrated force-sensitive resistors (FSRs) for accurate gait phase detection</li>
@@ -269,7 +269,7 @@ while True:
       alt="Tkinter UI Screenshot"
       className="rounded-lg shadow-md my-4 w-full max-w-3xl mx-auto"
     />
-                  <p className="text-sm text-[#5e5e5e] mt-2">Fig 5: Drawing which made us question if our design is good.</p>
+                  <p className="text-sm text-[#9a9896] mt-2">Fig 5: Drawing which made us question if our design is good.</p>
 
 
     <p>
@@ -352,7 +352,7 @@ while True:
 
 const renderSection = (title, key, openSections, toggleSection, content) => (
   <div className="border border-[#1a1a1a] mb-5" onClick={() => toggleSection(key)}>
-    <h3 className="text-[#9a9a9a] text-[13px] uppercase tracking-[0.25em] font-light p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">{title}</h3>
+    <h3 className="text-[#b0aeac] text-[13px] uppercase tracking-[0.25em] font-normal p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">{title}</h3>
     {openSections[key] && <div className="p-6 bg-[#111111]">{content}</div>}
   </div>
 );

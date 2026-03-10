@@ -62,7 +62,7 @@ const News = () => {
                 <p className="text-[#505050] text-[12px]">{item.source}</p>
                 <p className="text-[#222222] text-[12px] shrink-0">{item.date}</p>
               </div>
-              <p className="text-[#787674] text-[15px] leading-[1.85] group-hover:text-[#c8c2b8] transition-colors duration-300">
+              <p className="text-[#a8a6a4] text-[15px] leading-[1.85] group-hover:text-[#c8c2b8] transition-colors duration-300">
                 {item.title} ↗
               </p>
             </a>

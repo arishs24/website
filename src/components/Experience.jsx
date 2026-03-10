@@ -108,19 +108,28 @@ const fadeUp = {
   show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: [0.16, 1, 0.3, 1] } },
 };
 
+const roleColor = (role) => {
+  const r = role.toLowerCase();
+  if (r.includes("founder") || r.includes("co-founder")) return "text-[#d4a96a]";
+  if (r.includes("research")) return "text-[#7ab4d4]";
+  if (r.includes("engineer") || r.includes("fellow")) return "text-[#7ac8a0]";
+  if (r.includes("clinical") || r.includes("shadow") || r.includes("dialysis")) return "text-[#b094d4]";
+  return "text-[#b0aeac]";
+};
+
 const Entry = ({ item }) => (
-  <motion.div variants={fadeUp} className="mb-12">
+  <motion.div variants={fadeUp} className="mb-14">
     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-3">
       <div>
-        <p className="text-[#c8c2b8] text-[16px] font-normal leading-tight">{item.company}</p>
-        <p className="text-[#5a5856] text-[12px] mt-1.5">{item.role}</p>
+        <p className="text-[#e5dfd4] text-[16px] font-medium leading-tight">{item.company}</p>
+        <p className={`text-[12px] font-medium mt-1.5 ${roleColor(item.role)}`}>{item.role}</p>
       </div>
-      <p className="text-[#4a4846] text-[12px] shrink-0 sm:mt-0.5">{item.date}</p>
+      <p className="text-[#7a7876] text-[12px] font-normal shrink-0 sm:mt-0.5">{item.date}</p>
     </div>
-    <p className="text-[#787674] text-[15px] leading-[1.85]">{item.desc}</p>
+    <p className="text-[#a8a6a4] text-[15px] font-normal leading-[1.9]">{item.desc}</p>
     {item.link && (
       <a href={item.link} target="_blank" rel="noopener noreferrer"
-        className="inline-block mt-3 text-[12px] text-[#5a5856] hover:text-[#c8c2b8] transition-colors duration-200">
+        className="inline-block mt-3 text-[12px] text-[#7ab4d4] hover:text-[#c8c2b8] transition-colors duration-200">
         read ↗
       </a>
     )}
@@ -139,7 +148,7 @@ const Experience = () => {
             key={key}
             onClick={() => setActiveTab(key)}
             className="relative pb-2 text-[13px] transition-colors duration-200"
-            style={{ color: activeTab === key ? "#c8c2b8" : "#2e2e2e" }}
+            style={{ color: activeTab === key ? "#c8c2b8" : "#555250" }}
           >
             {tab.label}
             {activeTab === key && (

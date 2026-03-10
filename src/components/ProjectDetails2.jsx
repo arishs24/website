@@ -64,7 +64,7 @@ const ProjectDetails2 = () => {
       {/* Back Button */}
       <button
         onClick={handleBackToProjects}
-        className="text-[#5e5e5e] hover:text-[#e5dfd4] text-[12px] uppercase tracking-[0.25em] font-light transition-colors duration-200 mb-6 inline-block"
+        className="text-[#9a9896] hover:text-[#e5dfd4] text-[12px] uppercase tracking-[0.25em] font-normal transition-colors duration-200 mb-6 inline-block"
       >
         Back to Projects
       </button>
@@ -80,7 +80,7 @@ const ProjectDetails2 = () => {
           <div className="col-span-2">
             {/* Role */}
             <div className="mb-6">
-              <h3 className="text-[#5e5e5e] text-[12px] uppercase tracking-[0.25em] font-light mb-3">
+              <h3 className="text-[#9a9896] text-[12px] uppercase tracking-[0.25em] font-normal mb-3">
                 Role:
               </h3>
               <p className="text-white">{project.role}</p>
@@ -88,11 +88,11 @@ const ProjectDetails2 = () => {
 
           {/* Skills */}
           <div>
-            <h2 className="text-[#e5dfd4] text-[14px] uppercase tracking-[0.3em] font-light mb-5">Skills</h2>
+            <h2 className="text-[#e5dfd4] text-[14px] uppercase tracking-[0.3em] font-normal mb-5">Skills</h2>
 
             {/* Soft Skills */}
             <div className="mb-6">
-              <h3 className="text-[#5e5e5e] text-[12px] uppercase tracking-[0.25em] font-light mb-3">Soft Skills</h3>
+              <h3 className="text-[#9a9896] text-[12px] uppercase tracking-[0.25em] font-normal mb-3">Soft Skills</h3>
               <div className="flex flex-wrap gap-4">
                 {project.softSkills.map((skill, idx) => (
                   <TechBox key={idx} name={skill} index={idx} />
@@ -102,7 +102,7 @@ const ProjectDetails2 = () => {
 
             {/* Technical Skills */}
             <div className="mb-10">
-              <h3 className="text-[#5e5e5e] text-[12px] uppercase tracking-[0.25em] font-light mb-3 mt-5">Technical Skills</h3>
+              <h3 className="text-[#9a9896] text-[12px] uppercase tracking-[0.25em] font-normal mb-3 mt-5">Technical Skills</h3>
               <div className="flex flex-wrap gap-4">
                 {project.technicalSkills.map((skill, idx) => (
                   <TechBox key={idx} name={skill} index={idx} />
@@ -130,7 +130,7 @@ const ProjectDetails2 = () => {
         </Canvas>
       </Suspense>
     </div>
-    <p className="mt-4 text-[#5e5e5e] text-sm">
+    <p className="mt-4 text-[#9a9896] text-sm">
       Use your mouse or touch gestures to rotate, zoom, and explore the 3D model.
     </p>
   </div>
@@ -152,7 +152,7 @@ const ProjectDetails2 = () => {
   onClick={() => toggleSection("patientProfile")}
 >
   <h3 className="text-lg font-semibold p-4 text-secondary cursor-pointer flex justify-between items-center">
-    Patient Profile: <span className="text-[#5e5e5e]">↧</span>
+    Patient Profile: <span className="text-[#9a9896]">↧</span>
   </h3>
   {openSections["patientProfile"] && (
     <div className="p-6 bg-gray-800 text-white">
@@ -175,7 +175,7 @@ const ProjectDetails2 = () => {
                 alt="X-ray showing bone erosion (Fig. 1)"
                 className="rounded-lg shadow-lg"
               />
-              <p className="text-sm text-[#5e5e5e] mt-2 text-center">
+              <p className="text-sm text-[#9a9896] mt-2 text-center">
                 <strong>Fig. 1:</strong> X-ray showing bone erosion
               </p>
             </div>
@@ -185,7 +185,7 @@ const ProjectDetails2 = () => {
                 alt="X-ray showing reduced joint space (Fig. 2)"
                 className="rounded-lg shadow-lg"
               />
-              <p className="text-sm text-[#5e5e5e] mt-2 text-center">
+              <p className="text-sm text-[#9a9896] mt-2 text-center">
                 <strong>Fig. 2:</strong> X-ray showing reduced joint space
               </p>
             </div>
@@ -205,7 +205,7 @@ const ProjectDetails2 = () => {
               className="border border-[#1a1a1a] rounded-lg mb-6"
               onClick={() => toggleSection("objectives")}
             >
-              <h3 className="text-[#9a9a9a] text-[13px] uppercase tracking-[0.25em] font-light p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">
+              <h3 className="text-[#b0aeac] text-[13px] uppercase tracking-[0.25em] font-normal p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">
                 Establishing Objectives and Constraints:
               </h3>
               {openSections["objectives"] && (
@@ -245,7 +245,7 @@ const ProjectDetails2 = () => {
   className="border border-[#1a1a1a] rounded-lg mb-6"
   onClick={() => toggleSection("solution")}
 >
-  <h3 className="text-[#9a9a9a] text-[13px] uppercase tracking-[0.25em] font-light p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">
+  <h3 className="text-[#b0aeac] text-[13px] uppercase tracking-[0.25em] font-normal p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">
     Proposed Solution:
   </h3>
   {openSections["solution"] && (
@@ -324,7 +324,7 @@ const ProjectDetails2 = () => {
           src="/dp/drawing.png"
           alt="Exploded CAD view of the PEEKformance hip implant"
           className="w-full max-w-sm rounded-lg shadow-lg"        />
-        <p className="text-sm text-[#5e5e5e] mt-2 text-center">
+        <p className="text-sm text-[#9a9896] mt-2 text-center">
           <strong>Fig. 3:</strong> Drawing of preliminary implant with all parts.
            showcasing key components.
         </p>
@@ -337,7 +337,7 @@ const ProjectDetails2 = () => {
   className="border border-[#1a1a1a] rounded-lg mb-6"
   onClick={() => toggleSection("materials")}
 >
-  <h3 className="text-[#9a9a9a] text-[13px] uppercase tracking-[0.25em] font-light p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">
+  <h3 className="text-[#b0aeac] text-[13px] uppercase tracking-[0.25em] font-normal p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">
     Material Selection:
   </h3>
   {openSections["materials"] && (
@@ -373,7 +373,7 @@ const ProjectDetails2 = () => {
           alt="Exploded view of the PEEKformance hip implant materials"
           className="w-full max-w-md rounded-lg shadow-lg"
         />
-        <p className="text-sm text-[#5e5e5e] mt-2 text-center">
+        <p className="text-sm text-[#9a9896] mt-2 text-center">
           <strong>Fig. 4:</strong> Exploded view of the PEEKformance hip implant,
           highlighting advanced material applications.
         </p>
@@ -387,7 +387,7 @@ const ProjectDetails2 = () => {
   className="border border-[#1a1a1a] rounded-lg mb-6"
   onClick={() => toggleSection("responsibilities")}
 >
-  <h3 className="text-[#9a9a9a] text-[13px] uppercase tracking-[0.25em] font-light p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">
+  <h3 className="text-[#b0aeac] text-[13px] uppercase tracking-[0.25em] font-normal p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">
     Responsibilities and Contributions:
   </h3>
   {openSections["responsibilities"] && (
@@ -419,7 +419,7 @@ const ProjectDetails2 = () => {
   className="border border-[#1a1a1a] rounded-lg mb-6"
   onClick={() => toggleSection("learningChallenges")}
 >
-  <h3 className="text-[#9a9a9a] text-[13px] uppercase tracking-[0.25em] font-light p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">
+  <h3 className="text-[#b0aeac] text-[13px] uppercase tracking-[0.25em] font-normal p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">
     💭 Project Learning Opportunities and Challenges
   </h3>
   {openSections["learningChallenges"] && (
@@ -463,7 +463,7 @@ const ProjectDetails2 = () => {
           alt="Project Poster"
           className="w-full max-w-lg rounded-lg shadow-lg"
         />
-        <p className="text-sm text-[#5e5e5e] mt-2 text-center">
+        <p className="text-sm text-[#9a9896] mt-2 text-center">
           <strong>Fig. 5:</strong> Final poster presentation summarizing the CAD
           models and research findings.
         </p>
@@ -480,7 +480,7 @@ const ProjectDetails2 = () => {
   className="border border-[#1a1a1a] rounded-lg mb-6"
   onClick={() => toggleSection("reflection")}
 >
-  <h3 className="text-[#9a9a9a] text-[13px] uppercase tracking-[0.25em] font-light p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">
+  <h3 className="text-[#b0aeac] text-[13px] uppercase tracking-[0.25em] font-normal p-4 cursor-pointer hover:text-[#e5dfd4] transition-colors">
     Reflecting on the Project
   </h3>
   {openSections["reflection"] && (

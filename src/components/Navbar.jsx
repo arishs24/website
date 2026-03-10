@@ -9,7 +9,7 @@ const Navbar = ({ currentPage, onChangePage }) => {
       <div className="max-w-2xl mx-auto sm:px-16 px-6 py-6 flex justify-between items-center">
         <button
           onClick={() => onChangePage?.("about")}
-          className="text-[#555250] hover:text-[#c8c2b8] text-[13px] font-light transition-colors duration-300"
+          className="text-[#7a7876] hover:text-[#c8c2b8] text-[13px] font-normal transition-colors duration-300"
         >
           Arish Shahab
         </button>
@@ -20,7 +20,7 @@ const Navbar = ({ currentPage, onChangePage }) => {
             <li key={link.id}>
               <button
                 onClick={() => onChangePage?.(link.id)}
-                className="text-[12px] font-light transition-colors duration-300 tracking-wide"
+                className="text-[12px] font-normal transition-colors duration-300 tracking-wide"
                 style={{ color: currentPage === link.id ? "#c8c2b8" : "#555250" }}
               >
                 {link.title}
@@ -33,7 +33,7 @@ const Navbar = ({ currentPage, onChangePage }) => {
         <div className="sm:hidden relative">
           <button
             onClick={() => setToggle(!toggle)}
-            className="text-[#555250] hover:text-[#c8c2b8] transition-colors text-[12px] font-light tracking-wide"
+            className="text-[#7a7876] hover:text-[#c8c2b8] transition-colors text-[12px] font-normal tracking-wide"
           >
             {toggle ? "close" : "menu"}
           </button>
@@ -44,7 +44,7 @@ const Navbar = ({ currentPage, onChangePage }) => {
                   <li key={link.id}>
                     <button
                       onClick={() => { setToggle(false); onChangePage?.(link.id); }}
-                      className="text-[12px] font-light transition-colors tracking-wide"
+                      className="text-[12px] font-normal transition-colors tracking-wide"
                       style={{ color: currentPage === link.id ? "#c8c2b8" : "#555250" }}
                     >
                       {link.title}
