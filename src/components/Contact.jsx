@@ -34,38 +34,38 @@ const Contact = () => {
 
   return (
     <div>
-      <p className="text-[#b0aeac] text-[15px] leading-[1.85] mb-14">
+      <p className="text-[#555452] text-[15px] leading-[1.85] mb-14">
         For research collaborations, project inquiries, or anything else.{" "}
         <a href="mailto:arish.shahab1@gmail.com"
-          className="text-[#c8c2b8] hover:opacity-60 transition-opacity">
+          className="text-[#1a1917] hover:opacity-60 transition-opacity">
           arish.shahab1@gmail.com
         </a>
       </p>
 
       <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-10">
         <div className="flex flex-col gap-3">
-          <label className="text-[#505050] text-[11px] tracking-widest">Name</label>
+          <label className="text-[#aaa8a6] text-[11px] tracking-widest">Name</label>
           <input type="text" name="name" value={form.name} onChange={handleChange}
             placeholder="your name"
-            className="bg-transparent border-b border-[#2e2c2a] text-[#c8c2b8] placeholder:text-[#363432] py-3 text-[15px] focus:outline-none focus:border-[#2e2e2e] transition-colors" />
+            className="bg-transparent border-b border-[#d8d4cc] text-[#1a1917] placeholder:text-[#c8c4bc] py-3 text-[15px] focus:outline-none focus:border-[#aaa8a6] transition-colors" />
         </div>
 
         <div className="flex flex-col gap-3">
-          <label className="text-[#505050] text-[11px] tracking-widest">Email</label>
+          <label className="text-[#aaa8a6] text-[11px] tracking-widest">Email</label>
           <input type="email" name="email" value={form.email} onChange={handleChange}
             placeholder="your@email.com"
-            className="bg-transparent border-b border-[#2e2c2a] text-[#c8c2b8] placeholder:text-[#363432] py-3 text-[15px] focus:outline-none focus:border-[#2e2e2e] transition-colors" />
+            className="bg-transparent border-b border-[#d8d4cc] text-[#1a1917] placeholder:text-[#c8c4bc] py-3 text-[15px] focus:outline-none focus:border-[#aaa8a6] transition-colors" />
         </div>
 
         <div className="flex flex-col gap-3">
-          <label className="text-[#505050] text-[11px] tracking-widest">Message</label>
+          <label className="text-[#aaa8a6] text-[11px] tracking-widest">Message</label>
           <textarea rows={5} name="message" value={form.message} onChange={handleChange}
             placeholder="your message"
-            className="bg-transparent border-b border-[#2e2c2a] text-[#c8c2b8] placeholder:text-[#363432] py-3 text-[15px] focus:outline-none focus:border-[#2e2e2e] transition-colors resize-none" />
+            className="bg-transparent border-b border-[#d8d4cc] text-[#1a1917] placeholder:text-[#c8c4bc] py-3 text-[15px] focus:outline-none focus:border-[#aaa8a6] transition-colors resize-none" />
         </div>
 
         <button type="submit"
-          className="w-fit text-[13px] text-[#8a8886] hover:text-[#c8c2b8] transition-colors duration-200">
+          className="w-fit text-[13px] text-[#aaa8a6] hover:text-[#1a1917] transition-colors duration-200">
           {loading ? "Sending..." : "Send →"}
         </button>
       </form>

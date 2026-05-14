@@ -51,7 +51,7 @@ const Hero = () => {
         initial={{ opacity: 0, y: 18 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
-        className="font-heading text-[#e5dfd4] text-[80px] sm:text-[104px] font-normal leading-[0.95] tracking-tight mb-12"
+        className="font-heading text-[#1a1917] text-[80px] sm:text-[104px] font-normal leading-[0.95] tracking-tight mb-12"
       >
         Arish<br />Shahab
       </motion.h1>
@@ -60,9 +60,9 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.3 }}
-        className="text-[#a8a6a4] text-[16px] font-normal leading-[1.9] mb-12"
+        className="text-[#555452] text-[16px] font-normal leading-[1.9] mb-12"
       >
-        Studying <span className="text-[#e5dfd4] font-medium">Integrated Biomedical Engineering and Health Sciences</span> at <span className="text-[#7ab4d4] font-medium">McMaster University</span>. Working toward medicine, and building things along the way.
+        Studying <span className="text-[#1a1917] font-medium">Integrated Biomedical Engineering and Health Sciences</span> at <span className="text-[#2878aa] font-medium">McMaster University</span>. Working toward medicine, and building things along the way.
       </motion.p>
 
       <motion.div
@@ -71,10 +71,10 @@ const Hero = () => {
         transition={{ duration: 0.5, delay: 0.5 }}
         className="mb-12"
       >
-        <p className="font-heading italic text-[#6a6866] text-[17px] leading-relaxed">
+        <p className="font-heading italic text-[#bbb9b6] text-[17px] leading-relaxed">
           "Whoever saves one life, it is as if he had saved all of mankind."
         </p>
-        <p className="text-[#7a7876] text-[12px] mt-2 tracking-wide">— Quran 5:32</p>
+        <p className="text-[#ccc9c6] text-[12px] mt-2 tracking-wide">— Quran 5:32</p>
       </motion.div>
 
       <motion.div
@@ -85,7 +85,7 @@ const Hero = () => {
       >
         {links.map(({ label, href }) => (
           <a key={label} href={href} target="_blank" rel="noopener noreferrer"
-            className="text-[13px] text-[#8a8886] hover:text-[#c8c2b8] transition-colors duration-300">
+            className="text-[13px] text-[#aaa8a6] hover:text-[#1a1917] transition-colors duration-300">
             {label} ↗
           </a>
         ))}
@@ -99,11 +99,11 @@ const Hero = () => {
       >
         {/* Masthead */}
         <div className="flex items-center gap-4 mb-8">
-          <div className="h-px flex-1 bg-[#2e2c28]" />
-          <p className="font-heading text-[#6a6866] text-[11px] uppercase tracking-[0.35em]">
+          <div className="h-px flex-1 bg-[#e8e4dc]" />
+          <p className="font-heading text-[#bbb9b6] text-[11px] uppercase tracking-[0.35em]">
             In the Press
           </p>
-          <div className="h-px flex-1 bg-[#2e2c28]" />
+          <div className="h-px flex-1 bg-[#e8e4dc]" />
         </div>
 
         {/* Newspaper grid */}
@@ -120,21 +120,21 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
               variants={fadeUp}
-              className={`group p-5 border-[#2a2826] hover:bg-[#1e1c18] transition-colors duration-300 ${
+              className={`group p-5 border-[#e8e4dc] hover:bg-[#f5f2ec] transition-colors duration-300 ${
                 i % 2 === 0 ? "sm:border-r" : ""
               } ${
                 i < 2 ? "border-b" : ""
               } border`}
             >
-              <p className="text-[#7a7876] text-[9px] uppercase tracking-[0.2em] font-medium mb-3">
+              <p className="text-[#aaa8a6] text-[9px] uppercase tracking-[0.2em] font-medium mb-3">
                 {item.source}
               </p>
-              <p className="font-heading text-[#c8c2b8] text-[16px] leading-snug mb-4 group-hover:text-[#e5dfd4] transition-colors duration-300">
+              <p className="font-heading text-[#444240] text-[16px] leading-snug mb-4 group-hover:text-[#1a1917] transition-colors duration-300">
                 {item.title}
               </p>
               <div className="flex items-center justify-between">
-                <p className="text-[#4a4846] text-[10px] tracking-wide">{item.date}</p>
-                <p className="text-[#d4a96a] text-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium">
+                <p className="text-[#ccc9c6] text-[10px] tracking-wide">{item.date}</p>
+                <p className="text-[#a07838] text-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium">
                   Read ↗
                 </p>
               </div>
@@ -142,8 +142,7 @@ const Hero = () => {
           ))}
         </motion.div>
 
-        {/* Bottom rule */}
-        <div className="h-px bg-[#2e2c28] mt-0" />
+        <div className="h-px bg-[#e8e4dc] mt-0" />
       </motion.div>
 
     </section>

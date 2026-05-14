@@ -110,26 +110,26 @@ const fadeUp = {
 
 const roleColor = (role) => {
   const r = role.toLowerCase();
-  if (r.includes("founder") || r.includes("co-founder")) return "text-[#d4a96a]";
-  if (r.includes("research")) return "text-[#7ab4d4]";
-  if (r.includes("engineer") || r.includes("fellow")) return "text-[#7ac8a0]";
-  if (r.includes("clinical") || r.includes("shadow") || r.includes("dialysis")) return "text-[#b094d4]";
-  return "text-[#b0aeac]";
+  if (r.includes("founder") || r.includes("co-founder")) return "text-[#a07838]";
+  if (r.includes("research")) return "text-[#2878aa]";
+  if (r.includes("engineer") || r.includes("fellow")) return "text-[#2a8a56]";
+  if (r.includes("clinical") || r.includes("shadow") || r.includes("dialysis")) return "text-[#6a44a4]";
+  return "text-[#888684]";
 };
 
 const Entry = ({ item }) => (
   <motion.div variants={fadeUp} className="mb-14">
     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-3">
       <div>
-        <p className="text-[#e5dfd4] text-[16px] font-medium leading-tight">{item.company}</p>
+        <p className="text-[#1a1917] text-[16px] font-medium leading-tight">{item.company}</p>
         <p className={`text-[12px] font-medium mt-1.5 ${roleColor(item.role)}`}>{item.role}</p>
       </div>
-      <p className="text-[#7a7876] text-[12px] font-normal shrink-0 sm:mt-0.5">{item.date}</p>
+      <p className="text-[#aaa8a6] text-[12px] font-normal shrink-0 sm:mt-0.5">{item.date}</p>
     </div>
-    <p className="text-[#a8a6a4] text-[15px] font-normal leading-[1.9]">{item.desc}</p>
+    <p className="text-[#555452] text-[15px] font-normal leading-[1.9]">{item.desc}</p>
     {item.link && (
       <a href={item.link} target="_blank" rel="noopener noreferrer"
-        className="inline-block mt-3 text-[12px] text-[#7ab4d4] hover:text-[#c8c2b8] transition-colors duration-200">
+        className="inline-block mt-3 text-[12px] text-[#2878aa] hover:text-[#1a1917] transition-colors duration-200">
         read ↗
       </a>
     )}
@@ -148,13 +148,13 @@ const Experience = () => {
             key={key}
             onClick={() => setActiveTab(key)}
             className="relative pb-2 text-[13px] transition-colors duration-200"
-            style={{ color: activeTab === key ? "#c8c2b8" : "#555250" }}
+            style={{ color: activeTab === key ? "#1a1917" : "#aaa8a6" }}
           >
             {tab.label}
             {activeTab === key && (
               <motion.div
                 layoutId="exp-tab-line"
-                className="absolute bottom-0 left-0 right-0 h-px bg-[#c8c2b8]"
+                className="absolute bottom-0 left-0 right-0 h-px bg-[#1a1917]"
                 transition={{ type: "spring", stiffness: 320, damping: 32 }}
               />
             )}
