@@ -23,6 +23,7 @@ module.exports = {
       },
       fontFamily: {
         heading: ['"EB Garamond"', "Georgia", "serif"],
+        helvetica: ['"Helvetica Neue"', "Helvetica", "Arial", "sans-serif"],
         sans: ['"Inter"', "system-ui", "-apple-system", "sans-serif"],
       },
     },
