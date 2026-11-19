@@ -3,7 +3,6 @@ import Layout, { Card, Go, ink, muted, underline } from "./Layout";
 import {
   building,
   dreams,
-  highlights,
   howILearn,
   passions,
   press,
@@ -111,10 +110,6 @@ const Home = () => {
               {b.link && <Go to={b.link.href} className={underline}>{b.link.label}</Go>}
             </Entry>
           ))}
-        </Section>
-
-        <Section id="highlights" label="Highlights">
-          <Numbered items={highlights} />
         </Section>
 
         <Section id="dreams" label="Dreams">

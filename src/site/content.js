@@ -23,7 +23,6 @@ export const sidebar = [
       { label: "Passions", to: "/#passions" },
       { label: "Work", to: "/#work" },
       { label: "Building Others", to: "/#building" },
-      { label: "Highlights", to: "/#highlights" },
     ],
   },
   {
@@ -92,7 +91,7 @@ export const passions = [
   },
   {
     title: "And much more",
-    body: "Neuroscience, teaching, writing for The Frequency, and the patients I meet behind the pharmacy counter.",
+    body: "Neuroscience, teaching, and writing for The Frequency.",
     link: { label: "Read my writing.", href: "/articles" },
   },
 ];
@@ -128,20 +127,9 @@ export const building = [
   },
 ];
 
-// [plain before, highlighted, plain after]
-export const highlights = [
-  ["", "1st Place Healthcare", " at HackPrinceton"],
-  ["", "Nebius AI Discovery Award", ""],
-  ["", "1st in Canada", ", Waterloo Financial Literacy Competition"],
-  ["", "13th worldwide", ", International Research Olympiad"],
-  ["DECA ", "Top 20 worldwide", " at ICDC"],
-  ["", "JXTX Scholar", ""],
-];
-
 // DRAFT
 export const dreams = [
   ["Practice medicine as a ", "physician who builds"],
-  ["Put an affordable hearing aid in ", "100 million ears"],
   ["Make pre-operative planning take ", "minutes, not hours"],
   ["Catch neurodegeneration ", "years before symptoms"],
   ["Help 100 students start ", "building in healthcare"],
