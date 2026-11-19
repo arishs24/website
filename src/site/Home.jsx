@@ -1,8 +1,10 @@
 import React from "react";
 import Layout, { Card, Go, ink, muted, underline } from "./Layout";
+import WorldMap from "./WorldMap";
 import {
   building,
   dreams,
+  healthSystems,
   howILearn,
   passions,
   press,
@@ -11,12 +13,14 @@ import {
 
 const grid = "grid md:grid-cols-[minmax(0,1fr)_minmax(0,500px)_minmax(0,1fr)] gap-x-12";
 
-const Section = ({ id, label, children }) => (
+const Section = ({ id, label, wide = false, children }) => (
   <section id={id} className={`scroll-mt-8 ${grid} gap-y-4 mb-28`}>
     <h2 className="md:text-right text-[#252525] text-[26px] md:text-[28px] uppercase leading-[1.1] tracking-[-0.25px] whitespace-pre-line">
       {label}
     </h2>
-    <div className={`${muted} text-[17.6px] leading-[1.5]`}>{children}</div>
+    <div className={`${muted} text-[17.6px] leading-[1.5] ${wide ? "md:col-span-2" : ""}`}>
+      {children}
+    </div>
   </section>
 );
 
@@ -110,6 +114,14 @@ const Home = () => {
               {b.link && <Go to={b.link.href} className={underline}>{b.link.label}</Go>}
             </Entry>
           ))}
+        </Section>
+
+        <Section id="health-systems" label={"Health\nSystems"} wide>
+          <p className="mb-6 max-w-[500px]">
+            I&rsquo;ve seen healthcare delivered up close in{" "}
+            <span className={ink}>{healthSystems.length} countries</span>.
+          </p>
+          <WorldMap countries={healthSystems} />
         </Section>
 
         <Section id="dreams" label="Dreams">

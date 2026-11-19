@@ -23,6 +23,7 @@ export const sidebar = [
       { label: "Passions", to: "/#passions" },
       { label: "Work", to: "/#work" },
       { label: "Building Others", to: "/#building" },
+      { label: "Health Systems", to: "/#health-systems" },
     ],
   },
   {
@@ -125,6 +126,22 @@ export const building = [
     title: "Angel investing & scouting",
     body: "I angel invest, scout for funds, and help people with limited access kick-start their journey.",
   },
+];
+
+// Health systems seen in person. id is the ISO 3166 numeric code used by
+// the map data; at is [longitude, latitude] for the marker dot.
+export const healthSystems = [
+  { id: "124", name: "Canada", at: [-79.4, 43.7] },
+  { id: "840", name: "United States", at: [-77.0, 38.9] },
+  { id: "170", name: "Colombia", at: [-74.1, 4.7] },
+  { id: "372", name: "Ireland", at: [-6.3, 53.3] },
+  { id: "826", name: "United Kingdom", at: [-0.1, 51.5] },
+  { id: "620", name: "Portugal", at: [-9.1, 38.7] },
+  { id: "724", name: "Spain", at: [-3.7, 40.4] },
+  { id: "504", name: "Morocco", at: [-6.8, 34.0] },
+  { id: "682", name: "Saudi Arabia", at: [46.7, 24.7] },
+  { id: "784", name: "UAE", at: [55.3, 25.2] },
+  { id: "586", name: "Pakistan", at: [73.0, 33.7] },
 ];
 
 // DRAFT
