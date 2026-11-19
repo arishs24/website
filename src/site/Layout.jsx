@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
-import emailjs from "@emailjs/browser";
 import { sidebar, social } from "./content";
 
 export const ink = "text-[#161616]";
@@ -34,7 +33,7 @@ const Cursor = () => {
     const move = (e) => {
       x = e.clientX;
       y = e.clientY;
-      target = e.target.closest?.("a, button, input") ? 2 : 1;
+      target = e.target.closest?.("a, button") ? 2 : 1;
     };
     const loop = () => {
       cx += (x - cx) * 0.18;
@@ -91,62 +90,6 @@ const useHashScroll = () => {
     }, 50);
     return () => clearTimeout(t);
   }, [pathname, hash]);
-};
-
-export const Subscribe = () => {
-  const [email, setEmail] = useState("");
-  const [state, setState] = useState("idle");
-
-  const submit = (e) => {
-    e.preventDefault();
-    if (!email) return;
-    setState("sending");
-    emailjs
-      .send(
-        "service_f8fcdjw",
-        "template_3pkzg9b",
-        {
-          from_name: email,
-          to_name: "Arish",
-          from_email: email,
-          to_email: "arish.shahab1@gmail.com",
-          message: "Please add me to your updates list.",
-        },
-        "kRNZqCBtACCz1AxIZ"
-      )
-      .then(
-        () => setState("done"),
-        () => setState("error")
-      );
-  };
-
-  return (
-    <div className="text-[17.6px] leading-[1.5]">
-      <p className={`${ink} mb-4`}>
-        Subscribe for occasional notes on what I&rsquo;m building in healthcare:
-      </p>
-      {state === "done" ? (
-        <p className={muted}>Thanks. You&rsquo;re on the list.</p>
-      ) : (
-        <form onSubmit={submit} className="flex max-w-[460px] border-b border-[#252525]/30">
-          <input
-            type="email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="your@email.com"
-            className="flex-1 min-w-0 bg-transparent py-2 text-[#161616] placeholder:text-[#252525]/35 focus:outline-none"
-          />
-          <button type="submit" className={`${muted} hover:text-[#161616] transition-colors px-2`}>
-            {state === "sending" ? "Sending…" : "Subscribe →"}
-          </button>
-        </form>
-      )}
-      {state === "error" && (
-        <p className="text-[#a04040] text-[14px] mt-2">Something went wrong. Try again?</p>
-      )}
-    </div>
-  );
 };
 
 let introPlayed = false;

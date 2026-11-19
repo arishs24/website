@@ -19,19 +19,19 @@ export const sidebar = [
     label: "About",
     to: "/#about",
     children: [
-      { label: "Flaws", to: "/m/flaws" },
-      { label: "Dreams", to: "/m/dreams" },
-      { label: "Systems", to: "/m/systems" },
-      { label: "12 Learnings", to: "/m/learnings" },
-      { label: "Contrarian Beliefs", to: "/m/beliefs" },
+      { label: "Featured In", to: "/#featured" },
+      { label: "Passions", to: "/#passions" },
+      { label: "Work", to: "/#work" },
+      { label: "Building Others", to: "/#building" },
+      { label: "Highlights", to: "/#highlights" },
     ],
   },
   {
     label: "Articles",
     to: "/articles",
     children: [
-      { label: "Featured In", to: "/#featured" },
       { label: "Research", to: "/articles#research" },
+      { label: "Press", to: "/articles#press" },
       { label: "The Frequency", href: FREQUENCY },
     ],
   },
@@ -91,15 +91,6 @@ export const passions = [
     link: { label: "How Synovia won at Princeton.", href: "https://news.mcmaster.ca/like-a-flight-simulator-for-brain-surgery-undergrad-wins-at-princeton-engineering-competition/" },
   },
   {
-    title: "Hearing health",
-    body: "1 in 5 people live with hearing loss. Most will never afford a hearing aid. That's a design problem.",
-    link: { label: "What I'm building at Amano.", href: "https://amanolabs.com" },
-  },
-  {
-    title: "Faith & consistency",
-    body: "Building Manar taught me that consistency is a design problem, not a willpower problem.",
-  },
-  {
     title: "And much more",
     body: "Neuroscience, teaching, writing for The Frequency, and the patients I meet behind the pharmacy counter.",
     link: { label: "Read my writing.", href: "/articles" },
@@ -125,28 +116,16 @@ export const work = [
   },
 ];
 
-export const builds = [
+export const building = [
   {
-    name: "Baymax",
-    desc: "A companion robot with a custom voice model and real-time emotion detection.",
-    href: "https://github.com/subodh-thallada/Baymax-UofT-Hacks-12-",
+    title: "Buildojo",
+    body: "I help students go from an idea to a running startup.",
+    link: { label: "See Buildojo.", href: "https://buildojo.ai" },
   },
   {
-    name: "FitBud",
-    desc: "Real-time motion tracking that classifies exercises and corrects your form.",
-    href: "https://github.com/arishs24/FitBud",
+    title: "Angel investing & scouting",
+    body: "I angel invest, scout for funds, and help people with limited access kick-start their journey.",
   },
-  {
-    name: "Aqua Boost",
-    desc: "Bioimpedance sensors that tell you how hydrated you actually are.",
-    href: "https://github.com/arishs24/aqua_boost",
-  },
-];
-
-export const capstoneBlurbs = [
-  "A hip implant redesigned to resist aseptic loosening and promote bone regrowth.",
-  "A smart rehab assistant with resistance training and real-time motion feedback.",
-  "A wearable foot-drop device that helps people with MS run again.",
 ];
 
 // [plain before, highlighted, plain after]
@@ -171,10 +150,6 @@ export const dreams = [
 // DRAFT
 export const howILearn = [
   { lead: "Building things. Shadowing clinicians. Reading papers. Listening to patients." },
-  {
-    lead: "The fastest way to understand a system is to build a tool for it.",
-    link: { label: "See what I've built.", href: "/#projects" },
-  },
   {
     lead: "Research is a conversation. I try to join it early.",
     link: { label: "Read my published research.", href: "/articles#research" },
@@ -207,109 +182,3 @@ export const research = [
     href: "https://medium.com/@arishshahab/crispr-and-the-lrp5-gene-displaying-the-power-of-gene-editing-for-bone-health-9f7e55217cca",
   },
 ];
-
-// Sub-pages. Each block is { p }, { h }, or { ol: [...] }. ALL DRAFT.
-export const pages = {
-  flaws: {
-    title: "My Flaws",
-    updated: "November 2026",
-    blocks: [
-      { p: "I have plenty of flaws. Some I work on. Others I keep, because their flipside is a strength." },
-      { p: "Here are a few:" },
-      {
-        ol: [
-          "I say yes to too much. Five projects at once means some get less than they deserve.",
-          "I move fast and skip the write-up. Future me pays for it.",
-          "I build before I ask. Sometimes the answer was one conversation away.",
-          "I find it hard to stop working on something once it's interesting.",
-          "I'm slow to ask for help, even when it's right there.",
-        ],
-      },
-    ],
-  },
-  dreams: {
-    title: "My Dreams",
-    updated: "November 2026",
-    blocks: [
-      {
-        ol: [
-          "Practice medicine as a physician who builds",
-          "Put an affordable hearing aid in 100 million ears",
-          "Make pre-operative planning take minutes, not hours",
-          "Catch neurodegeneration years before symptoms",
-          "Help 100 students start building in healthcare",
-        ],
-      },
-    ],
-  },
-  systems: {
-    title: "My Systems, Routines, and Tools",
-    updated: "November 2026",
-    blocks: [
-      { p: "How I split my time between class, the lab, a startup, and the pharmacy." },
-      { h: "Weeks" },
-      { p: "I batch. Lab and research work get long uninterrupted blocks. Meetings get stacked on the same days. Pharmacy shifts are the reset button." },
-      { h: "Energy" },
-      { p: "Sleep first, then everything else. A walk between deep-work blocks does more than another coffee." },
-      { h: "Tools" },
-      {
-        ol: [
-          "Python, PyTorch and TensorFlow for models",
-          "FEA software for musculoskeletal simulation",
-          "React and Next.js for anything a clinician needs to click",
-          "A notebook. Still the fastest way to think.",
-        ],
-      },
-    ],
-  },
-  learnings: {
-    title: "12 Learnings",
-    updated: "November 2026",
-    blocks: [
-      { p: "Things that have changed how I work:" },
-      { h: "Building" },
-      {
-        ol: [
-          "Ship the ugly version. Feedback beats polish.",
-          "Talk to the person who will use it before you write a line of code.",
-          "Thirty-six hours is enough to build something real.",
-          "Constraints make better products than budgets.",
-        ],
-      },
-      { h: "Medicine" },
-      {
-        ol: [
-          "Clinicians don't need more data. They need the right number at the right time.",
-          "The pharmacy counter teaches more about healthcare than most lectures.",
-          "Every patient is an n of 1.",
-          "Precision is a form of care.",
-        ],
-      },
-      { h: "Life" },
-      {
-        ol: [
-          "Consistency beats intensity.",
-          "Say yes early, then learn to say no.",
-          "Be around people who make the right thing the default.",
-          "Most regrets are things you didn't try.",
-        ],
-      },
-    ],
-  },
-  beliefs: {
-    title: "Contrarian Beliefs",
-    updated: "November 2026",
-    blocks: [
-      { p: "[People tell me these are wrong. I take that as a good sign.]" },
-      {
-        ol: [
-          "Hearing aids should cost less than a pair of headphones.",
-          "Surgeons will rehearse every operation in simulation before they perform it.",
-          "The best clinicians of the next decade will also write code.",
-          "Most healthcare AI fails on workflow, not accuracy.",
-          "Undergrads can do serious research, if someone lets them.",
-        ],
-      },
-    ],
-  },
-};

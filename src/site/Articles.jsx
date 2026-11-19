@@ -1,5 +1,5 @@
 import React from "react";
-import { PageShell } from "./Page";
+import { PageShell } from "./PageShell";
 import { Go, ink, muted, underline } from "./Layout";
 import { FREQUENCY, RESEARCHGATE, press, research } from "./content";
 
