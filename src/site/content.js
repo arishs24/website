@@ -103,16 +103,16 @@ export const work = [
     desc: "Biomedical Engineer. ML and finite element models of how bone responds to force, so orthopedic surgeons can plan before the OR.",
   },
   {
-    org: "AlgoSurg (YC W18)",
-    desc: "Software Engineer. Automating the hours surgeons spend on pre-operative planning.",
+    org: "Johns Hopkins University",
+    desc: "Computational Neuroscience Researcher. ML models of brain function and disease, and signal work for brain-computer interfaces.",
   },
   {
     org: "University Health Network",
     desc: "ML Researcher. Predicting when a rehab patient is improving, plateauing, or quietly declining.",
   },
   {
-    org: "Before that",
-    desc: "Johns Hopkins (computational neuroscience), RBC Borealis (neuroimaging), Hamilton Health Sciences (arthroplasty outcomes).",
+    org: "Also",
+    desc: "AlgoSurg (YC W18), RBC Borealis (neuroimaging), and Hamilton Health Sciences (arthroplasty outcomes).",
   },
 ];
 

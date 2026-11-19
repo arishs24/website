@@ -78,16 +78,21 @@ const NavGroups = () =>
   ));
 
 // Scroll to #hash after route changes, or to the top on a new page.
-const useHashScroll = () => {
+// On the first load, wait for the card to finish sliding in so the
+// target's position is measured where it will actually end up.
+const useHashScroll = (firstDelay) => {
   const { pathname, hash } = useLocation();
+  const first = useRef(true);
   useEffect(() => {
+    const delay = first.current ? firstDelay : 50;
+    first.current = false;
     if (!hash) {
       window.scrollTo(0, 0);
       return;
     }
     const t = setTimeout(() => {
       document.getElementById(hash.slice(1))?.scrollIntoView({ behavior: "smooth" });
-    }, 50);
+    }, delay);
     return () => clearTimeout(t);
   }, [pathname, hash]);
 };
@@ -97,7 +102,7 @@ let introPlayed = false;
 const Layout = ({ children, cards = false }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [playIntro] = useState(() => !introPlayed);
-  useHashScroll();
+  useHashScroll(playIntro ? 1500 : 50);
   useEffect(() => {
     introPlayed = true;
   }, []);

@@ -75,7 +75,7 @@ const Home = () => {
           </p>
           <p>
             I want to practice medicine, but I can&rsquo;t ignore what&rsquo;s possible with
-            computation. Most weeks you&rsquo;ll still find me behind a pharmacy counter.
+            computation.
           </p>
         </Section>
 
