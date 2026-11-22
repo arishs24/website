@@ -4,10 +4,11 @@ import WorldMap from "./WorldMap";
 import {
   building,
   dreams,
+  featuredOutlets,
+  featuredStories,
   healthSystems,
   howILearn,
   passions,
-  press,
   work,
 } from "./content";
 
@@ -97,11 +98,30 @@ const Home = () => {
         </Section>
 
         <Section id="featured" label={"Featured\nIn"}>
-          {press.map((p) => (
-            <Entry key={p.url} title={p.source}>
-              <Go to={p.url} className={underline}>{p.title}</Go>
+          <p className="text-[#161616] text-[20px] leading-[1.4] mb-8">
+            {featuredOutlets.map((o, i) => (
+              <React.Fragment key={o}>
+                {i > 0 && <span className="text-[#252525]/30"> &middot; </span>}
+                <span className="whitespace-nowrap">{o}</span>
+              </React.Fragment>
+            ))}
+          </p>
+          {featuredStories.map((f) => (
+            <Entry key={f.story} title={f.story}>
+              <p>{f.headline}</p>
+              <p className="text-[15px] mt-1">
+                {f.sources.map((src, i) => (
+                  <React.Fragment key={src.url}>
+                    {i > 0 && <span className="text-[#252525]/30"> &middot; </span>}
+                    <Go to={src.url} className={underline}>{src.label}</Go>
+                  </React.Fragment>
+                ))}
+              </p>
             </Entry>
           ))}
+          <Go to="/articles#press" className={`${underline} inline-block mt-6`}>
+            See all press.
+          </Go>
         </Section>
 
         <Section id="passions" label="Passions">

@@ -96,6 +96,45 @@ export const press = [
   },
 ];
 
+// Homepage digest of the press list, grouped by story.
+export const featuredOutlets = [
+  "CBC News",
+  "McMaster",
+  "Founders, Inc.",
+  "Pubity",
+  "Education News Canada",
+];
+
+export const featuredStories = [
+  {
+    story: "Amano",
+    headline: "Affordable hearing care, from the classroom to California.",
+    sources: [
+      { label: "CBC News", url: "https://www.cbc.ca/news/canada/hamilton/mcmaster-students-affordable-hearing-aids-9.7259207" },
+      { label: "McMaster Daily News", url: "https://news.mcmaster.ca/mcmaster-students-launch-hearing-care-startup-amano/" },
+      { label: "Founders, Inc.", url: "https://x.com/fdotinc/status/2054634415649874097" },
+      { label: "Pubity", url: "https://www.instagram.com/p/DeZuFk9DSfU/" },
+    ],
+  },
+  {
+    story: "HackPrinceton",
+    headline: "1st in healthcare for \u201ca flight simulator for brain surgery.\u201d",
+    sources: [
+      { label: "McMaster Daily News", url: "https://news.mcmaster.ca/like-a-flight-simulator-for-brain-surgery-undergrad-wins-at-princeton-engineering-competition/" },
+      { label: "McMaster Health Sciences", url: "https://healthsci.mcmaster.ca/like-a-flight-simulator-for-brain-surgery-undergrad-arish-shahab-takes-home-health-care-prize-at-princeton-engineering-competition/" },
+      { label: "Education News Canada", url: "https://educationnewscanada.com/article/education/level/university/1/1176503/b-like-a-flight-simulator-for-brain-surgery-undergrad-wins-at-princeton-engineering-competition.html" },
+    ],
+  },
+  {
+    story: "Also",
+    headline: "The next generation of medical entrepreneurs, and a GBCC2025 scholarship.",
+    sources: [
+      { label: "McMaster Health Sciences", url: "https://healthsci.mcmaster.ca/meet-the-next-generation-of-medical-entrepreneurs/" },
+      { label: "JXTX Foundation", url: "https://jxtxfoundation.org/news/2025-6-19-gbcc-awardees/" },
+    ],
+  },
+];
+
 // DRAFT
 export const passions = [
   {
@@ -228,12 +267,6 @@ export const learnings = {
     {
       title: "Make family non-negotiable.",
       body: ["Prioritize family above everything else, and don't let anything move that."],
-      quote: {
-        arabic: "رَّبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا",
-        transliteration: "Rabbir hamhuma kama rabbayani sagheera",
-        translation: "\u201cMy Lord, have mercy upon them as they brought me up when I was small.\u201d",
-        source: "Surah Al-Isra (17:24)",
-      },
     },
     {
       title: "Do the thing that makes you most uncomfortable.",
@@ -251,10 +284,6 @@ export const learnings = {
     {
       title: "Travel the world.",
       body: ["See how different cultures and people view the world, and let it change how you see it."],
-      quote: {
-        translation: "\u201cSay, \u2018Travel throughout the land and see how He originated the creation.\u2019\u201d",
-        source: "Surah Al-\u2018Ankabut (29:20)",
-      },
     },
     {
       title: "Do something you actually love.",
