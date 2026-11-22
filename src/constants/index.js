@@ -241,18 +241,6 @@ export const education = [
 
 export const volunteerExperiences = [
   {
-    title: "Frequency Writer",
-    company_name: "The Frequency — McMaster Engineering Society",
-    icon: "/mac.jpg",
-    iconBg: "#FF0000",
-    date: "September 2024 – Present",
-    points: [
-      "Writing research-backed articles for McMaster Engineering's student journal. The work of making technical ideas legible to people who almost understand them.",
-      "Pitching, drafting, and refining pieces that sit at the edge of engineering and clinical relevance.",
-    ],
-    link: 'https://macengsociety.ca/pdfs/frequency/TheFrequency_fall_2024.pdf',
-  },
-  {
     title: "Dialysis Assistant",
     company_name: "Trillium Health Partners",
     icon: thp,

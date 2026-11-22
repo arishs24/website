@@ -5,7 +5,6 @@
 export const EMAIL = "arish.shahab1@gmail.com";
 export const CALENDLY = "https://calendly.com/arish-shahab1/30min";
 export const RESEARCHGATE = "https://www.researchgate.net/profile/Arish-Shahab";
-export const FREQUENCY = "https://macengsociety.ca/pdfs/frequency/TheFrequency_fall_2024.pdf";
 
 export const social = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/arishshahab/" },
@@ -19,7 +18,6 @@ export const sidebar = [
     label: "About",
     to: "/#about",
     children: [
-      { label: "Biggest Learnings", to: "/learnings" },
       { label: "Featured In", to: "/#featured" },
       { label: "Passions", to: "/#passions" },
       { label: "Work", to: "/#work" },
@@ -28,12 +26,16 @@ export const sidebar = [
     ],
   },
   {
+    label: "Writing",
+    to: "/learnings",
+    children: [{ label: "Biggest Learnings", to: "/learnings" }],
+  },
+  {
     label: "Articles",
     to: "/articles",
     children: [
       { label: "Research", to: "/articles#research" },
       { label: "Press", to: "/articles#press" },
-      { label: "The Frequency", href: FREQUENCY },
     ],
   },
   {
