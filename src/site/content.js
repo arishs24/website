@@ -19,6 +19,7 @@ export const sidebar = [
     label: "About",
     to: "/#about",
     children: [
+      { label: "Biggest Learnings", to: "/learnings" },
       { label: "Featured In", to: "/#featured" },
       { label: "Passions", to: "/#passions" },
       { label: "Work", to: "/#work" },
@@ -62,7 +63,7 @@ export const press = [
     url: "https://x.com/fdotinc/status/2054634415649874097",
   },
   {
-    source: "Instagram",
+    source: "Pubity",
     title: "Feature on Amano.",
     url: "https://www.instagram.com/p/DeZuFk9DSfU/",
   },
@@ -85,16 +86,6 @@ export const press = [
     source: "McMaster Faculty of Health Sciences",
     title: "Meet the next generation of medical entrepreneurs.",
     url: "https://healthsci.mcmaster.ca/meet-the-next-generation-of-medical-entrepreneurs/",
-  },
-  {
-    source: "Steve Orsini on X",
-    title: "On the HackPrinceton health care win.",
-    url: "https://x.com/SteveOrsini/status/2000995669931384966",
-  },
-  {
-    source: "Galaxy Project",
-    title: "Galaxy and Bioconductor Community Conference meeting report.",
-    url: "https://galaxyproject.org/news/2025-07-11-june2025-newsletter/",
   },
   {
     source: "JXTX Foundation",
@@ -227,3 +218,48 @@ export const research = [
     href: "https://medium.com/@arishshahab/crispr-and-the-lrp5-gene-displaying-the-power-of-gene-editing-for-bone-health-9f7e55217cca",
   },
 ];
+
+export const learnings = {
+  title: "Biggest Things I've Learned",
+  updated: "November 2026",
+  items: [
+    {
+      title: "Make family non-negotiable.",
+      body: ["Prioritize family above everything else, and don't let anything move that."],
+      quote: {
+        arabic: "رَّبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا",
+        transliteration: "Rabbir hamhuma kama rabbayani sagheera",
+        translation: "\u201cMy Lord, have mercy upon them as they brought me up when I was small.\u201d",
+        source: "Surah Al-Isra (17:24)",
+      },
+    },
+    {
+      title: "Do the thing that makes you most uncomfortable.",
+      body: [
+        "That's where real growth comes from. Once you do it, you realize it wasn't as scary as it seemed.",
+        "For me, that was public speaking.",
+      ],
+    },
+    {
+      title: "Drop your ego and talk to everyone.",
+      body: [
+        "Wherever you go, speak to everyone. You never know where a conversation will take you, or how it might change your life.",
+      ],
+    },
+    {
+      title: "Travel the world.",
+      body: ["See how different cultures and people view the world, and let it change how you see it."],
+      quote: {
+        translation: "\u201cSay, \u2018Travel throughout the land and see how He originated the creation.\u2019\u201d",
+        source: "Surah Al-\u2018Ankabut (29:20)",
+      },
+    },
+    {
+      title: "Do something you actually love.",
+      body: [
+        "I could have studied computer science or biomedical engineering at Waterloo. I knew where that path led: big tech, or another AI SaaS startup.",
+        "Instead I did the unusual thing and studied biomedical engineering and health sciences at McMaster, because that's what I'm passionate about. I enjoy it so much more.",
+      ],
+    },
+  ],
+};

@@ -65,9 +65,9 @@ const Home = () => {
             <span className={ink}>Lightyear (HF0)</span>.
           </p>
           <p className="mb-6">
-            Previously, I co-founded <span className={ink}>Neurite</span>, the first ML tool for
-            PSP detection, and built <span className={ink}>Manar</span>, an app that helps people
-            stay consistent with their Quran goals. I donated its proceeds to people in need. In
+            Previously, I co-founded the company behind{" "}
+            <span className={ink}>the first ML tool for PSP detection</span>, and built <span className={ink}>an app that helps people stay
+            consistent with their Quran goals</span>. I donated its proceeds to people in need. In
             high school, I founded a startup that was{" "}
             <span className={ink}>acquired by a sports wearable company</span>.
           </p>
