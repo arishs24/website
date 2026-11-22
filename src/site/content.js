@@ -47,6 +47,26 @@ export const sidebar = [
 
 export const press = [
   {
+    source: "CBC News",
+    title: "McMaster students are making hearing aids affordable.",
+    url: "https://www.cbc.ca/news/canada/hamilton/mcmaster-students-affordable-hearing-aids-9.7259207",
+  },
+  {
+    source: "McMaster Daily News",
+    title: "From the classroom to California: McMaster students launch hearing care startup Amano.",
+    url: "https://news.mcmaster.ca/mcmaster-students-launch-hearing-care-startup-amano/",
+  },
+  {
+    source: "Founders, Inc. on X",
+    title: "Amano's hearing device, built at Founders, Inc.",
+    url: "https://x.com/fdotinc/status/2054634415649874097",
+  },
+  {
+    source: "Instagram",
+    title: "Feature on Amano.",
+    url: "https://www.instagram.com/p/DeZuFk9DSfU/",
+  },
+  {
     source: "McMaster Daily News",
     title: "‘Like a flight simulator for brain surgery’: Undergrad wins at Princeton engineering competition.",
     url: "https://news.mcmaster.ca/like-a-flight-simulator-for-brain-surgery-undergrad-wins-at-princeton-engineering-competition/",
@@ -91,13 +111,25 @@ export const passions = [
     link: { label: "How Synovia won at Princeton.", href: "https://news.mcmaster.ca/like-a-flight-simulator-for-brain-surgery-undergrad-wins-at-princeton-engineering-competition/" },
   },
   {
+    title: "Personalized care",
+    body: "Every patient is different. Care should be built around the person, not the average.",
+  },
+  {
+    title: "How the world gets care",
+    body: "Who gets treated, how fast, and at what cost changes from one country to the next. I go see it for myself.",
+    link: { label: "Where I've been.", href: "/#health-systems" },
+  },
+  {
     title: "And much more",
-    body: "Neuroscience, teaching, and writing for The Frequency.",
-    link: { label: "Read my writing.", href: "/articles" },
+    body: "Neuroscience, teaching, and hackathons.",
   },
 ];
 
 export const work = [
+  {
+    org: "Amano",
+    desc: "Co-Founder. The future of personalized wellness. Part of Founders, Inc. and Lightyear (HF0).",
+  },
   {
     org: "Harvard Medical School & MGH",
     desc: "Biomedical Engineer. ML and finite element models of how bone responds to force, so orthopedic surgeons can plan before the OR.",
@@ -125,6 +157,14 @@ export const building = [
   {
     title: "Angel investing & scouting",
     body: "I angel invest, scout for funds, and help people with limited access kick-start their journey.",
+  },
+  {
+    title: "Hackathons",
+    body: "I sponsor and mentor at hackathons. They're what got me where I am today, and one of the best things you can do.",
+  },
+  {
+    title: "Guest lectures",
+    body: "I guest lecture on ML in healthcare, and on how to take the first step in starting a company.",
   },
 ];
 

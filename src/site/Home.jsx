@@ -60,13 +60,27 @@ const Home = () => {
           <p className="mb-6">
             Currently, I&rsquo;m building{" "}
             <Go to="https://amanolabs.com" className={`${ink} hover:opacity-60 transition-opacity`}>Amano</Go>,
-            the future of personalized human wellness.
+            the future of personalized human wellness, with{" "}
+            <span className={ink}>Founders, Inc.</span> and{" "}
+            <span className={ink}>Lightyear (HF0)</span>.
           </p>
           <p className="mb-6">
             Previously, I co-founded <span className={ink}>Neurite</span>, the first ML tool for
-            PSP detection, and built <span className={ink}>Manar</span>, a top-100 religion app on
-            the App Store. In high school, I founded a startup that was{" "}
+            PSP detection, and built <span className={ink}>Manar</span>, an app that helps people
+            stay consistent with their Quran goals. I donated its proceeds to people in need. In
+            high school, I founded a startup that was{" "}
             <span className={ink}>acquired by a sports wearable company</span>.
+          </p>
+          <p className="mb-6">
+            Along the way, I&rsquo;ve tried a lot of businesses: my own{" "}
+            <span className={ink}>clothing brand</span>, reselling{" "}
+            <span className={ink}>PS5s</span>, <span className={ink}>digital collectibles</span>,
+            and <span className={ink}>tutoring</span>.
+          </p>
+          <p className="mb-6">
+            I was also <span className={ink}>top 20 out of 18,000</span> at the{" "}
+            <span className={ink}>Hult Prize</span>, the world&rsquo;s largest student
+            entrepreneurship competition.
           </p>
           <p className="mb-6">
             I study Integrated Biomedical Engineering &amp; Health Sciences at{" "}
