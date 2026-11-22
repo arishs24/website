@@ -8,6 +8,7 @@ export const RESEARCHGATE = "https://www.researchgate.net/profile/Arish-Shahab";
 export const social = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/arishshahab/" },
   { label: "GitHub", href: "https://github.com/arishs24" },
+  { label: "Instagram", href: "https://www.instagram.com/arishshahabb/" },
   { label: "Email", href: `mailto:${EMAIL}` },
 ];
 
@@ -42,6 +43,7 @@ export const sidebar = [
     children: [
       { label: "LinkedIn", href: "https://www.linkedin.com/in/arishshahab/" },
       { label: "GitHub", href: "https://github.com/arishs24" },
+      { label: "Instagram", href: "https://www.instagram.com/arishshahabb/" },
     ],
   },
 ];
