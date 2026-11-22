@@ -3,7 +3,6 @@
 // rewritten in your own words.
 
 export const EMAIL = "arish.shahab1@gmail.com";
-export const CALENDLY = "https://calendly.com/arish-shahab1/30min";
 export const RESEARCHGATE = "https://www.researchgate.net/profile/Arish-Shahab";
 
 export const social = [
@@ -43,7 +42,6 @@ export const sidebar = [
     children: [
       { label: "LinkedIn", href: "https://www.linkedin.com/in/arishshahab/" },
       { label: "GitHub", href: "https://github.com/arishs24" },
-      { label: "Book a call", href: CALENDLY },
     ],
   },
 ];
