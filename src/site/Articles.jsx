@@ -5,7 +5,7 @@ import { RESEARCHGATE, press, research } from "./content";
 
 const Group = ({ id, label, children }) => (
   <section id={id} className="scroll-mt-8 mb-14 last:mb-0">
-    <h3 className="text-[#161616] text-[13px] uppercase tracking-[0.12em] mb-4">{label}</h3>
+    <h3 className="text-[#f2efea] text-[13px] uppercase tracking-[0.12em] mb-4">{label}</h3>
     <ul className="space-y-3">{children}</ul>
   </section>
 );

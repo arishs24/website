@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import { sidebar, social } from "./content";
 
-export const ink = "text-[#161616]";
-export const muted = "text-[#252525]/50";
+export const ink = "text-[#f2efea]";
+export const muted = "text-[#e6e2db]/60";
 export const underline =
-  "underline underline-offset-[3px] decoration-1 hover:text-[#161616] transition-colors duration-200";
+  "underline underline-offset-[3px] decoration-1 hover:text-[#f2efea] transition-colors duration-200";
 
 // Internal paths go through the router, everything else opens in a new tab.
 export const Go = ({ to, className = "", children }) => {
@@ -170,7 +170,7 @@ const Layout = ({ children, cards = false }) => {
 
 export const Card = ({ className = "", children }) => (
   <div
-    className={`bg-[#faf7f5] text-[#252525] rounded-t-[10px] md:rounded-[16px] px-6 md:px-10 ${className}`}
+    className={`bg-[#171615] text-[#e6e2db] rounded-t-[10px] md:rounded-[16px] px-6 md:px-10 ${className}`}
   >
     {children}
   </div>

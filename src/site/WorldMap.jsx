@@ -47,14 +47,14 @@ const WorldMap = ({ countries }) => {
             key={s.id}
             d={s.d}
             onPointerEnter={() => setActive(s.visited ? s.id : null)}
-            className={`transition-[fill] duration-300 stroke-[#faf7f5] [stroke-width:0.6] ${
+            className={`transition-[fill] duration-300 stroke-[#171615] [stroke-width:0.6] ${
               s.visited
                 ? s.id === active
-                  ? "fill-[#161616]"
+                  ? "fill-[#f2efea]"
                   : active
-                  ? "fill-[#252525]/45"
-                  : "fill-[#252525]/80"
-                : "fill-[#252525]/[0.09]"
+                  ? "fill-[#e6e2db]/45"
+                  : "fill-[#e6e2db]/80"
+                : "fill-[#e6e2db]/[0.11]"
             }`}
           />
         ))}
@@ -68,21 +68,21 @@ const WorldMap = ({ countries }) => {
             <circle r="11" className="fill-transparent" />
             <circle
               r="7"
-              className={`map-ping fill-none stroke-[#252525] [stroke-width:1] ${
+              className={`map-ping fill-none stroke-[#e6e2db] [stroke-width:1] ${
                 d.id === active ? "opacity-100" : "opacity-0"
               }`}
             />
             <circle
               r="3"
-              className={`transition-[fill] duration-300 stroke-[#faf7f5] [stroke-width:1.2] ${
-                d.id === active ? "fill-[#161616]" : "fill-[#252525]"
+              className={`transition-[fill] duration-300 stroke-[#171615] [stroke-width:1.2] ${
+                d.id === active ? "fill-[#f2efea]" : "fill-[#e6e2db]"
               }`}
             />
           </g>
         ))}
       </svg>
 
-      <p className="mt-3 min-h-[1.5em] text-[#161616]">{activeName || " "}</p>
+      <p className="mt-3 min-h-[1.5em] text-[#f2efea]">{activeName || " "}</p>
 
       <ul className="mt-1 flex flex-wrap gap-x-4 gap-y-1">
         {countries.map((c) => (
@@ -94,7 +94,7 @@ const WorldMap = ({ countries }) => {
               onFocus={() => setActive(c.id)}
               onBlur={() => setActive(null)}
               className={`transition-colors duration-200 ${
-                c.id === active ? "text-[#161616]" : ""
+                c.id === active ? "text-[#f2efea]" : ""
               }`}
             >
               {c.name}

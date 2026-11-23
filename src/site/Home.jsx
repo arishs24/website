@@ -16,7 +16,7 @@ const grid = "grid md:grid-cols-[minmax(0,1fr)_minmax(0,500px)_minmax(0,1fr)] ga
 
 const Section = ({ id, label, wide = false, children }) => (
   <section id={id} className={`scroll-mt-8 ${grid} gap-y-4 mb-28`}>
-    <h2 className="md:text-right text-[#252525] text-[26px] md:text-[28px] uppercase leading-[1.1] tracking-[-0.25px] whitespace-pre-line">
+    <h2 className="md:text-right text-[#e6e2db] text-[26px] md:text-[28px] uppercase leading-[1.1] tracking-[-0.25px] whitespace-pre-line">
       {label}
     </h2>
     <div className={`${muted} text-[17.6px] leading-[1.5] ${wide ? "md:col-span-2" : ""}`}>
@@ -33,7 +33,7 @@ const Entry = ({ title, children }) => (
 );
 
 const Numbered = ({ items }) => (
-  <ol className="list-decimal pl-[26px] marker:text-[#252525]/50 space-y-[2px]">
+  <ol className="list-decimal pl-[26px] marker:text-[#e6e2db]/50 space-y-[2px]">
     {items.map(([pre, strong, post = ""]) => (
       <li key={strong}>
         {pre}<span className={ink}>{strong}</span>{post}
@@ -47,7 +47,7 @@ const Home = () => {
     <Layout>
       <Card className="md:mt-[34px] pt-16 md:pt-[100px] pb-24">
         <Section id="north-star" label={"North\nStar"}>
-          <p className="text-[#252525]/50 text-[26px] md:text-[28px] uppercase leading-[1.1] tracking-[-0.25px]">
+          <p className="text-[#e6e2db]/50 text-[26px] md:text-[28px] uppercase leading-[1.1] tracking-[-0.25px]">
             Improve as many human lives
             <br />as possible, at the greatest
             <br />scale possible.
@@ -102,10 +102,10 @@ const Home = () => {
         </Section>
 
         <Section id="featured" label={"Featured\nIn"}>
-          <p className="text-[#161616] text-[20px] leading-[1.4] mb-8">
+          <p className="text-[#f2efea] text-[20px] leading-[1.4] mb-8">
             {featuredOutlets.map((o, i) => (
               <React.Fragment key={o}>
-                {i > 0 && <span className="text-[#252525]/30"> &middot; </span>}
+                {i > 0 && <span className="text-[#e6e2db]/30"> &middot; </span>}
                 <span className="whitespace-nowrap">{o}</span>
               </React.Fragment>
             ))}
@@ -116,7 +116,7 @@ const Home = () => {
               <p className="text-[15px] mt-1">
                 {f.sources.map((src, i) => (
                   <React.Fragment key={src.url}>
-                    {i > 0 && <span className="text-[#252525]/30"> &middot; </span>}
+                    {i > 0 && <span className="text-[#e6e2db]/30"> &middot; </span>}
                     <Go to={src.url} className={underline}>{src.label}</Go>
                   </React.Fragment>
                 ))}
