@@ -79,7 +79,11 @@ const Home = () => {
             and <span className={ink}>tutoring</span>.
           </p>
           <p className="mb-6">
-            I was also <span className={ink}>top 20 out of 18,000</span> at the{" "}
+            I was named{" "}
+            <Go to="https://yeyawards.com/2026" className={`${ink} ${underline}`}>
+              Canada&rsquo;s Young Entrepreneur of the Year
+            </Go>
+            , and was <span className={ink}>top 20 out of 18,000</span> at the{" "}
             <span className={ink}>Hult Prize</span>, the world&rsquo;s largest student
             entrepreneurship competition.
           </p>

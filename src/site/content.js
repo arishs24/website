@@ -50,6 +50,11 @@ export const sidebar = [
 
 export const press = [
   {
+    source: "YEY Awards",
+    title: "Young Entrepreneur of the Year, Canada 2026.",
+    url: "https://yeyawards.com/2026",
+  },
+  {
     source: "CBC News",
     title: "McMaster students are making hearing aids affordable.",
     url: "https://www.cbc.ca/news/canada/hamilton/mcmaster-students-affordable-hearing-aids-9.7259207",
@@ -103,6 +108,7 @@ export const featuredOutlets = [
   "Founders, Inc.",
   "Pubity",
   "Education News Canada",
+  "YEY Awards",
 ];
 
 export const featuredStories = [
@@ -115,6 +121,11 @@ export const featuredStories = [
       { label: "Founders, Inc.", url: "https://x.com/fdotinc/status/2054634415649874097" },
       { label: "Pubity", url: "https://www.instagram.com/p/DeZuFk9DSfU/" },
     ],
+  },
+  {
+    story: "Young Entrepreneur of the Year",
+    headline: "Named Canada\u2019s Young Entrepreneur of the Year, 2026.",
+    sources: [{ label: "YEY Awards", url: "https://yeyawards.com/2026" }],
   },
   {
     story: "HackPrinceton",
