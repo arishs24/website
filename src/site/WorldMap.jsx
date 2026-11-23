@@ -47,7 +47,7 @@ const WorldMap = ({ countries }) => {
             key={s.id}
             d={s.d}
             onPointerEnter={() => setActive(s.visited ? s.id : null)}
-            className={`transition-[fill] duration-300 stroke-[#171615] [stroke-width:0.6] ${
+            className={`transition-[fill] duration-300 stroke-[#0e1a2f] [stroke-width:0.6] ${
               s.visited
                 ? s.id === active
                   ? "fill-[#f2efea]"
@@ -74,7 +74,7 @@ const WorldMap = ({ countries }) => {
             />
             <circle
               r="3"
-              className={`transition-[fill] duration-300 stroke-[#171615] [stroke-width:1.2] ${
+              className={`transition-[fill] duration-300 stroke-[#0e1a2f] [stroke-width:1.2] ${
                 d.id === active ? "fill-[#f2efea]" : "fill-[#e6e2db]"
               }`}
             />

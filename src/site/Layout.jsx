@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import { sidebar, social } from "./content";
+import CursorFx from "./CursorFx";
 
 export const ink = "text-[#f2efea]";
 export const muted = "text-[#e6e2db]/60";
@@ -16,47 +17,6 @@ export const Go = ({ to, className = "", children }) => {
     <a href={to} target="_blank" rel="noopener noreferrer" className={className}>
       {children}
     </a>
-  );
-};
-
-// Soft frosted circle that trails the pointer.
-const Cursor = () => {
-  const ref = useRef(null);
-  const [enabled] = useState(
-    () => typeof window !== "undefined" && window.matchMedia("(pointer: fine)").matches
-  );
-
-  useEffect(() => {
-    if (!enabled) return;
-    const el = ref.current;
-    let x = -100, y = -100, cx = x, cy = y, scale = 1, target = 1, raf;
-    const move = (e) => {
-      x = e.clientX;
-      y = e.clientY;
-      target = e.target.closest?.("a, button") ? 2 : 1;
-    };
-    const loop = () => {
-      cx += (x - cx) * 0.18;
-      cy += (y - cy) * 0.18;
-      scale += (target - scale) * 0.15;
-      el.style.transform = `translate3d(${cx - 12}px, ${cy - 12}px, 0) scale(${scale})`;
-      raf = requestAnimationFrame(loop);
-    };
-    window.addEventListener("pointermove", move, { passive: true });
-    raf = requestAnimationFrame(loop);
-    return () => {
-      window.removeEventListener("pointermove", move);
-      cancelAnimationFrame(raf);
-    };
-  }, [enabled]);
-
-  if (!enabled) return null;
-  return (
-    <div
-      ref={ref}
-      aria-hidden="true"
-      className="pointer-events-none fixed left-0 top-0 z-50 h-6 w-6 rounded-full bg-[#faf7f5]/10 backdrop-blur-[3px] shadow-[0_0_10px_rgba(0,0,0,0.08)]"
-    />
   );
 };
 
@@ -109,7 +69,7 @@ const Layout = ({ children, cards = false }) => {
 
   return (
     <div id="top" className="min-h-screen bg-black text-[#faf7f5] font-helvetica">
-      <Cursor />
+      <CursorFx />
 
       <header className="relative z-20 flex items-center justify-between px-6 h-[60px]">
         <Link to="/" className="text-[20px] md:text-[24px] leading-none">
@@ -170,7 +130,7 @@ const Layout = ({ children, cards = false }) => {
 
 export const Card = ({ className = "", children }) => (
   <div
-    className={`bg-[#171615] text-[#e6e2db] rounded-t-[10px] md:rounded-[16px] px-6 md:px-10 ${className}`}
+    className={`bg-[#0e1a2f] text-[#e6e2db] rounded-t-[10px] md:rounded-[16px] px-6 md:px-10 ${className}`}
   >
     {children}
   </div>
